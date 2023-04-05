@@ -39,7 +39,7 @@ publishing {
 
 
 wrapper {
-    gradleVersion = '7.5'
+    gradleVersion = '8.0.2'
     distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }
 
