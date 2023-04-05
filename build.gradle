@@ -19,8 +19,8 @@ publishing {
                 url = 'https://github.com/Nivalit/invoiceninja-java-client'
             }
             groupId = 'com.nivalit'
-            artifactId = 'invoiceninja'
-            version = '0.0.1'
+            artifactId = 'invoiceninja-client'
+            version = version
             from components.java
         }
     }
