@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 **creditNumberPattern** | **kotlin.String** | Allows customisation of the credit number pattern |  [optional]
 **creditNumberCounter** | **kotlin.Int** | The incrementing counter for credits |  [optional]
 **recurringInvoiceNumberPrefix** | **kotlin.String** | This string is prepended to the recurring invoice number |  [optional]
-**resetCounterFrequencyId** | **kotlin.Int** | CONSTANT which is used to apply the frequency which the counters are reset |  [optional]
+**resetCounterFrequencyId** | **kotlin.String** | CONSTANT which is used to apply the frequency which the counters are reset |  [optional]
 **resetCounterDate** | **kotlin.String** | The explicit date which is used to reset counters |  [optional]
 **counterPadding** | **kotlin.Int** | Pads the counter with leading zeros |  [optional]
 **sharedInvoiceQuoteCounter** | **kotlin.Boolean** | Flags whether to share the counter for invoices and quotes |  [optional]

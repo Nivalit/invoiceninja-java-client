@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **isAmountDiscount** | **kotlin.Boolean** | Indicates whether the discount is a fixed amount |  [optional]
 **allowCancellation** | **kotlin.Boolean** | Indicates whether the subscription can be cancelled |  [optional]
 **perSeatEnabled** | **kotlin.Boolean** | Indicates whether the subscription pricing is per seat |  [optional]
-**currencyId** | **kotlin.Int** | Unique identifier for the currency used in the subscription |  [optional]
+**currencyId** | **kotlin.String** | Unique identifier for the currency used in the subscription |  [optional]
 **maxSeatsLimit** | **kotlin.Int** | Maximum number of seats allowed for the subscription |  [optional]
 **trialEnabled** | **kotlin.Boolean** | Indicates whether the subscription has a trial period |  [optional]
 **trialDuration** | **kotlin.Int** | Duration of the trial period in days |  [optional]

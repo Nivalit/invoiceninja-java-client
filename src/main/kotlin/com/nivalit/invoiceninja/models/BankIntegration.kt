@@ -55,7 +55,7 @@ data class BankIntegration (
 
     /* The bank account id */
     @Json(name = "bank_account_id")
-    val bankAccountId: kotlin.Int? = null,
+    val bankAccountId: kotlin.String? = null,
 
     /* The name of the account */
     @Json(name = "bank_account_name")

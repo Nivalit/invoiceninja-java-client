@@ -104,7 +104,7 @@ data class RecurringInvoice (
 
     /* The recurring invoice frequency */
     @Json(name = "frequency_id")
-    val frequencyId: java.math.BigDecimal? = null,
+    val frequencyId: kotlin.String? = null,
 
     /* The number of invoices left to be generated */
     @Json(name = "remaining_cycles")

@@ -243,7 +243,7 @@ Configure ApiKeyAuth:
 
 <a name="getClients"></a>
 # **getClients**
-> Client getClients(X_API_TOKEN, xRequestedWith, include, index, status, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, name, balance, betweenBalance, email, idNumber, number, filter, sort)
+> ClientArrayWrapped getClients(X_API_TOKEN, xRequestedWith, include, index, status, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, name, balance, betweenBalance, email, idNumber, number, filter, sort)
 
 List clients
 
@@ -275,7 +275,7 @@ val number : kotlin.String = a1039883 // kotlin.String | Filter by client number
 val filter : kotlin.String = a1039883 // kotlin.String | Filters clients on columns - name, id_number, contact.first_name contact.last_name, contact.email, custom_value1-4
 val sort : kotlin.String = id|desc name|desc balance|asc // kotlin.String | Returns the list sorted by column in ascending or descending order.
 try {
-    val result : Client = apiInstance.getClients(X_API_TOKEN, xRequestedWith, include, index, status, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, name, balance, betweenBalance, email, idNumber, number, filter, sort)
+    val result : ClientArrayWrapped = apiInstance.getClients(X_API_TOKEN, xRequestedWith, include, index, status, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, name, balance, betweenBalance, email, idNumber, number, filter, sort)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ClientsApi#getClients")
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Client**](Client.md)
+[**ClientArrayWrapped**](ClientArrayWrapped.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ Configure ApiKeyAuth:
 
 <a name="storeClient"></a>
 # **storeClient**
-> Client storeClient(X_API_TOKEN, xRequestedWith, client, include)
+> ClientWrapped storeClient(X_API_TOKEN, xRequestedWith, client, include)
 
 Create client
 
@@ -567,7 +567,7 @@ val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to s
 val client : Client =  // Client | A request body for creating new client
 val include : kotlin.String = activities // kotlin.String | Include child relationships of the Client Object.
 try {
-    val result : Client = apiInstance.storeClient(X_API_TOKEN, xRequestedWith, client, include)
+    val result : ClientWrapped = apiInstance.storeClient(X_API_TOKEN, xRequestedWith, client, include)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ClientsApi#storeClient")
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Client**](Client.md)
+[**ClientWrapped**](ClientWrapped.md)
 
 ### Authorization
 

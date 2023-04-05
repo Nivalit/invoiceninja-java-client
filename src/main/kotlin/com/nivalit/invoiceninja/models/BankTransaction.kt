@@ -73,7 +73,7 @@ data class BankTransaction (
 
     /* The category id */
     @Json(name = "category_id")
-    val categoryId: kotlin.Int? = null,
+    val categoryId: kotlin.String? = null,
 
     /* The category description */
     @Json(name = "category_type")
@@ -89,7 +89,7 @@ data class BankTransaction (
 
     /* The ID number of the bank account */
     @Json(name = "bank_account_id")
-    val bankAccountId: kotlin.Int? = null
+    val bankAccountId: kotlin.String? = null
 
 )
 

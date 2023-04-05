@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **companyId** | **kotlin.String** | The company hashed id |  [optional]
 **clientId** | **kotlin.String** | The client hashed id |  [optional]
 **statusId** | **kotlin.String** | The invoice status variable |  [optional]
-**frequencyId** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | The recurring invoice frequency |  [optional]
+**frequencyId** | **kotlin.String** | The recurring invoice frequency |  [optional]
 **remainingCycles** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | The number of invoices left to be generated |  [optional]
 **number** | **kotlin.String** | The recurringinvoice number - is a unique alpha numeric number per invoice per company |  [optional]
 **poNumber** | **kotlin.String** | The purchase order associated with this recurring invoice |  [optional]

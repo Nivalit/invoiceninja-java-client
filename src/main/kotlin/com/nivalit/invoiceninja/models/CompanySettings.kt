@@ -387,7 +387,7 @@ data class CompanySettings (
 
     /* CONSTANT which is used to apply the frequency which the counters are reset */
     @Json(name = "reset_counter_frequency_id")
-    val resetCounterFrequencyId: kotlin.Int? = null,
+    val resetCounterFrequencyId: kotlin.String? = null,
 
     /* The explicit date which is used to reset counters */
     @Json(name = "reset_counter_date")

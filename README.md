@@ -50,339 +50,339 @@ All URIs are relative to *https://demo.invoiceninja.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActvitiesApi* | [**getActivities**](docs/ActvitiesApi.md#getactivities) | **GET** /api/v1/activities | Returns a list of actvities
-*ActvitiesApi* | [**getActivityHistoricalEntityPdf**](docs/ActvitiesApi.md#getactivityhistoricalentitypdf) | **GET** /api/v1/actvities/download_entity/{activity_id} | Returns a PDF for the given activity
-*BankIntegrationsApi* | [**bulkBankIntegrations**](docs/BankIntegrationsApi.md#bulkbankintegrations) | **POST** /api/v1/bank_integrations/bulk | Performs bulk actions on an array of bank_integrations
-*BankIntegrationsApi* | [**deleteBankIntegration**](docs/BankIntegrationsApi.md#deletebankintegration) | **DELETE** /api/v1/bank_integrations/{id} | Deletes a bank_integration
-*BankIntegrationsApi* | [**editBankIntegration**](docs/BankIntegrationsApi.md#editbankintegration) | **GET** /api/v1/bank_integrations/{id}/edit | Shows a bank_integration for editing
-*BankIntegrationsApi* | [**getAccountTransactions**](docs/BankIntegrationsApi.md#getaccounttransactions) | **POST** /api/v1/bank_integrations/get_transactions/account_id | Retrieve transactions for a account
-*BankIntegrationsApi* | [**getBankIntegrations**](docs/BankIntegrationsApi.md#getbankintegrations) | **GET** /api/v1/bank_integrations | Returns a list of Bank Integrations
-*BankIntegrationsApi* | [**getBankIntegrationsCreate**](docs/BankIntegrationsApi.md#getbankintegrationscreate) | **GET** /api/v1/bank_integrations/create | Gets a new blank bank_integration object
-*BankIntegrationsApi* | [**getRefreshAccounts**](docs/BankIntegrationsApi.md#getrefreshaccounts) | **POST** /api/v1/bank_integrations/refresh_accounts | Gets the list of accounts from the remote server
-*BankIntegrationsApi* | [**getRemoveAccount**](docs/BankIntegrationsApi.md#getremoveaccount) | **POST** /api/v1/bank_integrations/remove_account/account_id | Removes an account from the integration
-*BankIntegrationsApi* | [**showBankIntegration**](docs/BankIntegrationsApi.md#showbankintegration) | **GET** /api/v1/bank_integrations/{id} | Shows a bank_integration
-*BankIntegrationsApi* | [**storeBankIntegration**](docs/BankIntegrationsApi.md#storebankintegration) | **POST** /api/v1/bank_integrations | Adds a bank_integration
-*BankIntegrationsApi* | [**updateBankIntegration**](docs/BankIntegrationsApi.md#updatebankintegration) | **PUT** /api/v1/bank_integrations/{id} | Updates a bank_integration
-*BankTransactionRulesApi* | [**bulkBankTransactionRules**](docs/BankTransactionRulesApi.md#bulkbanktransactionrules) | **POST** /api/v1/bank_transation_rules/bulk | Performs bulk actions on an array of bank_transation rules
-*BankTransactionRulesApi* | [**deleteBankTransactionRule**](docs/BankTransactionRulesApi.md#deletebanktransactionrule) | **DELETE** /api/v1/bank_transaction_rules/{id} | Deletes a bank_transaction rule
-*BankTransactionRulesApi* | [**editBankTransactionRule**](docs/BankTransactionRulesApi.md#editbanktransactionrule) | **GET** /api/v1/bank_transaction_rules/{id}/edit | Shows a bank_transaction for editing
-*BankTransactionRulesApi* | [**getBankTransactionRules**](docs/BankTransactionRulesApi.md#getbanktransactionrules) | **GET** /api/v1/bank_transaction_rules | Gets a list of bank_transaction_rules
-*BankTransactionRulesApi* | [**getBankTransactionRulesCreate**](docs/BankTransactionRulesApi.md#getbanktransactionrulescreate) | **GET** /api/v1/bank_transaction_rules/create | Gets a new blank bank_transaction rule object
-*BankTransactionRulesApi* | [**showBankTransactionRule**](docs/BankTransactionRulesApi.md#showbanktransactionrule) | **GET** /api/v1/bank_transaction_rules/{id} | Shows a bank_transaction
-*BankTransactionRulesApi* | [**storeBankTransactionRule**](docs/BankTransactionRulesApi.md#storebanktransactionrule) | **POST** /api/v1/bank_transaction_rules | Adds a bank_transaction rule
-*BankTransactionRulesApi* | [**updateBankTransactionRule**](docs/BankTransactionRulesApi.md#updatebanktransactionrule) | **PUT** /api/v1/bank_transaction_rules/{id} | Updates a bank_transaction Rule
-*BankTransactionsApi* | [**bulkBankTransactions**](docs/BankTransactionsApi.md#bulkbanktransactions) | **POST** /api/v1/bank_transations/bulk | Performs bulk actions on an array of bank_transations
-*BankTransactionsApi* | [**deleteBankTransaction**](docs/BankTransactionsApi.md#deletebanktransaction) | **DELETE** /api/v1/bank_transactions/{id} | Deletes a bank_transaction
-*BankTransactionsApi* | [**editBankTransaction**](docs/BankTransactionsApi.md#editbanktransaction) | **GET** /api/v1/bank_transactions/{id}/edit | Shows a bank_transaction for editing
-*BankTransactionsApi* | [**getBankTransactions**](docs/BankTransactionsApi.md#getbanktransactions) | **GET** /api/v1/bank_transactions | Gets a list of bank_transactions
-*BankTransactionsApi* | [**getBankTransactionsCreate**](docs/BankTransactionsApi.md#getbanktransactionscreate) | **GET** /api/v1/bank_transactions/create | Gets a new blank bank_transaction object
-*BankTransactionsApi* | [**matchBankTransactions**](docs/BankTransactionsApi.md#matchbanktransactions) | **POST** /api/v1/bank_transations/match | Performs match actions on an array of bank_transactions
-*BankTransactionsApi* | [**showBankTransaction**](docs/BankTransactionsApi.md#showbanktransaction) | **GET** /api/v1/bank_transactions/{id} | Shows a bank_transaction
-*BankTransactionsApi* | [**storeBankTransaction**](docs/BankTransactionsApi.md#storebanktransaction) | **POST** /api/v1/bank_transactions | Adds a bank_transaction
-*BankTransactionsApi* | [**updateBankTransaction**](docs/BankTransactionsApi.md#updatebanktransaction) | **PUT** /api/v1/bank_transactions/{id} | Updates a bank_transaction
-*ChartsApi* | [**getChartTotals**](docs/ChartsApi.md#getcharttotals) | **POST** /api/v1/charts/totals | Get chart data
-*ClaimLicenseApi* | [**getClaimLicense**](docs/ClaimLicenseApi.md#getclaimlicense) | **GET** /api/v1/claim_license | Attempts to claim a white label license
-*ClientGatewayTokensApi* | [**deleteClientGatewayToken**](docs/ClientGatewayTokensApi.md#deleteclientgatewaytoken) | **DELETE** /api/v1/client_gateway_tokens/{id} | Deletes a client
-*ClientGatewayTokensApi* | [**editClientGatewayToken**](docs/ClientGatewayTokensApi.md#editclientgatewaytoken) | **GET** /api/v1/client_gateway_tokens/{id}/edit | Shows a client for editting
-*ClientGatewayTokensApi* | [**getClientGatewayTokens**](docs/ClientGatewayTokensApi.md#getclientgatewaytokens) | **GET** /api/v1/client_gateway_tokens | List of client tokens
-*ClientGatewayTokensApi* | [**getClientGatewayTokensCreate**](docs/ClientGatewayTokensApi.md#getclientgatewaytokenscreate) | **GET** /api/v1/client_gateway_tokens/create | Gets a new blank client object
-*ClientGatewayTokensApi* | [**showClientGatewayToken**](docs/ClientGatewayTokensApi.md#showclientgatewaytoken) | **GET** /api/v1/client_gateway_tokens/{id} | Shows a client
-*ClientGatewayTokensApi* | [**storeClientGatewayToken**](docs/ClientGatewayTokensApi.md#storeclientgatewaytoken) | **POST** /api/v1/client_gateway_tokens | Adds a client
-*ClientGatewayTokensApi* | [**updateClientGatewayToken**](docs/ClientGatewayTokensApi.md#updateclientgatewaytoken) | **PUT** /api/v1/client_gateway_tokens/{id} | Updates a client
-*ClientsApi* | [**bulkClients**](docs/ClientsApi.md#bulkclients) | **POST** /api/v1/clients/bulk | Bulk client actions
-*ClientsApi* | [**clientStatement**](docs/ClientsApi.md#clientstatement) | **POST** /api/v1/client_statement | Client statement PDF
-*ClientsApi* | [**deleteClient**](docs/ClientsApi.md#deleteclient) | **DELETE** /api/v1/clients/{id} | Delete client
-*ClientsApi* | [**editClient**](docs/ClientsApi.md#editclient) | **GET** /api/v1/clients/{id}/edit | Edit Client
-*ClientsApi* | [**getClients**](docs/ClientsApi.md#getclients) | **GET** /api/v1/clients | List clients
-*ClientsApi* | [**getClientsCreate**](docs/ClientsApi.md#getclientscreate) | **GET** /api/v1/clients/create | Blank Client
-*ClientsApi* | [**mergeClient**](docs/ClientsApi.md#mergeclient) | **POST** /api/v1/clients/{id}/{mergeable_client_hashed_id}/merge | Merge client
-*ClientsApi* | [**purgeClient**](docs/ClientsApi.md#purgeclient) | **POST** /api/v1/clients/{id}/purge | Purge client
-*ClientsApi* | [**showClient**](docs/ClientsApi.md#showclient) | **GET** /api/v1/clients/{id} | Show client
-*ClientsApi* | [**storeClient**](docs/ClientsApi.md#storeclient) | **POST** /api/v1/clients | Create client
-*ClientsApi* | [**updateClient**](docs/ClientsApi.md#updateclient) | **PUT** /api/v1/clients/{id} | Update client
-*ClientsApi* | [**uploadClient**](docs/ClientsApi.md#uploadclient) | **PUT** /api/v1/clients/{id}/upload | Add client document
-*CompaniesApi* | [**deleteCompany**](docs/CompaniesApi.md#deletecompany) | **DELETE** /api/v1/companies/{id} | Deletes a company
-*CompaniesApi* | [**editCompany**](docs/CompaniesApi.md#editcompany) | **GET** /api/v1/companies/{id}/edit | Shows an company for editting
-*CompaniesApi* | [**getCompanies**](docs/CompaniesApi.md#getcompanies) | **GET** /api/v1/companies | Gets a list of companies
-*CompaniesApi* | [**getCompaniesCreate**](docs/CompaniesApi.md#getcompaniescreate) | **GET** /api/v1/companies/create | Gets a new blank company object
-*CompaniesApi* | [**setDefaultCompany**](docs/CompaniesApi.md#setdefaultcompany) | **POST** /api/v1/companies/{company}/default | Sets the company as the default company.
-*CompaniesApi* | [**showCompany**](docs/CompaniesApi.md#showcompany) | **GET** /api/v1/companies/{id} | Shows an company
-*CompaniesApi* | [**storeCompany**](docs/CompaniesApi.md#storecompany) | **POST** /api/v1/companies | Adds a company
-*CompaniesApi* | [**updateCompany**](docs/CompaniesApi.md#updatecompany) | **PUT** /api/v1/companies/{id} | Updates an company
-*CompaniesApi* | [**uploadCompanies**](docs/CompaniesApi.md#uploadcompanies) | **PUT** /api/v1/companies/{id}/upload | Uploads a document to a company
-*CompanyGatewaysApi* | [**bulkCompanyGateways**](docs/CompanyGatewaysApi.md#bulkcompanygateways) | **POST** /api/v1/company_gateways/bulk | Performs bulk actions on an array of company_gateways
-*CompanyGatewaysApi* | [**deleteCompanyGateway**](docs/CompanyGatewaysApi.md#deletecompanygateway) | **DELETE** /api/v1/company_gateways/{id} | Deletes a CompanyGateway
-*CompanyGatewaysApi* | [**editCompanyGateway**](docs/CompanyGatewaysApi.md#editcompanygateway) | **GET** /api/v1/company_gateways/{id}/edit | Shows an CompanyGateway for editting
-*CompanyGatewaysApi* | [**getCompanyGateways**](docs/CompanyGatewaysApi.md#getcompanygateways) | **GET** /api/v1/company_gateways | Gets a list of company_gateways
-*CompanyGatewaysApi* | [**getCompanyGatewaysCreate**](docs/CompanyGatewaysApi.md#getcompanygatewayscreate) | **GET** /api/v1/company_gateways/create | Gets a new blank CompanyGateway object
-*CompanyGatewaysApi* | [**showCompanyGateway**](docs/CompanyGatewaysApi.md#showcompanygateway) | **GET** /api/v1/company_gateways/{id} | Shows an CompanyGateway
-*CompanyGatewaysApi* | [**storeCompanyGateway**](docs/CompanyGatewaysApi.md#storecompanygateway) | **POST** /api/v1/company_gateways | Adds a CompanyGateway
-*CompanyGatewaysApi* | [**updateCompanyGateway**](docs/CompanyGatewaysApi.md#updatecompanygateway) | **PUT** /api/v1/company_gateways/{id} | Updates an CompanyGateway
-*CompanyLedgerApi* | [**getCompanyLedger**](docs/CompanyLedgerApi.md#getcompanyledger) | **GET** /api/v1/company_ledger | Gets a list of company_ledger
-*CompanyUserApi* | [**updateCompanyUser**](docs/CompanyUserApi.md#updatecompanyuser) | **POST** /api/v1/company_users | Update a company user record
-*ConnectedAccountApi* | [**connectedAccount**](docs/ConnectedAccountApi.md#connectedaccount) | **POST** /api/v1/connected_account | Connect an oauth user to an existing user
-*CreditsApi* | [**bulkCredits**](docs/CreditsApi.md#bulkcredits) | **POST** /api/v1/credits/bulk | Bulk credit actions
-*CreditsApi* | [**deleteCredit**](docs/CreditsApi.md#deletecredit) | **DELETE** /api/v1/credits/{id} | Delete credit
-*CreditsApi* | [**editCredit**](docs/CreditsApi.md#editcredit) | **GET** /api/v1/credits/{id}/edit | Edit credit
-*CreditsApi* | [**getCredits**](docs/CreditsApi.md#getcredits) | **GET** /api/v1/credits | List credits
-*CreditsApi* | [**getCreditsCreate**](docs/CreditsApi.md#getcreditscreate) | **GET** /api/v1/credits/create | Blank credit
-*CreditsApi* | [**showCredit**](docs/CreditsApi.md#showcredit) | **GET** /api/v1/credits/{id} | Show credit
-*CreditsApi* | [**storeCredit**](docs/CreditsApi.md#storecredit) | **POST** /api/v1/credits | Create credit
-*CreditsApi* | [**updateCredit**](docs/CreditsApi.md#updatecredit) | **PUT** /api/v1/credits/{id} | Update credit
-*CreditsApi* | [**uploadCredits**](docs/CreditsApi.md#uploadcredits) | **PUT** /api/v1/credits/{id}/upload | Upload a credit document
-*DesignsApi* | [**bulkDesigns**](docs/DesignsApi.md#bulkdesigns) | **POST** /api/v1/designs/bulk | Performs bulk actions on an array of designs
-*DesignsApi* | [**deleteDesign**](docs/DesignsApi.md#deletedesign) | **DELETE** /api/v1/designs/{id} | Deletes a design
-*DesignsApi* | [**editDesign**](docs/DesignsApi.md#editdesign) | **GET** /api/v1/designs/{id}/edit | Shows a design for editting
-*DesignsApi* | [**getDesigns**](docs/DesignsApi.md#getdesigns) | **GET** /api/v1/designs | Gets a list of designs
-*DesignsApi* | [**getDesignsCreate**](docs/DesignsApi.md#getdesignscreate) | **GET** /api/v1/designs/create | Gets a new blank design object
-*DesignsApi* | [**showDesign**](docs/DesignsApi.md#showdesign) | **GET** /api/v1/designs/{id} | Shows a design
-*DesignsApi* | [**storeDesign**](docs/DesignsApi.md#storedesign) | **POST** /api/v1/designs | Adds a design
-*DesignsApi* | [**updateDesign**](docs/DesignsApi.md#updatedesign) | **PUT** /api/v1/designs/{id} | Updates a design
-*DocumentsApi* | [**getDocuments**](docs/DocumentsApi.md#getdocuments) | **GET** /api/v1/documents | Gets a list of documents
-*EmailsApi* | [**sendEmailTemplate**](docs/EmailsApi.md#sendemailtemplate) | **POST** /api/v1/emails | Sends an email for an entity
-*ExpenseApi* | [**uploadExpense**](docs/ExpenseApi.md#uploadexpense) | **PUT** /api/v1/expenses/{id}/upload | Uploads a document to a expense
-*ExpenseCategoriesApi* | [**bulkExpenseCategorys**](docs/ExpenseCategoriesApi.md#bulkexpensecategorys) | **POST** /api/v1/expense_categories/bulk | Performs bulk actions on an array of ExpenseCategorys
-*ExpenseCategoriesApi* | [**deleteExpenseCategory**](docs/ExpenseCategoriesApi.md#deleteexpensecategory) | **DELETE** /api/v1/expense_categories/{id} | Deletes a ExpenseCategory
-*ExpenseCategoriesApi* | [**editExpenseCategory**](docs/ExpenseCategoriesApi.md#editexpensecategory) | **GET** /api/v1/expense_categories/{id}/edit | Shows a Expens Category for editting
-*ExpenseCategoriesApi* | [**getExpenseCategoryCreate**](docs/ExpenseCategoriesApi.md#getexpensecategorycreate) | **GET** /api/v1/expense_categories/create | Gets a new blank Expens Category object
-*ExpenseCategoriesApi* | [**getExpenseCategorys**](docs/ExpenseCategoriesApi.md#getexpensecategorys) | **GET** /api/v1/expense_categories | Gets a list of expense_categories
-*ExpenseCategoriesApi* | [**showExpenseCategory**](docs/ExpenseCategoriesApi.md#showexpensecategory) | **GET** /api/v1/expense_categories/{id} | Shows a Expens Category
-*ExpenseCategoriesApi* | [**storeExpenseCategory**](docs/ExpenseCategoriesApi.md#storeexpensecategory) | **POST** /api/v1/expense_categories | Adds a expense category
-*ExpenseCategoriesApi* | [**updateExpenseCategory**](docs/ExpenseCategoriesApi.md#updateexpensecategory) | **PUT** /api/v1/expense_categories/{id} | Updates a tax rate
-*ExpensesApi* | [**bulkExpenses**](docs/ExpensesApi.md#bulkexpenses) | **POST** /api/v1/expenses/bulk | Performs bulk actions on an array of expenses
-*ExpensesApi* | [**deleteExpense**](docs/ExpensesApi.md#deleteexpense) | **DELETE** /api/v1/expenses/{id} | Deletes a client
-*ExpensesApi* | [**editExpense**](docs/ExpensesApi.md#editexpense) | **GET** /api/v1/expenses/{id}/edit | Shows a client for editting
-*ExpensesApi* | [**getExpenses**](docs/ExpensesApi.md#getexpenses) | **GET** /api/v1/expenses | Gets a list of expenses
-*ExpensesApi* | [**getExpensesCreate**](docs/ExpensesApi.md#getexpensescreate) | **GET** /api/v1/expenses/create | Gets a new blank client object
-*ExpensesApi* | [**showExpense**](docs/ExpensesApi.md#showexpense) | **GET** /api/v1/expenses/{id} | Shows a client
-*ExpensesApi* | [**storeExpense**](docs/ExpensesApi.md#storeexpense) | **POST** /api/v1/expenses | Adds a client
-*ExpensesApi* | [**updateExpense**](docs/ExpensesApi.md#updateexpense) | **PUT** /api/v1/expenses/{id} | Updates a client
-*ExportApi* | [**getExport**](docs/ExportApi.md#getexport) | **POST** /api/v1/export | Export data from the system
-*GroupSettingsApi* | [**bulkGroupSettings**](docs/GroupSettingsApi.md#bulkgroupsettings) | **POST** /api/v1/group_settings/bulk | Performs bulk actions on an array of group_settings
-*GroupSettingsApi* | [**deleteGroupSetting**](docs/GroupSettingsApi.md#deletegroupsetting) | **DELETE** /api/v1/group_settings/{id} | Deletes a GroupSetting
-*GroupSettingsApi* | [**editGroupSetting**](docs/GroupSettingsApi.md#editgroupsetting) | **GET** /api/v1/group_settings/{id}/edit | Shows an GroupSetting for editting
-*GroupSettingsApi* | [**getGroupSettings**](docs/GroupSettingsApi.md#getgroupsettings) | **GET** /api/v1/group_settings | Gets a list of group_settings
-*GroupSettingsApi* | [**getGroupSettingsCreate**](docs/GroupSettingsApi.md#getgroupsettingscreate) | **GET** /api/v1/group_settings/create | Gets a new blank GroupSetting object
-*GroupSettingsApi* | [**showGroupSetting**](docs/GroupSettingsApi.md#showgroupsetting) | **GET** /api/v1/group_settings/{id} | Shows an GroupSetting
-*GroupSettingsApi* | [**storeGroupSetting**](docs/GroupSettingsApi.md#storegroupsetting) | **POST** /api/v1/group_settings | Adds a GroupSetting
-*GroupSettingsApi* | [**updateGroupSetting**](docs/GroupSettingsApi.md#updategroupsetting) | **PUT** /api/v1/group_settings/{id} | Updates an GroupSetting
-*GroupSettingsApi* | [**uploadGroupSetting**](docs/GroupSettingsApi.md#uploadgroupsetting) | **PUT** /api/v1/group_settings/{id}/upload | Uploads a document to a group setting
-*HealthCheckApi* | [**getHealthCheck**](docs/HealthCheckApi.md#gethealthcheck) | **GET** /api/v1/health_check | Attempts to get a health check from the API
-*ImportApi* | [**getImportJson**](docs/ImportApi.md#getimportjson) | **POST** /api/v1/import_json | Import data from the system
-*ImportsApi* | [**preimport**](docs/ImportsApi.md#preimport) | **POST** /api/v1/preimport | Pre Import checks - returns a reference to the job and the headers of the CSV
-*InvoicesApi* | [**actionInvoice**](docs/InvoicesApi.md#actioninvoice) | **GET** /api/v1/invoices/{id}/{action} | Custom invoice action
-*InvoicesApi* | [**bulkInvoices**](docs/InvoicesApi.md#bulkinvoices) | **POST** /api/v1/invoices/bulk | Bulk invoice actions
-*InvoicesApi* | [**deleteInvoice**](docs/InvoicesApi.md#deleteinvoice) | **DELETE** /api/v1/invoices/{id} | Delete invoice
-*InvoicesApi* | [**deliveryNote**](docs/InvoicesApi.md#deliverynote) | **GET** /api/v1/invoices/{id}/delivery_note | Download delivery note
-*InvoicesApi* | [**downloadInvoice**](docs/InvoicesApi.md#downloadinvoice) | **GET** /api/v1/invoice/{invitation_key}/download | Download invoice PDF
-*InvoicesApi* | [**editInvoice**](docs/InvoicesApi.md#editinvoice) | **GET** /api/v1/invoices/{id}/edit | Edit invoice
-*InvoicesApi* | [**getInvoices**](docs/InvoicesApi.md#getinvoices) | **GET** /api/v1/invoices | List invoices
-*InvoicesApi* | [**getInvoicesCreate**](docs/InvoicesApi.md#getinvoicescreate) | **GET** /api/v1/invoices/create | Blank invoice
-*InvoicesApi* | [**showInvoice**](docs/InvoicesApi.md#showinvoice) | **GET** /api/v1/invoices/{id} | Show invoice
-*InvoicesApi* | [**storeInvoice**](docs/InvoicesApi.md#storeinvoice) | **POST** /api/v1/invoices | Create invoice
-*InvoicesApi* | [**updateInvoice**](docs/InvoicesApi.md#updateinvoice) | **PUT** /api/v1/invoices/{id} | Update invoice
-*InvoicesApi* | [**uploadInvoice**](docs/InvoicesApi.md#uploadinvoice) | **POST** /api/v1/invoices/{id}/upload | Add invoice document
-*LoginApi* | [**postLogin**](docs/LoginApi.md#postlogin) | **POST** /api/v1/login | Attempts authentication
-*LogoutApi* | [**getLogout**](docs/LogoutApi.md#getlogout) | **POST** /api/v1/logout | Gets a list of logout
-*MigrationApi* | [**postPurgeCompany**](docs/MigrationApi.md#postpurgecompany) | **POST** /api/v1/migration/purge/{company} | Attempts to purge a company record and all its child records
-*MigrationApi* | [**postPurgeCompanySaveSettings**](docs/MigrationApi.md#postpurgecompanysavesettings) | **POST** /api/v1/migration/purge_save_settings/{company} | Attempts to purge a companies child records but save the company record and its settings
-*MigrationApi* | [**postStartMigration**](docs/MigrationApi.md#poststartmigration) | **POST** /api/v1/migration/start | Starts the migration from previous version of Invoice Ninja
-*OneTimeTokenApi* | [**oneTimeToken**](docs/OneTimeTokenApi.md#onetimetoken) | **POST** /api/v1/one_time_token | Attempts to create a one time token
-*PaymentTermsApi* | [**bulkPaymentTerms**](docs/PaymentTermsApi.md#bulkpaymentterms) | **POST** /api/v1/payment_terms/bulk | Performs bulk actions on an array of payment terms
-*PaymentTermsApi* | [**editPaymentTerms**](docs/PaymentTermsApi.md#editpaymentterms) | **GET** /api/v1/payment_terms/{id}/edit | Shows an Payment Term for editting
-*PaymentTermsApi* | [**getPaymentTerms**](docs/PaymentTermsApi.md#getpaymentterms) | **GET** /api/v1/payment_terms | Gets a list of payment terms
-*PaymentTermsApi* | [**getPaymentTermsCreate**](docs/PaymentTermsApi.md#getpaymenttermscreate) | **GET** /api/v1/payment_terms/create | Gets a new blank PaymentTerm object
-*PaymentTermsApi* | [**showPaymentTerm**](docs/PaymentTermsApi.md#showpaymentterm) | **GET** /api/v1/payment_terms/{id} | Shows a Payment Term
-*PaymentTermsApi* | [**storePaymentTerm**](docs/PaymentTermsApi.md#storepaymentterm) | **POST** /api/v1/payment_terms | Adds a Payment
-*PaymentTermsApi* | [**updatePaymentTerm**](docs/PaymentTermsApi.md#updatepaymentterm) | **PUT** /api/v1/payment_terms/{id} | Updates a Payment Term
-*PaymentTermssApi* | [**deletePaymentTerm**](docs/PaymentTermssApi.md#deletepaymentterm) | **DELETE** /api/v1/payment_terms/{id} | Deletes a Payment Term
-*PaymentsApi* | [**actionPayment**](docs/PaymentsApi.md#actionpayment) | **GET** /api/v1/payments/{id}/{action} | Custom payment actions
-*PaymentsApi* | [**bulkPayments**](docs/PaymentsApi.md#bulkpayments) | **POST** /api/v1/payments/bulk | Bulk payment actions
-*PaymentsApi* | [**deletePayment**](docs/PaymentsApi.md#deletepayment) | **DELETE** /api/v1/payments/{id} | Delete payment
-*PaymentsApi* | [**editPayment**](docs/PaymentsApi.md#editpayment) | **GET** /api/v1/payments/{id}/edit | Edit payment
-*PaymentsApi* | [**getPayments**](docs/PaymentsApi.md#getpayments) | **GET** /api/v1/payments | List payments
-*PaymentsApi* | [**getPaymentsCreate**](docs/PaymentsApi.md#getpaymentscreate) | **GET** /api/v1/payments/create | Blank payment
-*PaymentsApi* | [**showPayment**](docs/PaymentsApi.md#showpayment) | **GET** /api/v1/payments/{id} | Show payment
-*PaymentsApi* | [**storePayment**](docs/PaymentsApi.md#storepayment) | **POST** /api/v1/payments | Create payment
-*PaymentsApi* | [**storeRefund**](docs/PaymentsApi.md#storerefund) | **POST** /api/v1/payments/refund | Refund payment
-*PaymentsApi* | [**updatePayment**](docs/PaymentsApi.md#updatepayment) | **PUT** /api/v1/payments/{id} | Update payment
-*PaymentsApi* | [**uploadPayment**](docs/PaymentsApi.md#uploadpayment) | **PUT** /api/v1/payments/{id}/upload | Upload a payment document
-*PingApi* | [**getPing**](docs/PingApi.md#getping) | **GET** /api/v1/ping | Attempts to ping the API
-*PostmarkApi* | [**confirmApplePurchase**](docs/PostmarkApi.md#confirmapplepurchase) | **POST** /api/v1/apple/confirm_purchase | Processing webhooks from Apple for in app purchases
-*PostmarkApi* | [**postmarkWebhook**](docs/PostmarkApi.md#postmarkwebhook) | **POST** /api/v1/postmark_webhook | Processing webhooks from PostMark
-*PostmarkApi* | [**processAppleWebhook**](docs/PostmarkApi.md#processapplewebhook) | **POST** /api/v1/apple/process_webhook | Processing event webhooks from Apple for in purchase / subscription status update
-*PreviewApi* | [**getPreview**](docs/PreviewApi.md#getpreview) | **POST** /api/v1/preview | Returns a pdf preview
-*PreviewApi* | [**getPreviewPurchaseOrder**](docs/PreviewApi.md#getpreviewpurchaseorder) | **POST** /api/v1/preview/purchase_order | Returns a pdf preview for purchase order
-*ProductsApi* | [**bulkProducts**](docs/ProductsApi.md#bulkproducts) | **POST** /api/v1/products/bulk | Bulk product actions
-*ProductsApi* | [**deleteProduct**](docs/ProductsApi.md#deleteproduct) | **DELETE** /api/v1/products/{id} | Delete product
-*ProductsApi* | [**editProduct**](docs/ProductsApi.md#editproduct) | **GET** /api/v1/products/{id}/edit | Edit product
-*ProductsApi* | [**getProducts**](docs/ProductsApi.md#getproducts) | **GET** /api/v1/products | List products
-*ProductsApi* | [**getProductsCreate**](docs/ProductsApi.md#getproductscreate) | **GET** /api/v1/products/create | Blank product
-*ProductsApi* | [**showProduct**](docs/ProductsApi.md#showproduct) | **GET** /api/v1/products/{id} | Show product
-*ProductsApi* | [**storeProduct**](docs/ProductsApi.md#storeproduct) | **POST** /api/v1/products | Create Product
-*ProductsApi* | [**updateProduct**](docs/ProductsApi.md#updateproduct) | **PUT** /api/v1/products/{id} | Update product
-*ProductsApi* | [**uploadProduct**](docs/ProductsApi.md#uploadproduct) | **PUT** /api/v1/products/{id}/upload | Add product document
-*ProjectsApi* | [**bulkProjects**](docs/ProjectsApi.md#bulkprojects) | **POST** /api/v1/projects/bulk | Bulk project actions
-*ProjectsApi* | [**deleteProject**](docs/ProjectsApi.md#deleteproject) | **DELETE** /api/v1/projects/{id} | Delete project
-*ProjectsApi* | [**editProject**](docs/ProjectsApi.md#editproject) | **GET** /api/v1/projects/{id}/edit | Edit project
-*ProjectsApi* | [**getProjects**](docs/ProjectsApi.md#getprojects) | **GET** /api/v1/projects | List projects
-*ProjectsApi* | [**getProjectsCreate**](docs/ProjectsApi.md#getprojectscreate) | **GET** /api/v1/projects/create | Blank project
-*ProjectsApi* | [**showProject**](docs/ProjectsApi.md#showproject) | **GET** /api/v1/projects/{id} | Show project
-*ProjectsApi* | [**storeProject**](docs/ProjectsApi.md#storeproject) | **POST** /api/v1/projects | Create project
-*ProjectsApi* | [**updateProject**](docs/ProjectsApi.md#updateproject) | **PUT** /api/v1/projects/{id} | Update project
-*ProjectsApi* | [**uploadProject**](docs/ProjectsApi.md#uploadproject) | **PUT** /api/v1/projects/{id}/upload | Uploads a project document
-*PurchaseOrdersApi* | [**actionPurchaseOrder**](docs/PurchaseOrdersApi.md#actionpurchaseorder) | **GET** /api/v1/purchase_orders/{id}/{action} | Custom purchase order actions
-*PurchaseOrdersApi* | [**bulkPurchaseOrderss**](docs/PurchaseOrdersApi.md#bulkpurchaseorderss) | **POST** /api/v1/purchase_orders/bulk | Bulk purchase order action
-*PurchaseOrdersApi* | [**deletePurchaseOrder**](docs/PurchaseOrdersApi.md#deletepurchaseorder) | **DELETE** /api/v1/purchase_order/{id} | Delete purchase order
-*PurchaseOrdersApi* | [**downloadPurchaseOrder**](docs/PurchaseOrdersApi.md#downloadpurchaseorder) | **GET** /api/v1/purchase_order/{invitation_key}/download | Download a purchase order PDF
-*PurchaseOrdersApi* | [**editPurchaseOrder**](docs/PurchaseOrdersApi.md#editpurchaseorder) | **GET** /api/v1/purchase_orders/{id}/edit | Edit purchase order
-*PurchaseOrdersApi* | [**getPurchaseOrderCreate**](docs/PurchaseOrdersApi.md#getpurchaseordercreate) | **GET** /api/v1/purchase_orders/create | Blank purchase order
-*PurchaseOrdersApi* | [**getPurchaseOrders**](docs/PurchaseOrdersApi.md#getpurchaseorders) | **GET** /api/v1/purchase_orders | List purchase orders
-*PurchaseOrdersApi* | [**showPurchaseOrder**](docs/PurchaseOrdersApi.md#showpurchaseorder) | **GET** /api/v1/purchase_orders/{id} | Show purchase order
-*PurchaseOrdersApi* | [**storePurchaseOrder**](docs/PurchaseOrdersApi.md#storepurchaseorder) | **POST** /api/v1/purchase_orders | Create purchase order
-*PurchaseOrdersApi* | [**updatePurchaseOrder**](docs/PurchaseOrdersApi.md#updatepurchaseorder) | **PUT** /api/v1/purchase_order/{id} | Update purchase order
-*PurchaseOrdersApi* | [**uploadPurchaseOrder**](docs/PurchaseOrdersApi.md#uploadpurchaseorder) | **PUT** /api/v1/purchase_orders/{id}/upload | Uploads a purchase order document
-*QuotesApi* | [**actionQuote**](docs/QuotesApi.md#actionquote) | **GET** /api/v1/quotes/{id}/{action} | Performs a custom action on an Quote
-*QuotesApi* | [**bulkQuotes**](docs/QuotesApi.md#bulkquotes) | **POST** /api/v1/quotes/bulk | Bulk quote actions
-*QuotesApi* | [**deleteQuote**](docs/QuotesApi.md#deletequote) | **DELETE** /api/v1/quotes/{id} | Delete quote
-*QuotesApi* | [**downloadCredit**](docs/QuotesApi.md#downloadcredit) | **GET** /api/v1/credit/{invitation_key}/download | Download quote PDF
-*QuotesApi* | [**downloadQuote**](docs/QuotesApi.md#downloadquote) | **GET** /api/v1/quote/{invitation_key}/download | Download quote PDF
-*QuotesApi* | [**editQuote**](docs/QuotesApi.md#editquote) | **GET** /api/v1/quotes/{id}/edit | Edit quote
-*QuotesApi* | [**getQuotes**](docs/QuotesApi.md#getquotes) | **GET** /api/v1/quotes | List quotes
-*QuotesApi* | [**getQuotesCreate**](docs/QuotesApi.md#getquotescreate) | **GET** /api/v1/quotes/create | Blank quote
-*QuotesApi* | [**showQuote**](docs/QuotesApi.md#showquote) | **GET** /api/v1/quotes/{id} | Show quote
-*QuotesApi* | [**storeQuote**](docs/QuotesApi.md#storequote) | **POST** /api/v1/quotes | Create quote
-*QuotesApi* | [**updateQuote**](docs/QuotesApi.md#updatequote) | **PUT** /api/v1/quotes/{id} | Update quote
-*QuotesApi* | [**uploadQuote**](docs/QuotesApi.md#uploadquote) | **PUT** /api/v1/quotes/{id}/upload | Upload a quote document
-*RecurringExpenseApi* | [**uploadRecurringExpense**](docs/RecurringExpenseApi.md#uploadrecurringexpense) | **PUT** /api/v1/recurring_expenses/{id}/upload | Uploads a document to a recurring_expense
-*RecurringExpensesApi* | [**bulkRecurringExpenses**](docs/RecurringExpensesApi.md#bulkrecurringexpenses) | **POST** /api/v1/recurring_expenses/bulk | Performs bulk actions on an array of recurring_expenses
-*RecurringExpensesApi* | [**deleteRecurringExpense**](docs/RecurringExpensesApi.md#deleterecurringexpense) | **DELETE** /api/v1/recurring_expenses/{id} | Deletes a client
-*RecurringExpensesApi* | [**editRecurringExpense**](docs/RecurringExpensesApi.md#editrecurringexpense) | **GET** /api/v1/recurring_expenses/{id}/edit | Shows a client for editting
-*RecurringExpensesApi* | [**getRecurringExpenses**](docs/RecurringExpensesApi.md#getrecurringexpenses) | **GET** /api/v1/recurring_expenses | Gets a list of recurring_expenses
-*RecurringExpensesApi* | [**getRecurringExpensesCreate**](docs/RecurringExpensesApi.md#getrecurringexpensescreate) | **GET** /api/v1/recurring_expenses/create | Gets a new blank client object
-*RecurringExpensesApi* | [**showRecurringExpense**](docs/RecurringExpensesApi.md#showrecurringexpense) | **GET** /api/v1/recurring_expenses/{id} | Shows a client
-*RecurringExpensesApi* | [**storeRecurringExpense**](docs/RecurringExpensesApi.md#storerecurringexpense) | **POST** /api/v1/recurring_expenses | Adds a client
-*RecurringExpensesApi* | [**updateRecurringExpense**](docs/RecurringExpensesApi.md#updaterecurringexpense) | **PUT** /api/v1/recurring_expenses/{id} | Updates a client
-*RecurringInvoicesApi* | [**actionRecurringInvoice**](docs/RecurringInvoicesApi.md#actionrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id}/{action} | Custom recurring invoice action
-*RecurringInvoicesApi* | [**bulkRecurringInvoices**](docs/RecurringInvoicesApi.md#bulkrecurringinvoices) | **POST** /api/v1/recurring_invoices/bulk | Bulk recurring invoice actions
-*RecurringInvoicesApi* | [**deleteRecurringInvoice**](docs/RecurringInvoicesApi.md#deleterecurringinvoice) | **DELETE** /api/v1/recurring_invoices/{id} | Delete recurring invoice
-*RecurringInvoicesApi* | [**downloadRecurringInvoice**](docs/RecurringInvoicesApi.md#downloadrecurringinvoice) | **GET** /api/v1/recurring_invoice/{invitation_key}/download | Download recurring invoice PDF
-*RecurringInvoicesApi* | [**editRecurringInvoice**](docs/RecurringInvoicesApi.md#editrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id}/edit | Edit recurring invoice
-*RecurringInvoicesApi* | [**getRecurringInvoices**](docs/RecurringInvoicesApi.md#getrecurringinvoices) | **GET** /api/v1/recurring_invoices | List recurring invoices
-*RecurringInvoicesApi* | [**getRecurringInvoicesCreate**](docs/RecurringInvoicesApi.md#getrecurringinvoicescreate) | **GET** /api/v1/recurring_invoices/create | Blank recurring invoice
-*RecurringInvoicesApi* | [**showRecurringInvoice**](docs/RecurringInvoicesApi.md#showrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id} | Show recurring invoice
-*RecurringInvoicesApi* | [**storeRecurringInvoice**](docs/RecurringInvoicesApi.md#storerecurringinvoice) | **POST** /api/v1/recurring_invoices | Create recurring invoice
-*RecurringInvoicesApi* | [**updateRecurringInvoice**](docs/RecurringInvoicesApi.md#updaterecurringinvoice) | **PUT** /api/v1/recurring_invoices/{id} | Update recurring invoice
-*RecurringInvoicesApi* | [**uploadRecurringInvoice**](docs/RecurringInvoicesApi.md#uploadrecurringinvoice) | **PUT** /api/v1/recurring_invoices/{id}/upload | Add recurring invoice document
-*RecurringQuotesApi* | [**actionRecurringQuote**](docs/RecurringQuotesApi.md#actionrecurringquote) | **GET** /api/v1/recurring_quotes/{id}/{action} | Performs a custom action on an RecurringQuote
-*RecurringQuotesApi* | [**bulkRecurringQuotes**](docs/RecurringQuotesApi.md#bulkrecurringquotes) | **POST** /api/v1/recurring_quotes/bulk | Performs bulk actions on an array of recurring_quotes
-*RecurringQuotesApi* | [**deleteRecurringQuote**](docs/RecurringQuotesApi.md#deleterecurringquote) | **DELETE** /api/v1/recurring_quotes/{id} | Deletes a RecurringQuote
-*RecurringQuotesApi* | [**editRecurringQuote**](docs/RecurringQuotesApi.md#editrecurringquote) | **GET** /api/v1/recurring_quotes/{id}/edit | Shows an RecurringQuote for editting
-*RecurringQuotesApi* | [**getRecurringQuotes**](docs/RecurringQuotesApi.md#getrecurringquotes) | **GET** /api/v1/recurring_quotes | Gets a list of recurring_quotes
-*RecurringQuotesApi* | [**getRecurringQuotesCreate**](docs/RecurringQuotesApi.md#getrecurringquotescreate) | **GET** /api/v1/recurring_quotes/create | Gets a new blank RecurringQuote object
-*RecurringQuotesApi* | [**showRecurringQuote**](docs/RecurringQuotesApi.md#showrecurringquote) | **GET** /api/v1/recurring_quotes/{id} | Shows an RecurringQuote
-*RecurringQuotesApi* | [**storeRecurringQuote**](docs/RecurringQuotesApi.md#storerecurringquote) | **POST** /api/v1/recurring_quotes | Adds a RecurringQuote
-*RecurringQuotesApi* | [**updateRecurringQuote**](docs/RecurringQuotesApi.md#updaterecurringquote) | **PUT** /api/v1/recurring_quotes/{id} | Updates an RecurringQuote
-*RefreshApi* | [**apiV1RefreshPost**](docs/RefreshApi.md#apiv1refreshpost) | **POST** /api/v1/refresh | Refresh data by timestamp
-*ReportsApi* | [**getClientReport**](docs/ReportsApi.md#getclientreport) | **POST** /api/v1/reports/clients | Client reports
-*ReportsApi* | [**getContactReport**](docs/ReportsApi.md#getcontactreport) | **POST** /api/v1/reports/contacts | Contact reports
-*ReportsApi* | [**getCreditReport**](docs/ReportsApi.md#getcreditreport) | **POST** /api/v1/reports/credit | Credit reports
-*ReportsApi* | [**getDocumentReport**](docs/ReportsApi.md#getdocumentreport) | **POST** /api/v1/reports/documents | Document reports
-*ReportsApi* | [**getExpenseReport**](docs/ReportsApi.md#getexpensereport) | **POST** /api/v1/reports/expense | Expense reports
-*ReportsApi* | [**getInvoiceItemReport**](docs/ReportsApi.md#getinvoiceitemreport) | **POST** /api/v1/reports/invoice_items | Invoice item reports
-*ReportsApi* | [**getInvoiceReport**](docs/ReportsApi.md#getinvoicereport) | **POST** /api/v1/reports/invoices | Invoice reports
-*ReportsApi* | [**getPaymentReport**](docs/ReportsApi.md#getpaymentreport) | **POST** /api/v1/reports/payments | Payment reports
-*ReportsApi* | [**getProductReport**](docs/ReportsApi.md#getproductreport) | **POST** /api/v1/reports/products | Product reports
-*ReportsApi* | [**getProductSalesReport**](docs/ReportsApi.md#getproductsalesreport) | **POST** /api/v1/reports/product_sales | Product Salesreports
-*ReportsApi* | [**getProfitLossReport**](docs/ReportsApi.md#getprofitlossreport) | **POST** /api/v1/reports/profitloss | Profit loss reports
-*ReportsApi* | [**getQuoteItemReport**](docs/ReportsApi.md#getquoteitemreport) | **POST** /api/v1/reports/quote_items | Quote item reports
-*ReportsApi* | [**getQuoteReport**](docs/ReportsApi.md#getquotereport) | **POST** /api/v1/reports/quotes | Quote reports
-*ReportsApi* | [**getRecurringInvoiceReport**](docs/ReportsApi.md#getrecurringinvoicereport) | **POST** /api/v1/reports/recurring_invoices | Recurring Invoice reports
-*ReportsApi* | [**getTaskReport**](docs/ReportsApi.md#gettaskreport) | **POST** /api/v1/reports/tasks | Task reports
-*StaticsApi* | [**getStatics**](docs/StaticsApi.md#getstatics) | **GET** /api/v1/statics | Gets a list of statics
-*SubscriptionsApi* | [**bulkSubscriptions**](docs/SubscriptionsApi.md#bulksubscriptions) | **POST** /api/v1/subscriptions/bulk | Performs bulk actions on an array of subscriptions
-*SubscriptionsApi* | [**deleteSubscription**](docs/SubscriptionsApi.md#deletesubscription) | **DELETE** /api/v1/subscriptions/{id} | Deletes a subscriptions
-*SubscriptionsApi* | [**editSubscription**](docs/SubscriptionsApi.md#editsubscription) | **GET** /api/v1/subscriptions/{id}/edit | Shows an subscriptions for editting
-*SubscriptionsApi* | [**getSubscriptions**](docs/SubscriptionsApi.md#getsubscriptions) | **GET** /api/v1/subscriptions | Gets a list of subscriptions
-*SubscriptionsApi* | [**getSubscriptionsCreate**](docs/SubscriptionsApi.md#getsubscriptionscreate) | **GET** /api/v1/subscriptions/create | Gets a new blank subscriptions object
-*SubscriptionsApi* | [**showSubscription**](docs/SubscriptionsApi.md#showsubscription) | **GET** /api/v1/subscriptions/{id} | Shows an subscriptions
-*SubscriptionsApi* | [**storeSubscription**](docs/SubscriptionsApi.md#storesubscription) | **POST** /api/v1/subscriptions | Adds a subscriptions
-*SubscriptionsApi* | [**updateSubscription**](docs/SubscriptionsApi.md#updatesubscription) | **PUT** /api/v1/subscriptions/{id} | Updates an subscriptions
-*SupportApi* | [**supportMessage**](docs/SupportApi.md#supportmessage) | **POST** /api/v1/support/messages/send | Sends a support message to Invoice Ninja team
-*SystemLogsApi* | [**getSystemLogs**](docs/SystemLogsApi.md#getsystemlogs) | **GET** /api/v1/system_logs | Gets a list of system logs
-*SystemLogsApi* | [**showSystemLogs**](docs/SystemLogsApi.md#showsystemlogs) | **GET** /api/v1/system_logs/{id} | Shows a system_logs
-*TaskSchedulersApi* | [**bulkTaskSchedulerActions**](docs/TaskSchedulersApi.md#bulktaskscheduleractions) | **POST** /api/v1/task_schedulers/bulk | Performs bulk actions on an array of task_schedulers
-*TaskSchedulersApi* | [**createTaskScheduler**](docs/TaskSchedulersApi.md#createtaskscheduler) | **POST** /api/v1/task_schedulers/ | Create task scheduler with job 
-*TaskSchedulersApi* | [**destroyTaskScheduler**](docs/TaskSchedulersApi.md#destroytaskscheduler) | **DELETE** /api/v1/task_schedulers/{id} | Destroy Task Scheduler
-*TaskSchedulersApi* | [**getTaskScheduler**](docs/TaskSchedulersApi.md#gettaskscheduler) | **GET** /api/v1/task_schedulers/create | Gets a new blank scheduler object
-*TaskSchedulersApi* | [**getTaskSchedulers**](docs/TaskSchedulersApi.md#gettaskschedulers) | **GET** /api/v1/task_schedulers/ | Task Scheduler Index
-*TaskSchedulersApi* | [**showTaskScheduler**](docs/TaskSchedulersApi.md#showtaskscheduler) | **GET** /api/v1/task_schedulers/{id} | Show given scheduler
-*TaskSchedulersApi* | [**updateTaskScheduler**](docs/TaskSchedulersApi.md#updatetaskscheduler) | **PUT** /api/v1/task_schedulers/{id} | Update task scheduler 
-*TaskStatusApi* | [**bulkTaskStatuss**](docs/TaskStatusApi.md#bulktaskstatuss) | **POST** /api/v1/task_statuses/bulk | Performs bulk actions on an array of task statuses
-*TaskStatusApi* | [**editTaskStatuss**](docs/TaskStatusApi.md#edittaskstatuss) | **GET** /api/v1/task_statuses/{id}/edit | Shows an TaskStatusfor editting
-*TaskStatusApi* | [**getTaskStatuses**](docs/TaskStatusApi.md#gettaskstatuses) | **GET** /api/v1/task_statuses | Gets a list of task statuses
-*TaskStatusApi* | [**getTaskStatussCreate**](docs/TaskStatusApi.md#gettaskstatusscreate) | **GET** /api/v1/task_statuses/create | Gets a new blank TaskStatus object
-*TaskStatusApi* | [**showTaskStatus**](docs/TaskStatusApi.md#showtaskstatus) | **GET** /api/v1/task_statuses/{id} | Shows a TaskStatus Term
-*TaskStatusApi* | [**storeTaskStatus**](docs/TaskStatusApi.md#storetaskstatus) | **POST** /api/v1/task_statuses | Adds a TaskStatus
-*TaskStatusApi* | [**updateTaskStatus**](docs/TaskStatusApi.md#updatetaskstatus) | **PUT** /api/v1/task_statuses/{id} | Updates a TaskStatus Term
-*TaskStatussApi* | [**deleteTaskStatus**](docs/TaskStatussApi.md#deletetaskstatus) | **DELETE** /api/v1/task_statuses/{id} | Deletes a TaskStatus Term
-*TasksApi* | [**bulkTasks**](docs/TasksApi.md#bulktasks) | **POST** /api/v1/tasks/bulk | Bulk task actions
-*TasksApi* | [**deleteTask**](docs/TasksApi.md#deletetask) | **DELETE** /api/v1/tasks/{id} | Delete task
-*TasksApi* | [**editTask**](docs/TasksApi.md#edittask) | **GET** /api/v1/tasks/{id}/edit | Edit task
-*TasksApi* | [**getTasks**](docs/TasksApi.md#gettasks) | **GET** /api/v1/tasks | List tasks
-*TasksApi* | [**getTasksCreate**](docs/TasksApi.md#gettaskscreate) | **GET** /api/v1/tasks/create | Blank task
-*TasksApi* | [**showTask**](docs/TasksApi.md#showtask) | **GET** /api/v1/tasks/{id} | Show task
-*TasksApi* | [**sortTasks**](docs/TasksApi.md#sorttasks) | **POST** /api/v1/tasks/sort | Sort tasks on KanBan
-*TasksApi* | [**storeTask**](docs/TasksApi.md#storetask) | **POST** /api/v1/tasks | Create task
-*TasksApi* | [**updateTask**](docs/TasksApi.md#updatetask) | **PUT** /api/v1/tasks/{id} | Update task
-*TasksApi* | [**uploadTask**](docs/TasksApi.md#uploadtask) | **PUT** /api/v1/tasks/{id}/upload | Uploads a task document
-*TaxRatesApi* | [**bulkTaxRates**](docs/TaxRatesApi.md#bulktaxrates) | **POST** /api/v1/tax_rates/bulk | Performs bulk actions on an array of TaxRates
-*TaxRatesApi* | [**deleteTaxRate**](docs/TaxRatesApi.md#deletetaxrate) | **DELETE** /api/v1/tax_rates/{id} | Deletes a TaxRate
-*TaxRatesApi* | [**editTaxRate**](docs/TaxRatesApi.md#edittaxrate) | **GET** /api/v1/tax_rates/{id}/edit | Shows a Tax Rate for editting
-*TaxRatesApi* | [**getTaxRateCreate**](docs/TaxRatesApi.md#gettaxratecreate) | **GET** /api/v1/tax_rates/create | Gets a new blank Tax Rate object
-*TaxRatesApi* | [**getTaxRates**](docs/TaxRatesApi.md#gettaxrates) | **GET** /api/v1/tax_rates | Gets a list of tax_rates
-*TaxRatesApi* | [**showTaxRate**](docs/TaxRatesApi.md#showtaxrate) | **GET** /api/v1/tax_rates/{id} | Shows a Tax Rate
-*TaxRatesApi* | [**updateTaxRate**](docs/TaxRatesApi.md#updatetaxrate) | **PUT** /api/v1/tax_rates/{id} | Updates a tax rate
-*TemplatesApi* | [**getShowTemplate**](docs/TemplatesApi.md#getshowtemplate) | **POST** /api/v1/templates | Returns a entity template with the template variables replaced with the Entities
-*TokensApi* | [**bulkTokens**](docs/TokensApi.md#bulktokens) | **POST** /api/v1/tokens/bulk | Performs bulk actions on an array of tokens
-*TokensApi* | [**deleteToken**](docs/TokensApi.md#deletetoken) | **DELETE** /api/v1/tokens/{id} | Deletes a token
-*TokensApi* | [**editToken**](docs/TokensApi.md#edittoken) | **GET** /api/v1/tokens/{id}/edit | Shows a token for editting
-*TokensApi* | [**getTokens**](docs/TokensApi.md#gettokens) | **GET** /api/v1/tokens | Gets a list of company tokens
-*TokensApi* | [**getTokensCreate**](docs/TokensApi.md#gettokenscreate) | **GET** /api/v1/tokens/create | Gets a new blank token object
-*TokensApi* | [**showToken**](docs/TokensApi.md#showtoken) | **GET** /api/v1/tokens/{id} | Shows a token
-*TokensApi* | [**storeToken**](docs/TokensApi.md#storetoken) | **POST** /api/v1/tokens | Adds a token
-*TokensApi* | [**updateToken**](docs/TokensApi.md#updatetoken) | **PUT** /api/v1/tokens/{id} | Updates a token
-*UpdateApi* | [**selfUpdate**](docs/UpdateApi.md#selfupdate) | **POST** /api/v1/self-update | Performs a system update
-*UsersApi* | [**bulkUsers**](docs/UsersApi.md#bulkusers) | **POST** /api/v1/users/bulk | Performs bulk actions on an array of users
-*UsersApi* | [**deleteUser**](docs/UsersApi.md#deleteuser) | **DELETE** /api/v1/users/{id} | Deletes a User
-*UsersApi* | [**detachUser**](docs/UsersApi.md#detachuser) | **DELETE** /api/v1/users/{user}/detach_from_company | Detach an existing user to a company
-*UsersApi* | [**editUser**](docs/UsersApi.md#edituser) | **GET** /api/v1/users/{id}/edit | Shows an User for editting
-*UsersApi* | [**getUsers**](docs/UsersApi.md#getusers) | **GET** /api/v1/users | Gets a list of users
-*UsersApi* | [**getUsersCreate**](docs/UsersApi.md#getuserscreate) | **GET** /api/v1/users/create | Gets a new blank User object
-*UsersApi* | [**inviteUser**](docs/UsersApi.md#inviteuser) | **POST** /api/v1/users/{user}/invite | Reconfirm an existing user to a company
-*UsersApi* | [**inviteUserReconfirm**](docs/UsersApi.md#inviteuserreconfirm) | **POST** /api/v1/users/{user}/reconfirm | Reconfirm an existing user to a company
-*UsersApi* | [**showUser**](docs/UsersApi.md#showuser) | **GET** /api/v1/users/{id} | Shows an User
-*UsersApi* | [**storeUser**](docs/UsersApi.md#storeuser) | **POST** /api/v1/users | Adds a User
-*UsersApi* | [**updateUser**](docs/UsersApi.md#updateuser) | **PUT** /api/v1/users/{id} | Updates an User
-*VendorsApi* | [**bulkVendors**](docs/VendorsApi.md#bulkvendors) | **POST** /api/v1/vendors/bulk | Bulk vendor actions
-*VendorsApi* | [**deleteVendor**](docs/VendorsApi.md#deletevendor) | **DELETE** /api/v1/vendors/{id} | Delete vendor
-*VendorsApi* | [**editVendor**](docs/VendorsApi.md#editvendor) | **GET** /api/v1/vendors/{id}/edit | Edit vendor
-*VendorsApi* | [**getVendors**](docs/VendorsApi.md#getvendors) | **GET** /api/v1/vendors | List vendors
-*VendorsApi* | [**getVendorsCreate**](docs/VendorsApi.md#getvendorscreate) | **GET** /api/v1/vendors/create | Blank vendor
-*VendorsApi* | [**showVendor**](docs/VendorsApi.md#showvendor) | **GET** /api/v1/vendors/{id} | Show vendor
-*VendorsApi* | [**storeVendor**](docs/VendorsApi.md#storevendor) | **POST** /api/v1/vendors | Create vendor
-*VendorsApi* | [**updateVendor**](docs/VendorsApi.md#updatevendor) | **PUT** /api/v1/vendors/{id} | Update vendor
-*VendorsApi* | [**uploadVendor**](docs/VendorsApi.md#uploadvendor) | **PUT** /api/v1/vendors/{id}/upload | Uploads a vendor document
-*WebcronApi* | [**webcron**](docs/WebcronApi.md#webcron) | **GET** /api/v1/webcron | Executes the task scheduler via a webcron service
-*WebhooksApi* | [**bulkWebhooks**](docs/WebhooksApi.md#bulkwebhooks) | **POST** /api/v1/webhooks/bulk | Performs bulk actions on an array of Webhooks
-*WebhooksApi* | [**deleteWebhook**](docs/WebhooksApi.md#deletewebhook) | **DELETE** /api/v1/webhooks/{id} | Deletes a Webhook
-*WebhooksApi* | [**editWebhook**](docs/WebhooksApi.md#editwebhook) | **GET** /api/v1/webhooks/{id}/edit | Shows a Webhook for editting
-*WebhooksApi* | [**getWebhooks**](docs/WebhooksApi.md#getwebhooks) | **GET** /api/v1/webhooks | Gets a list of Webhooks
-*WebhooksApi* | [**getWebhooksCreate**](docs/WebhooksApi.md#getwebhookscreate) | **GET** /api/v1/webhooks/create | Gets a new blank Webhook object
-*WebhooksApi* | [**showWebhook**](docs/WebhooksApi.md#showwebhook) | **GET** /api/v1/webhooks/{id} | Shows a Webhook
-*WebhooksApi* | [**storeWebhook**](docs/WebhooksApi.md#storewebhook) | **POST** /api/v1/webhooks | Adds a Webhook
-*WebhooksApi* | [**updateWebhook**](docs/WebhooksApi.md#updatewebhook) | **PUT** /api/v1/webhooks/{id} | Updates a Webhook
-*YodleeApi* | [**yodleeRefreshWebhook**](docs/YodleeApi.md#yodleerefreshwebhook) | **POST** /api/v1/yodlee/refresh | Yodlee Webhook
+*ActvitiesApiAdapter* | [**getActivities**](docs/ActvitiesApiAdapter.md#getactivities) | **GET** /api/v1/activities | Returns a list of actvities
+*ActvitiesApiAdapter* | [**getActivityHistoricalEntityPdf**](docs/ActvitiesApiAdapter.md#getactivityhistoricalentitypdf) | **GET** /api/v1/actvities/download_entity/{activity_id} | Returns a PDF for the given activity
+*BankIntegrationsApiAdapter* | [**bulkBankIntegrations**](docs/BankIntegrationsApiAdapter.md#bulkbankintegrations) | **POST** /api/v1/bank_integrations/bulk | Performs bulk actions on an array of bank_integrations
+*BankIntegrationsApiAdapter* | [**deleteBankIntegration**](docs/BankIntegrationsApiAdapter.md#deletebankintegration) | **DELETE** /api/v1/bank_integrations/{id} | Deletes a bank_integration
+*BankIntegrationsApiAdapter* | [**editBankIntegration**](docs/BankIntegrationsApiAdapter.md#editbankintegration) | **GET** /api/v1/bank_integrations/{id}/edit | Shows a bank_integration for editing
+*BankIntegrationsApiAdapter* | [**getAccountTransactions**](docs/BankIntegrationsApiAdapter.md#getaccounttransactions) | **POST** /api/v1/bank_integrations/get_transactions/account_id | Retrieve transactions for a account
+*BankIntegrationsApiAdapter* | [**getBankIntegrations**](docs/BankIntegrationsApiAdapter.md#getbankintegrations) | **GET** /api/v1/bank_integrations | Returns a list of Bank Integrations
+*BankIntegrationsApiAdapter* | [**getBankIntegrationsCreate**](docs/BankIntegrationsApiAdapter.md#getbankintegrationscreate) | **GET** /api/v1/bank_integrations/create | Gets a new blank bank_integration object
+*BankIntegrationsApiAdapter* | [**getRefreshAccounts**](docs/BankIntegrationsApiAdapter.md#getrefreshaccounts) | **POST** /api/v1/bank_integrations/refresh_accounts | Gets the list of accounts from the remote server
+*BankIntegrationsApiAdapter* | [**getRemoveAccount**](docs/BankIntegrationsApiAdapter.md#getremoveaccount) | **POST** /api/v1/bank_integrations/remove_account/account_id | Removes an account from the integration
+*BankIntegrationsApiAdapter* | [**showBankIntegration**](docs/BankIntegrationsApiAdapter.md#showbankintegration) | **GET** /api/v1/bank_integrations/{id} | Shows a bank_integration
+*BankIntegrationsApiAdapter* | [**storeBankIntegration**](docs/BankIntegrationsApiAdapter.md#storebankintegration) | **POST** /api/v1/bank_integrations | Adds a bank_integration
+*BankIntegrationsApiAdapter* | [**updateBankIntegration**](docs/BankIntegrationsApiAdapter.md#updatebankintegration) | **PUT** /api/v1/bank_integrations/{id} | Updates a bank_integration
+*BankTransactionRulesApiAdapter* | [**bulkBankTransactionRules**](docs/BankTransactionRulesApiAdapter.md#bulkbanktransactionrules) | **POST** /api/v1/bank_transation_rules/bulk | Performs bulk actions on an array of bank_transation rules
+*BankTransactionRulesApiAdapter* | [**deleteBankTransactionRule**](docs/BankTransactionRulesApiAdapter.md#deletebanktransactionrule) | **DELETE** /api/v1/bank_transaction_rules/{id} | Deletes a bank_transaction rule
+*BankTransactionRulesApiAdapter* | [**editBankTransactionRule**](docs/BankTransactionRulesApiAdapter.md#editbanktransactionrule) | **GET** /api/v1/bank_transaction_rules/{id}/edit | Shows a bank_transaction for editing
+*BankTransactionRulesApiAdapter* | [**getBankTransactionRules**](docs/BankTransactionRulesApiAdapter.md#getbanktransactionrules) | **GET** /api/v1/bank_transaction_rules | Gets a list of bank_transaction_rules
+*BankTransactionRulesApiAdapter* | [**getBankTransactionRulesCreate**](docs/BankTransactionRulesApiAdapter.md#getbanktransactionrulescreate) | **GET** /api/v1/bank_transaction_rules/create | Gets a new blank bank_transaction rule object
+*BankTransactionRulesApiAdapter* | [**showBankTransactionRule**](docs/BankTransactionRulesApiAdapter.md#showbanktransactionrule) | **GET** /api/v1/bank_transaction_rules/{id} | Shows a bank_transaction
+*BankTransactionRulesApiAdapter* | [**storeBankTransactionRule**](docs/BankTransactionRulesApiAdapter.md#storebanktransactionrule) | **POST** /api/v1/bank_transaction_rules | Adds a bank_transaction rule
+*BankTransactionRulesApiAdapter* | [**updateBankTransactionRule**](docs/BankTransactionRulesApiAdapter.md#updatebanktransactionrule) | **PUT** /api/v1/bank_transaction_rules/{id} | Updates a bank_transaction Rule
+*BankTransactionsApiAdapter* | [**bulkBankTransactions**](docs/BankTransactionsApiAdapter.md#bulkbanktransactions) | **POST** /api/v1/bank_transations/bulk | Performs bulk actions on an array of bank_transations
+*BankTransactionsApiAdapter* | [**deleteBankTransaction**](docs/BankTransactionsApiAdapter.md#deletebanktransaction) | **DELETE** /api/v1/bank_transactions/{id} | Deletes a bank_transaction
+*BankTransactionsApiAdapter* | [**editBankTransaction**](docs/BankTransactionsApiAdapter.md#editbanktransaction) | **GET** /api/v1/bank_transactions/{id}/edit | Shows a bank_transaction for editing
+*BankTransactionsApiAdapter* | [**getBankTransactions**](docs/BankTransactionsApiAdapter.md#getbanktransactions) | **GET** /api/v1/bank_transactions | Gets a list of bank_transactions
+*BankTransactionsApiAdapter* | [**getBankTransactionsCreate**](docs/BankTransactionsApiAdapter.md#getbanktransactionscreate) | **GET** /api/v1/bank_transactions/create | Gets a new blank bank_transaction object
+*BankTransactionsApiAdapter* | [**matchBankTransactions**](docs/BankTransactionsApiAdapter.md#matchbanktransactions) | **POST** /api/v1/bank_transations/match | Performs match actions on an array of bank_transactions
+*BankTransactionsApiAdapter* | [**showBankTransaction**](docs/BankTransactionsApiAdapter.md#showbanktransaction) | **GET** /api/v1/bank_transactions/{id} | Shows a bank_transaction
+*BankTransactionsApiAdapter* | [**storeBankTransaction**](docs/BankTransactionsApiAdapter.md#storebanktransaction) | **POST** /api/v1/bank_transactions | Adds a bank_transaction
+*BankTransactionsApiAdapter* | [**updateBankTransaction**](docs/BankTransactionsApiAdapter.md#updatebanktransaction) | **PUT** /api/v1/bank_transactions/{id} | Updates a bank_transaction
+*ChartsApiAdapter* | [**getChartTotals**](docs/ChartsApiAdapter.md#getcharttotals) | **POST** /api/v1/charts/totals | Get chart data
+*ClaimLicenseApiAdapter* | [**getClaimLicense**](docs/ClaimLicenseApiAdapter.md#getclaimlicense) | **GET** /api/v1/claim_license | Attempts to claim a white label license
+*ClientGatewayTokensApiAdapter* | [**deleteClientGatewayToken**](docs/ClientGatewayTokensApiAdapter.md#deleteclientgatewaytoken) | **DELETE** /api/v1/client_gateway_tokens/{id} | Deletes a client
+*ClientGatewayTokensApiAdapter* | [**editClientGatewayToken**](docs/ClientGatewayTokensApiAdapter.md#editclientgatewaytoken) | **GET** /api/v1/client_gateway_tokens/{id}/edit | Shows a client for editting
+*ClientGatewayTokensApiAdapter* | [**getClientGatewayTokens**](docs/ClientGatewayTokensApiAdapter.md#getclientgatewaytokens) | **GET** /api/v1/client_gateway_tokens | List of client tokens
+*ClientGatewayTokensApiAdapter* | [**getClientGatewayTokensCreate**](docs/ClientGatewayTokensApiAdapter.md#getclientgatewaytokenscreate) | **GET** /api/v1/client_gateway_tokens/create | Gets a new blank client object
+*ClientGatewayTokensApiAdapter* | [**showClientGatewayToken**](docs/ClientGatewayTokensApiAdapter.md#showclientgatewaytoken) | **GET** /api/v1/client_gateway_tokens/{id} | Shows a client
+*ClientGatewayTokensApiAdapter* | [**storeClientGatewayToken**](docs/ClientGatewayTokensApiAdapter.md#storeclientgatewaytoken) | **POST** /api/v1/client_gateway_tokens | Adds a client
+*ClientGatewayTokensApiAdapter* | [**updateClientGatewayToken**](docs/ClientGatewayTokensApiAdapter.md#updateclientgatewaytoken) | **PUT** /api/v1/client_gateway_tokens/{id} | Updates a client
+*ClientsApiAdapter* | [**bulkClients**](docs/ClientsApiAdapter.md#bulkclients) | **POST** /api/v1/clients/bulk | Bulk client actions
+*ClientsApiAdapter* | [**clientStatement**](docs/ClientsApiAdapter.md#clientstatement) | **POST** /api/v1/client_statement | Client statement PDF
+*ClientsApiAdapter* | [**deleteClient**](docs/ClientsApiAdapter.md#deleteclient) | **DELETE** /api/v1/clients/{id} | Delete client
+*ClientsApiAdapter* | [**editClient**](docs/ClientsApiAdapter.md#editclient) | **GET** /api/v1/clients/{id}/edit | Edit Client
+*ClientsApiAdapter* | [**getClients**](docs/ClientsApiAdapter.md#getclients) | **GET** /api/v1/clients | List clients
+*ClientsApiAdapter* | [**getClientsCreate**](docs/ClientsApiAdapter.md#getclientscreate) | **GET** /api/v1/clients/create | Blank Client
+*ClientsApiAdapter* | [**mergeClient**](docs/ClientsApiAdapter.md#mergeclient) | **POST** /api/v1/clients/{id}/{mergeable_client_hashed_id}/merge | Merge client
+*ClientsApiAdapter* | [**purgeClient**](docs/ClientsApiAdapter.md#purgeclient) | **POST** /api/v1/clients/{id}/purge | Purge client
+*ClientsApiAdapter* | [**showClient**](docs/ClientsApiAdapter.md#showclient) | **GET** /api/v1/clients/{id} | Show client
+*ClientsApiAdapter* | [**storeClient**](docs/ClientsApiAdapter.md#storeclient) | **POST** /api/v1/clients | Create client
+*ClientsApiAdapter* | [**updateClient**](docs/ClientsApiAdapter.md#updateclient) | **PUT** /api/v1/clients/{id} | Update client
+*ClientsApiAdapter* | [**uploadClient**](docs/ClientsApiAdapter.md#uploadclient) | **PUT** /api/v1/clients/{id}/upload | Add client document
+*CompaniesApiAdapter* | [**deleteCompany**](docs/CompaniesApiAdapter.md#deletecompany) | **DELETE** /api/v1/companies/{id} | Deletes a company
+*CompaniesApiAdapter* | [**editCompany**](docs/CompaniesApiAdapter.md#editcompany) | **GET** /api/v1/companies/{id}/edit | Shows an company for editting
+*CompaniesApiAdapter* | [**getCompanies**](docs/CompaniesApiAdapter.md#getcompanies) | **GET** /api/v1/companies | Gets a list of companies
+*CompaniesApiAdapter* | [**getCompaniesCreate**](docs/CompaniesApiAdapter.md#getcompaniescreate) | **GET** /api/v1/companies/create | Gets a new blank company object
+*CompaniesApiAdapter* | [**setDefaultCompany**](docs/CompaniesApiAdapter.md#setdefaultcompany) | **POST** /api/v1/companies/{company}/default | Sets the company as the default company.
+*CompaniesApiAdapter* | [**showCompany**](docs/CompaniesApiAdapter.md#showcompany) | **GET** /api/v1/companies/{id} | Shows an company
+*CompaniesApiAdapter* | [**storeCompany**](docs/CompaniesApiAdapter.md#storecompany) | **POST** /api/v1/companies | Adds a company
+*CompaniesApiAdapter* | [**updateCompany**](docs/CompaniesApiAdapter.md#updatecompany) | **PUT** /api/v1/companies/{id} | Updates an company
+*CompaniesApiAdapter* | [**uploadCompanies**](docs/CompaniesApiAdapter.md#uploadcompanies) | **PUT** /api/v1/companies/{id}/upload | Uploads a document to a company
+*CompanyGatewaysApiAdapter* | [**bulkCompanyGateways**](docs/CompanyGatewaysApiAdapter.md#bulkcompanygateways) | **POST** /api/v1/company_gateways/bulk | Performs bulk actions on an array of company_gateways
+*CompanyGatewaysApiAdapter* | [**deleteCompanyGateway**](docs/CompanyGatewaysApiAdapter.md#deletecompanygateway) | **DELETE** /api/v1/company_gateways/{id} | Deletes a CompanyGateway
+*CompanyGatewaysApiAdapter* | [**editCompanyGateway**](docs/CompanyGatewaysApiAdapter.md#editcompanygateway) | **GET** /api/v1/company_gateways/{id}/edit | Shows an CompanyGateway for editting
+*CompanyGatewaysApiAdapter* | [**getCompanyGateways**](docs/CompanyGatewaysApiAdapter.md#getcompanygateways) | **GET** /api/v1/company_gateways | Gets a list of company_gateways
+*CompanyGatewaysApiAdapter* | [**getCompanyGatewaysCreate**](docs/CompanyGatewaysApiAdapter.md#getcompanygatewayscreate) | **GET** /api/v1/company_gateways/create | Gets a new blank CompanyGateway object
+*CompanyGatewaysApiAdapter* | [**showCompanyGateway**](docs/CompanyGatewaysApiAdapter.md#showcompanygateway) | **GET** /api/v1/company_gateways/{id} | Shows an CompanyGateway
+*CompanyGatewaysApiAdapter* | [**storeCompanyGateway**](docs/CompanyGatewaysApiAdapter.md#storecompanygateway) | **POST** /api/v1/company_gateways | Adds a CompanyGateway
+*CompanyGatewaysApiAdapter* | [**updateCompanyGateway**](docs/CompanyGatewaysApiAdapter.md#updatecompanygateway) | **PUT** /api/v1/company_gateways/{id} | Updates an CompanyGateway
+*CompanyLedgerApiAdapter* | [**getCompanyLedger**](docs/CompanyLedgerApiAdapter.md#getcompanyledger) | **GET** /api/v1/company_ledger | Gets a list of company_ledger
+*CompanyUserApiAdapter* | [**updateCompanyUser**](docs/CompanyUserApiAdapter.md#updatecompanyuser) | **POST** /api/v1/company_users | Update a company user record
+*ConnectedAccountApiAdapter* | [**connectedAccount**](docs/ConnectedAccountApiAdapter.md#connectedaccount) | **POST** /api/v1/connected_account | Connect an oauth user to an existing user
+*CreditsApiAdapter* | [**bulkCredits**](docs/CreditsApiAdapter.md#bulkcredits) | **POST** /api/v1/credits/bulk | Bulk credit actions
+*CreditsApiAdapter* | [**deleteCredit**](docs/CreditsApiAdapter.md#deletecredit) | **DELETE** /api/v1/credits/{id} | Delete credit
+*CreditsApiAdapter* | [**editCredit**](docs/CreditsApiAdapter.md#editcredit) | **GET** /api/v1/credits/{id}/edit | Edit credit
+*CreditsApiAdapter* | [**getCredits**](docs/CreditsApiAdapter.md#getcredits) | **GET** /api/v1/credits | List credits
+*CreditsApiAdapter* | [**getCreditsCreate**](docs/CreditsApiAdapter.md#getcreditscreate) | **GET** /api/v1/credits/create | Blank credit
+*CreditsApiAdapter* | [**showCredit**](docs/CreditsApiAdapter.md#showcredit) | **GET** /api/v1/credits/{id} | Show credit
+*CreditsApiAdapter* | [**storeCredit**](docs/CreditsApiAdapter.md#storecredit) | **POST** /api/v1/credits | Create credit
+*CreditsApiAdapter* | [**updateCredit**](docs/CreditsApiAdapter.md#updatecredit) | **PUT** /api/v1/credits/{id} | Update credit
+*CreditsApiAdapter* | [**uploadCredits**](docs/CreditsApiAdapter.md#uploadcredits) | **PUT** /api/v1/credits/{id}/upload | Upload a credit document
+*DesignsApiAdapter* | [**bulkDesigns**](docs/DesignsApiAdapter.md#bulkdesigns) | **POST** /api/v1/designs/bulk | Performs bulk actions on an array of designs
+*DesignsApiAdapter* | [**deleteDesign**](docs/DesignsApiAdapter.md#deletedesign) | **DELETE** /api/v1/designs/{id} | Deletes a design
+*DesignsApiAdapter* | [**editDesign**](docs/DesignsApiAdapter.md#editdesign) | **GET** /api/v1/designs/{id}/edit | Shows a design for editting
+*DesignsApiAdapter* | [**getDesigns**](docs/DesignsApiAdapter.md#getdesigns) | **GET** /api/v1/designs | Gets a list of designs
+*DesignsApiAdapter* | [**getDesignsCreate**](docs/DesignsApiAdapter.md#getdesignscreate) | **GET** /api/v1/designs/create | Gets a new blank design object
+*DesignsApiAdapter* | [**showDesign**](docs/DesignsApiAdapter.md#showdesign) | **GET** /api/v1/designs/{id} | Shows a design
+*DesignsApiAdapter* | [**storeDesign**](docs/DesignsApiAdapter.md#storedesign) | **POST** /api/v1/designs | Adds a design
+*DesignsApiAdapter* | [**updateDesign**](docs/DesignsApiAdapter.md#updatedesign) | **PUT** /api/v1/designs/{id} | Updates a design
+*DocumentsApiAdapter* | [**getDocuments**](docs/DocumentsApiAdapter.md#getdocuments) | **GET** /api/v1/documents | Gets a list of documents
+*EmailsApiAdapter* | [**sendEmailTemplate**](docs/EmailsApiAdapter.md#sendemailtemplate) | **POST** /api/v1/emails | Sends an email for an entity
+*ExpenseApiAdapter* | [**uploadExpense**](docs/ExpenseApiAdapter.md#uploadexpense) | **PUT** /api/v1/expenses/{id}/upload | Uploads a document to a expense
+*ExpenseCategoriesApiAdapter* | [**bulkExpenseCategorys**](docs/ExpenseCategoriesApiAdapter.md#bulkexpensecategorys) | **POST** /api/v1/expense_categories/bulk | Performs bulk actions on an array of ExpenseCategorys
+*ExpenseCategoriesApiAdapter* | [**deleteExpenseCategory**](docs/ExpenseCategoriesApiAdapter.md#deleteexpensecategory) | **DELETE** /api/v1/expense_categories/{id} | Deletes a ExpenseCategory
+*ExpenseCategoriesApiAdapter* | [**editExpenseCategory**](docs/ExpenseCategoriesApiAdapter.md#editexpensecategory) | **GET** /api/v1/expense_categories/{id}/edit | Shows a Expens Category for editting
+*ExpenseCategoriesApiAdapter* | [**getExpenseCategoryCreate**](docs/ExpenseCategoriesApiAdapter.md#getexpensecategorycreate) | **GET** /api/v1/expense_categories/create | Gets a new blank Expens Category object
+*ExpenseCategoriesApiAdapter* | [**getExpenseCategorys**](docs/ExpenseCategoriesApiAdapter.md#getexpensecategorys) | **GET** /api/v1/expense_categories | Gets a list of expense_categories
+*ExpenseCategoriesApiAdapter* | [**showExpenseCategory**](docs/ExpenseCategoriesApiAdapter.md#showexpensecategory) | **GET** /api/v1/expense_categories/{id} | Shows a Expens Category
+*ExpenseCategoriesApiAdapter* | [**storeExpenseCategory**](docs/ExpenseCategoriesApiAdapter.md#storeexpensecategory) | **POST** /api/v1/expense_categories | Adds a expense category
+*ExpenseCategoriesApiAdapter* | [**updateExpenseCategory**](docs/ExpenseCategoriesApiAdapter.md#updateexpensecategory) | **PUT** /api/v1/expense_categories/{id} | Updates a tax rate
+*ExpensesApiAdapter* | [**bulkExpenses**](docs/ExpensesApiAdapter.md#bulkexpenses) | **POST** /api/v1/expenses/bulk | Performs bulk actions on an array of expenses
+*ExpensesApiAdapter* | [**deleteExpense**](docs/ExpensesApiAdapter.md#deleteexpense) | **DELETE** /api/v1/expenses/{id} | Deletes a client
+*ExpensesApiAdapter* | [**editExpense**](docs/ExpensesApiAdapter.md#editexpense) | **GET** /api/v1/expenses/{id}/edit | Shows a client for editting
+*ExpensesApiAdapter* | [**getExpenses**](docs/ExpensesApiAdapter.md#getexpenses) | **GET** /api/v1/expenses | Gets a list of expenses
+*ExpensesApiAdapter* | [**getExpensesCreate**](docs/ExpensesApiAdapter.md#getexpensescreate) | **GET** /api/v1/expenses/create | Gets a new blank client object
+*ExpensesApiAdapter* | [**showExpense**](docs/ExpensesApiAdapter.md#showexpense) | **GET** /api/v1/expenses/{id} | Shows a client
+*ExpensesApiAdapter* | [**storeExpense**](docs/ExpensesApiAdapter.md#storeexpense) | **POST** /api/v1/expenses | Adds a client
+*ExpensesApiAdapter* | [**updateExpense**](docs/ExpensesApiAdapter.md#updateexpense) | **PUT** /api/v1/expenses/{id} | Updates a client
+*ExportApiAdapter* | [**getExport**](docs/ExportApiAdapter.md#getexport) | **POST** /api/v1/export | Export data from the system
+*GroupSettingsApiAdapter* | [**bulkGroupSettings**](docs/GroupSettingsApiAdapter.md#bulkgroupsettings) | **POST** /api/v1/group_settings/bulk | Performs bulk actions on an array of group_settings
+*GroupSettingsApiAdapter* | [**deleteGroupSetting**](docs/GroupSettingsApiAdapter.md#deletegroupsetting) | **DELETE** /api/v1/group_settings/{id} | Deletes a GroupSetting
+*GroupSettingsApiAdapter* | [**editGroupSetting**](docs/GroupSettingsApiAdapter.md#editgroupsetting) | **GET** /api/v1/group_settings/{id}/edit | Shows an GroupSetting for editting
+*GroupSettingsApiAdapter* | [**getGroupSettings**](docs/GroupSettingsApiAdapter.md#getgroupsettings) | **GET** /api/v1/group_settings | Gets a list of group_settings
+*GroupSettingsApiAdapter* | [**getGroupSettingsCreate**](docs/GroupSettingsApiAdapter.md#getgroupsettingscreate) | **GET** /api/v1/group_settings/create | Gets a new blank GroupSetting object
+*GroupSettingsApiAdapter* | [**showGroupSetting**](docs/GroupSettingsApiAdapter.md#showgroupsetting) | **GET** /api/v1/group_settings/{id} | Shows an GroupSetting
+*GroupSettingsApiAdapter* | [**storeGroupSetting**](docs/GroupSettingsApiAdapter.md#storegroupsetting) | **POST** /api/v1/group_settings | Adds a GroupSetting
+*GroupSettingsApiAdapter* | [**updateGroupSetting**](docs/GroupSettingsApiAdapter.md#updategroupsetting) | **PUT** /api/v1/group_settings/{id} | Updates an GroupSetting
+*GroupSettingsApiAdapter* | [**uploadGroupSetting**](docs/GroupSettingsApiAdapter.md#uploadgroupsetting) | **PUT** /api/v1/group_settings/{id}/upload | Uploads a document to a group setting
+*HealthCheckApiAdapter* | [**getHealthCheck**](docs/HealthCheckApiAdapter.md#gethealthcheck) | **GET** /api/v1/health_check | Attempts to get a health check from the API
+*ImportApiAdapter* | [**getImportJson**](docs/ImportApiAdapter.md#getimportjson) | **POST** /api/v1/import_json | Import data from the system
+*ImportsApiAdapter* | [**preimport**](docs/ImportsApiAdapter.md#preimport) | **POST** /api/v1/preimport | Pre Import checks - returns a reference to the job and the headers of the CSV
+*InvoicesApiAdapter* | [**actionInvoice**](docs/InvoicesApiAdapter.md#actioninvoice) | **GET** /api/v1/invoices/{id}/{action} | Custom invoice action
+*InvoicesApiAdapter* | [**bulkInvoices**](docs/InvoicesApiAdapter.md#bulkinvoices) | **POST** /api/v1/invoices/bulk | Bulk invoice actions
+*InvoicesApiAdapter* | [**deleteInvoice**](docs/InvoicesApiAdapter.md#deleteinvoice) | **DELETE** /api/v1/invoices/{id} | Delete invoice
+*InvoicesApiAdapter* | [**deliveryNote**](docs/InvoicesApiAdapter.md#deliverynote) | **GET** /api/v1/invoices/{id}/delivery_note | Download delivery note
+*InvoicesApiAdapter* | [**downloadInvoice**](docs/InvoicesApiAdapter.md#downloadinvoice) | **GET** /api/v1/invoice/{invitation_key}/download | Download invoice PDF
+*InvoicesApiAdapter* | [**editInvoice**](docs/InvoicesApiAdapter.md#editinvoice) | **GET** /api/v1/invoices/{id}/edit | Edit invoice
+*InvoicesApiAdapter* | [**getInvoices**](docs/InvoicesApiAdapter.md#getinvoices) | **GET** /api/v1/invoices | List invoices
+*InvoicesApiAdapter* | [**getInvoicesCreate**](docs/InvoicesApiAdapter.md#getinvoicescreate) | **GET** /api/v1/invoices/create | Blank invoice
+*InvoicesApiAdapter* | [**showInvoice**](docs/InvoicesApiAdapter.md#showinvoice) | **GET** /api/v1/invoices/{id} | Show invoice
+*InvoicesApiAdapter* | [**storeInvoice**](docs/InvoicesApiAdapter.md#storeinvoice) | **POST** /api/v1/invoices | Create invoice
+*InvoicesApiAdapter* | [**updateInvoice**](docs/InvoicesApiAdapter.md#updateinvoice) | **PUT** /api/v1/invoices/{id} | Update invoice
+*InvoicesApiAdapter* | [**uploadInvoice**](docs/InvoicesApiAdapter.md#uploadinvoice) | **POST** /api/v1/invoices/{id}/upload | Add invoice document
+*LoginApiAdapter* | [**postLogin**](docs/LoginApiAdapter.md#postlogin) | **POST** /api/v1/login | Attempts authentication
+*LogoutApiAdapter* | [**getLogout**](docs/LogoutApiAdapter.md#getlogout) | **POST** /api/v1/logout | Gets a list of logout
+*MigrationApiAdapter* | [**postPurgeCompany**](docs/MigrationApiAdapter.md#postpurgecompany) | **POST** /api/v1/migration/purge/{company} | Attempts to purge a company record and all its child records
+*MigrationApiAdapter* | [**postPurgeCompanySaveSettings**](docs/MigrationApiAdapter.md#postpurgecompanysavesettings) | **POST** /api/v1/migration/purge_save_settings/{company} | Attempts to purge a companies child records but save the company record and its settings
+*MigrationApiAdapter* | [**postStartMigration**](docs/MigrationApiAdapter.md#poststartmigration) | **POST** /api/v1/migration/start | Starts the migration from previous version of Invoice Ninja
+*OneTimeTokenApiAdapter* | [**oneTimeToken**](docs/OneTimeTokenApiAdapter.md#onetimetoken) | **POST** /api/v1/one_time_token | Attempts to create a one time token
+*PaymentTermsApiAdapter* | [**bulkPaymentTerms**](docs/PaymentTermsApiAdapter.md#bulkpaymentterms) | **POST** /api/v1/payment_terms/bulk | Performs bulk actions on an array of payment terms
+*PaymentTermsApiAdapter* | [**editPaymentTerms**](docs/PaymentTermsApiAdapter.md#editpaymentterms) | **GET** /api/v1/payment_terms/{id}/edit | Shows an Payment Term for editting
+*PaymentTermsApiAdapter* | [**getPaymentTerms**](docs/PaymentTermsApiAdapter.md#getpaymentterms) | **GET** /api/v1/payment_terms | Gets a list of payment terms
+*PaymentTermsApiAdapter* | [**getPaymentTermsCreate**](docs/PaymentTermsApiAdapter.md#getpaymenttermscreate) | **GET** /api/v1/payment_terms/create | Gets a new blank PaymentTerm object
+*PaymentTermsApiAdapter* | [**showPaymentTerm**](docs/PaymentTermsApiAdapter.md#showpaymentterm) | **GET** /api/v1/payment_terms/{id} | Shows a Payment Term
+*PaymentTermsApiAdapter* | [**storePaymentTerm**](docs/PaymentTermsApiAdapter.md#storepaymentterm) | **POST** /api/v1/payment_terms | Adds a Payment
+*PaymentTermsApiAdapter* | [**updatePaymentTerm**](docs/PaymentTermsApiAdapter.md#updatepaymentterm) | **PUT** /api/v1/payment_terms/{id} | Updates a Payment Term
+*PaymentTermssApiAdapter* | [**deletePaymentTerm**](docs/PaymentTermssApiAdapter.md#deletepaymentterm) | **DELETE** /api/v1/payment_terms/{id} | Deletes a Payment Term
+*PaymentsApiAdapter* | [**actionPayment**](docs/PaymentsApiAdapter.md#actionpayment) | **GET** /api/v1/payments/{id}/{action} | Custom payment actions
+*PaymentsApiAdapter* | [**bulkPayments**](docs/PaymentsApiAdapter.md#bulkpayments) | **POST** /api/v1/payments/bulk | Bulk payment actions
+*PaymentsApiAdapter* | [**deletePayment**](docs/PaymentsApiAdapter.md#deletepayment) | **DELETE** /api/v1/payments/{id} | Delete payment
+*PaymentsApiAdapter* | [**editPayment**](docs/PaymentsApiAdapter.md#editpayment) | **GET** /api/v1/payments/{id}/edit | Edit payment
+*PaymentsApiAdapter* | [**getPayments**](docs/PaymentsApiAdapter.md#getpayments) | **GET** /api/v1/payments | List payments
+*PaymentsApiAdapter* | [**getPaymentsCreate**](docs/PaymentsApiAdapter.md#getpaymentscreate) | **GET** /api/v1/payments/create | Blank payment
+*PaymentsApiAdapter* | [**showPayment**](docs/PaymentsApiAdapter.md#showpayment) | **GET** /api/v1/payments/{id} | Show payment
+*PaymentsApiAdapter* | [**storePayment**](docs/PaymentsApiAdapter.md#storepayment) | **POST** /api/v1/payments | Create payment
+*PaymentsApiAdapter* | [**storeRefund**](docs/PaymentsApiAdapter.md#storerefund) | **POST** /api/v1/payments/refund | Refund payment
+*PaymentsApiAdapter* | [**updatePayment**](docs/PaymentsApiAdapter.md#updatepayment) | **PUT** /api/v1/payments/{id} | Update payment
+*PaymentsApiAdapter* | [**uploadPayment**](docs/PaymentsApiAdapter.md#uploadpayment) | **PUT** /api/v1/payments/{id}/upload | Upload a payment document
+*PingApiAdapter* | [**getPing**](docs/PingApiAdapter.md#getping) | **GET** /api/v1/ping | Attempts to ping the API
+*PostmarkApiAdapter* | [**confirmApplePurchase**](docs/PostmarkApiAdapter.md#confirmapplepurchase) | **POST** /api/v1/apple/confirm_purchase | Processing webhooks from Apple for in app purchases
+*PostmarkApiAdapter* | [**postmarkWebhook**](docs/PostmarkApiAdapter.md#postmarkwebhook) | **POST** /api/v1/postmark_webhook | Processing webhooks from PostMark
+*PostmarkApiAdapter* | [**processAppleWebhook**](docs/PostmarkApiAdapter.md#processapplewebhook) | **POST** /api/v1/apple/process_webhook | Processing event webhooks from Apple for in purchase / subscription status update
+*PreviewApiAdapter* | [**getPreview**](docs/PreviewApiAdapter.md#getpreview) | **POST** /api/v1/preview | Returns a pdf preview
+*PreviewApiAdapter* | [**getPreviewPurchaseOrder**](docs/PreviewApiAdapter.md#getpreviewpurchaseorder) | **POST** /api/v1/preview/purchase_order | Returns a pdf preview for purchase order
+*ProductsApiAdapter* | [**bulkProducts**](docs/ProductsApiAdapter.md#bulkproducts) | **POST** /api/v1/products/bulk | Bulk product actions
+*ProductsApiAdapter* | [**deleteProduct**](docs/ProductsApiAdapter.md#deleteproduct) | **DELETE** /api/v1/products/{id} | Delete product
+*ProductsApiAdapter* | [**editProduct**](docs/ProductsApiAdapter.md#editproduct) | **GET** /api/v1/products/{id}/edit | Edit product
+*ProductsApiAdapter* | [**getProducts**](docs/ProductsApiAdapter.md#getproducts) | **GET** /api/v1/products | List products
+*ProductsApiAdapter* | [**getProductsCreate**](docs/ProductsApiAdapter.md#getproductscreate) | **GET** /api/v1/products/create | Blank product
+*ProductsApiAdapter* | [**showProduct**](docs/ProductsApiAdapter.md#showproduct) | **GET** /api/v1/products/{id} | Show product
+*ProductsApiAdapter* | [**storeProduct**](docs/ProductsApiAdapter.md#storeproduct) | **POST** /api/v1/products | Create Product
+*ProductsApiAdapter* | [**updateProduct**](docs/ProductsApiAdapter.md#updateproduct) | **PUT** /api/v1/products/{id} | Update product
+*ProductsApiAdapter* | [**uploadProduct**](docs/ProductsApiAdapter.md#uploadproduct) | **PUT** /api/v1/products/{id}/upload | Add product document
+*ProjectsApiAdapter* | [**bulkProjects**](docs/ProjectsApiAdapter.md#bulkprojects) | **POST** /api/v1/projects/bulk | Bulk project actions
+*ProjectsApiAdapter* | [**deleteProject**](docs/ProjectsApiAdapter.md#deleteproject) | **DELETE** /api/v1/projects/{id} | Delete project
+*ProjectsApiAdapter* | [**editProject**](docs/ProjectsApiAdapter.md#editproject) | **GET** /api/v1/projects/{id}/edit | Edit project
+*ProjectsApiAdapter* | [**getProjects**](docs/ProjectsApiAdapter.md#getprojects) | **GET** /api/v1/projects | List projects
+*ProjectsApiAdapter* | [**getProjectsCreate**](docs/ProjectsApiAdapter.md#getprojectscreate) | **GET** /api/v1/projects/create | Blank project
+*ProjectsApiAdapter* | [**showProject**](docs/ProjectsApiAdapter.md#showproject) | **GET** /api/v1/projects/{id} | Show project
+*ProjectsApiAdapter* | [**storeProject**](docs/ProjectsApiAdapter.md#storeproject) | **POST** /api/v1/projects | Create project
+*ProjectsApiAdapter* | [**updateProject**](docs/ProjectsApiAdapter.md#updateproject) | **PUT** /api/v1/projects/{id} | Update project
+*ProjectsApiAdapter* | [**uploadProject**](docs/ProjectsApiAdapter.md#uploadproject) | **PUT** /api/v1/projects/{id}/upload | Uploads a project document
+*PurchaseOrdersApiAdapter* | [**actionPurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#actionpurchaseorder) | **GET** /api/v1/purchase_orders/{id}/{action} | Custom purchase order actions
+*PurchaseOrdersApiAdapter* | [**bulkPurchaseOrderss**](docs/PurchaseOrdersApiAdapter.md#bulkpurchaseorderss) | **POST** /api/v1/purchase_orders/bulk | Bulk purchase order action
+*PurchaseOrdersApiAdapter* | [**deletePurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#deletepurchaseorder) | **DELETE** /api/v1/purchase_order/{id} | Delete purchase order
+*PurchaseOrdersApiAdapter* | [**downloadPurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#downloadpurchaseorder) | **GET** /api/v1/purchase_order/{invitation_key}/download | Download a purchase order PDF
+*PurchaseOrdersApiAdapter* | [**editPurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#editpurchaseorder) | **GET** /api/v1/purchase_orders/{id}/edit | Edit purchase order
+*PurchaseOrdersApiAdapter* | [**getPurchaseOrderCreate**](docs/PurchaseOrdersApiAdapter.md#getpurchaseordercreate) | **GET** /api/v1/purchase_orders/create | Blank purchase order
+*PurchaseOrdersApiAdapter* | [**getPurchaseOrders**](docs/PurchaseOrdersApiAdapter.md#getpurchaseorders) | **GET** /api/v1/purchase_orders | List purchase orders
+*PurchaseOrdersApiAdapter* | [**showPurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#showpurchaseorder) | **GET** /api/v1/purchase_orders/{id} | Show purchase order
+*PurchaseOrdersApiAdapter* | [**storePurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#storepurchaseorder) | **POST** /api/v1/purchase_orders | Create purchase order
+*PurchaseOrdersApiAdapter* | [**updatePurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#updatepurchaseorder) | **PUT** /api/v1/purchase_order/{id} | Update purchase order
+*PurchaseOrdersApiAdapter* | [**uploadPurchaseOrder**](docs/PurchaseOrdersApiAdapter.md#uploadpurchaseorder) | **PUT** /api/v1/purchase_orders/{id}/upload | Uploads a purchase order document
+*QuotesApiAdapter* | [**actionQuote**](docs/QuotesApiAdapter.md#actionquote) | **GET** /api/v1/quotes/{id}/{action} | Performs a custom action on an Quote
+*QuotesApiAdapter* | [**bulkQuotes**](docs/QuotesApiAdapter.md#bulkquotes) | **POST** /api/v1/quotes/bulk | Bulk quote actions
+*QuotesApiAdapter* | [**deleteQuote**](docs/QuotesApiAdapter.md#deletequote) | **DELETE** /api/v1/quotes/{id} | Delete quote
+*QuotesApiAdapter* | [**downloadCredit**](docs/QuotesApiAdapter.md#downloadcredit) | **GET** /api/v1/credit/{invitation_key}/download | Download quote PDF
+*QuotesApiAdapter* | [**downloadQuote**](docs/QuotesApiAdapter.md#downloadquote) | **GET** /api/v1/quote/{invitation_key}/download | Download quote PDF
+*QuotesApiAdapter* | [**editQuote**](docs/QuotesApiAdapter.md#editquote) | **GET** /api/v1/quotes/{id}/edit | Edit quote
+*QuotesApiAdapter* | [**getQuotes**](docs/QuotesApiAdapter.md#getquotes) | **GET** /api/v1/quotes | List quotes
+*QuotesApiAdapter* | [**getQuotesCreate**](docs/QuotesApiAdapter.md#getquotescreate) | **GET** /api/v1/quotes/create | Blank quote
+*QuotesApiAdapter* | [**showQuote**](docs/QuotesApiAdapter.md#showquote) | **GET** /api/v1/quotes/{id} | Show quote
+*QuotesApiAdapter* | [**storeQuote**](docs/QuotesApiAdapter.md#storequote) | **POST** /api/v1/quotes | Create quote
+*QuotesApiAdapter* | [**updateQuote**](docs/QuotesApiAdapter.md#updatequote) | **PUT** /api/v1/quotes/{id} | Update quote
+*QuotesApiAdapter* | [**uploadQuote**](docs/QuotesApiAdapter.md#uploadquote) | **PUT** /api/v1/quotes/{id}/upload | Upload a quote document
+*RecurringExpenseApiAdapter* | [**uploadRecurringExpense**](docs/RecurringExpenseApiAdapter.md#uploadrecurringexpense) | **PUT** /api/v1/recurring_expenses/{id}/upload | Uploads a document to a recurring_expense
+*RecurringExpensesApiAdapter* | [**bulkRecurringExpenses**](docs/RecurringExpensesApiAdapter.md#bulkrecurringexpenses) | **POST** /api/v1/recurring_expenses/bulk | Performs bulk actions on an array of recurring_expenses
+*RecurringExpensesApiAdapter* | [**deleteRecurringExpense**](docs/RecurringExpensesApiAdapter.md#deleterecurringexpense) | **DELETE** /api/v1/recurring_expenses/{id} | Deletes a client
+*RecurringExpensesApiAdapter* | [**editRecurringExpense**](docs/RecurringExpensesApiAdapter.md#editrecurringexpense) | **GET** /api/v1/recurring_expenses/{id}/edit | Shows a client for editting
+*RecurringExpensesApiAdapter* | [**getRecurringExpenses**](docs/RecurringExpensesApiAdapter.md#getrecurringexpenses) | **GET** /api/v1/recurring_expenses | Gets a list of recurring_expenses
+*RecurringExpensesApiAdapter* | [**getRecurringExpensesCreate**](docs/RecurringExpensesApiAdapter.md#getrecurringexpensescreate) | **GET** /api/v1/recurring_expenses/create | Gets a new blank client object
+*RecurringExpensesApiAdapter* | [**showRecurringExpense**](docs/RecurringExpensesApiAdapter.md#showrecurringexpense) | **GET** /api/v1/recurring_expenses/{id} | Shows a client
+*RecurringExpensesApiAdapter* | [**storeRecurringExpense**](docs/RecurringExpensesApiAdapter.md#storerecurringexpense) | **POST** /api/v1/recurring_expenses | Adds a client
+*RecurringExpensesApiAdapter* | [**updateRecurringExpense**](docs/RecurringExpensesApiAdapter.md#updaterecurringexpense) | **PUT** /api/v1/recurring_expenses/{id} | Updates a client
+*RecurringInvoicesApiAdapter* | [**actionRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#actionrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id}/{action} | Custom recurring invoice action
+*RecurringInvoicesApiAdapter* | [**bulkRecurringInvoices**](docs/RecurringInvoicesApiAdapter.md#bulkrecurringinvoices) | **POST** /api/v1/recurring_invoices/bulk | Bulk recurring invoice actions
+*RecurringInvoicesApiAdapter* | [**deleteRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#deleterecurringinvoice) | **DELETE** /api/v1/recurring_invoices/{id} | Delete recurring invoice
+*RecurringInvoicesApiAdapter* | [**downloadRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#downloadrecurringinvoice) | **GET** /api/v1/recurring_invoice/{invitation_key}/download | Download recurring invoice PDF
+*RecurringInvoicesApiAdapter* | [**editRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#editrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id}/edit | Edit recurring invoice
+*RecurringInvoicesApiAdapter* | [**getRecurringInvoices**](docs/RecurringInvoicesApiAdapter.md#getrecurringinvoices) | **GET** /api/v1/recurring_invoices | List recurring invoices
+*RecurringInvoicesApiAdapter* | [**getRecurringInvoicesCreate**](docs/RecurringInvoicesApiAdapter.md#getrecurringinvoicescreate) | **GET** /api/v1/recurring_invoices/create | Blank recurring invoice
+*RecurringInvoicesApiAdapter* | [**showRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#showrecurringinvoice) | **GET** /api/v1/recurring_invoices/{id} | Show recurring invoice
+*RecurringInvoicesApiAdapter* | [**storeRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#storerecurringinvoice) | **POST** /api/v1/recurring_invoices | Create recurring invoice
+*RecurringInvoicesApiAdapter* | [**updateRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#updaterecurringinvoice) | **PUT** /api/v1/recurring_invoices/{id} | Update recurring invoice
+*RecurringInvoicesApiAdapter* | [**uploadRecurringInvoice**](docs/RecurringInvoicesApiAdapter.md#uploadrecurringinvoice) | **PUT** /api/v1/recurring_invoices/{id}/upload | Add recurring invoice document
+*RecurringQuotesApiAdapter* | [**actionRecurringQuote**](docs/RecurringQuotesApiAdapter.md#actionrecurringquote) | **GET** /api/v1/recurring_quotes/{id}/{action} | Performs a custom action on an RecurringQuote
+*RecurringQuotesApiAdapter* | [**bulkRecurringQuotes**](docs/RecurringQuotesApiAdapter.md#bulkrecurringquotes) | **POST** /api/v1/recurring_quotes/bulk | Performs bulk actions on an array of recurring_quotes
+*RecurringQuotesApiAdapter* | [**deleteRecurringQuote**](docs/RecurringQuotesApiAdapter.md#deleterecurringquote) | **DELETE** /api/v1/recurring_quotes/{id} | Deletes a RecurringQuote
+*RecurringQuotesApiAdapter* | [**editRecurringQuote**](docs/RecurringQuotesApiAdapter.md#editrecurringquote) | **GET** /api/v1/recurring_quotes/{id}/edit | Shows an RecurringQuote for editting
+*RecurringQuotesApiAdapter* | [**getRecurringQuotes**](docs/RecurringQuotesApiAdapter.md#getrecurringquotes) | **GET** /api/v1/recurring_quotes | Gets a list of recurring_quotes
+*RecurringQuotesApiAdapter* | [**getRecurringQuotesCreate**](docs/RecurringQuotesApiAdapter.md#getrecurringquotescreate) | **GET** /api/v1/recurring_quotes/create | Gets a new blank RecurringQuote object
+*RecurringQuotesApiAdapter* | [**showRecurringQuote**](docs/RecurringQuotesApiAdapter.md#showrecurringquote) | **GET** /api/v1/recurring_quotes/{id} | Shows an RecurringQuote
+*RecurringQuotesApiAdapter* | [**storeRecurringQuote**](docs/RecurringQuotesApiAdapter.md#storerecurringquote) | **POST** /api/v1/recurring_quotes | Adds a RecurringQuote
+*RecurringQuotesApiAdapter* | [**updateRecurringQuote**](docs/RecurringQuotesApiAdapter.md#updaterecurringquote) | **PUT** /api/v1/recurring_quotes/{id} | Updates an RecurringQuote
+*RefreshApiAdapter* | [**apiV1RefreshPost**](docs/RefreshApiAdapter.md#apiv1refreshpost) | **POST** /api/v1/refresh | Refresh data by timestamp
+*ReportsApiAdapter* | [**getClientReport**](docs/ReportsApiAdapter.md#getclientreport) | **POST** /api/v1/reports/clients | Client reports
+*ReportsApiAdapter* | [**getContactReport**](docs/ReportsApiAdapter.md#getcontactreport) | **POST** /api/v1/reports/contacts | Contact reports
+*ReportsApiAdapter* | [**getCreditReport**](docs/ReportsApiAdapter.md#getcreditreport) | **POST** /api/v1/reports/credit | Credit reports
+*ReportsApiAdapter* | [**getDocumentReport**](docs/ReportsApiAdapter.md#getdocumentreport) | **POST** /api/v1/reports/documents | Document reports
+*ReportsApiAdapter* | [**getExpenseReport**](docs/ReportsApiAdapter.md#getexpensereport) | **POST** /api/v1/reports/expense | Expense reports
+*ReportsApiAdapter* | [**getInvoiceItemReport**](docs/ReportsApiAdapter.md#getinvoiceitemreport) | **POST** /api/v1/reports/invoice_items | Invoice item reports
+*ReportsApiAdapter* | [**getInvoiceReport**](docs/ReportsApiAdapter.md#getinvoicereport) | **POST** /api/v1/reports/invoices | Invoice reports
+*ReportsApiAdapter* | [**getPaymentReport**](docs/ReportsApiAdapter.md#getpaymentreport) | **POST** /api/v1/reports/payments | Payment reports
+*ReportsApiAdapter* | [**getProductReport**](docs/ReportsApiAdapter.md#getproductreport) | **POST** /api/v1/reports/products | Product reports
+*ReportsApiAdapter* | [**getProductSalesReport**](docs/ReportsApiAdapter.md#getproductsalesreport) | **POST** /api/v1/reports/product_sales | Product Salesreports
+*ReportsApiAdapter* | [**getProfitLossReport**](docs/ReportsApiAdapter.md#getprofitlossreport) | **POST** /api/v1/reports/profitloss | Profit loss reports
+*ReportsApiAdapter* | [**getQuoteItemReport**](docs/ReportsApiAdapter.md#getquoteitemreport) | **POST** /api/v1/reports/quote_items | Quote item reports
+*ReportsApiAdapter* | [**getQuoteReport**](docs/ReportsApiAdapter.md#getquotereport) | **POST** /api/v1/reports/quotes | Quote reports
+*ReportsApiAdapter* | [**getRecurringInvoiceReport**](docs/ReportsApiAdapter.md#getrecurringinvoicereport) | **POST** /api/v1/reports/recurring_invoices | Recurring Invoice reports
+*ReportsApiAdapter* | [**getTaskReport**](docs/ReportsApiAdapter.md#gettaskreport) | **POST** /api/v1/reports/tasks | Task reports
+*StaticsApiAdapter* | [**getStatics**](docs/StaticsApiAdapter.md#getstatics) | **GET** /api/v1/statics | Gets a list of statics
+*SubscriptionsApiAdapter* | [**bulkSubscriptions**](docs/SubscriptionsApiAdapter.md#bulksubscriptions) | **POST** /api/v1/subscriptions/bulk | Performs bulk actions on an array of subscriptions
+*SubscriptionsApiAdapter* | [**deleteSubscription**](docs/SubscriptionsApiAdapter.md#deletesubscription) | **DELETE** /api/v1/subscriptions/{id} | Deletes a subscriptions
+*SubscriptionsApiAdapter* | [**editSubscription**](docs/SubscriptionsApiAdapter.md#editsubscription) | **GET** /api/v1/subscriptions/{id}/edit | Shows an subscriptions for editting
+*SubscriptionsApiAdapter* | [**getSubscriptions**](docs/SubscriptionsApiAdapter.md#getsubscriptions) | **GET** /api/v1/subscriptions | Gets a list of subscriptions
+*SubscriptionsApiAdapter* | [**getSubscriptionsCreate**](docs/SubscriptionsApiAdapter.md#getsubscriptionscreate) | **GET** /api/v1/subscriptions/create | Gets a new blank subscriptions object
+*SubscriptionsApiAdapter* | [**showSubscription**](docs/SubscriptionsApiAdapter.md#showsubscription) | **GET** /api/v1/subscriptions/{id} | Shows an subscriptions
+*SubscriptionsApiAdapter* | [**storeSubscription**](docs/SubscriptionsApiAdapter.md#storesubscription) | **POST** /api/v1/subscriptions | Adds a subscriptions
+*SubscriptionsApiAdapter* | [**updateSubscription**](docs/SubscriptionsApiAdapter.md#updatesubscription) | **PUT** /api/v1/subscriptions/{id} | Updates an subscriptions
+*SupportApiAdapter* | [**supportMessage**](docs/SupportApiAdapter.md#supportmessage) | **POST** /api/v1/support/messages/send | Sends a support message to Invoice Ninja team
+*SystemLogsApiAdapter* | [**getSystemLogs**](docs/SystemLogsApiAdapter.md#getsystemlogs) | **GET** /api/v1/system_logs | Gets a list of system logs
+*SystemLogsApiAdapter* | [**showSystemLogs**](docs/SystemLogsApiAdapter.md#showsystemlogs) | **GET** /api/v1/system_logs/{id} | Shows a system_logs
+*TaskSchedulersApiAdapter* | [**bulkTaskSchedulerActions**](docs/TaskSchedulersApiAdapter.md#bulktaskscheduleractions) | **POST** /api/v1/task_schedulers/bulk | Performs bulk actions on an array of task_schedulers
+*TaskSchedulersApiAdapter* | [**createTaskScheduler**](docs/TaskSchedulersApiAdapter.md#createtaskscheduler) | **POST** /api/v1/task_schedulers/ | Create task scheduler with job 
+*TaskSchedulersApiAdapter* | [**destroyTaskScheduler**](docs/TaskSchedulersApiAdapter.md#destroytaskscheduler) | **DELETE** /api/v1/task_schedulers/{id} | Destroy Task Scheduler
+*TaskSchedulersApiAdapter* | [**getTaskScheduler**](docs/TaskSchedulersApiAdapter.md#gettaskscheduler) | **GET** /api/v1/task_schedulers/create | Gets a new blank scheduler object
+*TaskSchedulersApiAdapter* | [**getTaskSchedulers**](docs/TaskSchedulersApiAdapter.md#gettaskschedulers) | **GET** /api/v1/task_schedulers/ | Task Scheduler Index
+*TaskSchedulersApiAdapter* | [**showTaskScheduler**](docs/TaskSchedulersApiAdapter.md#showtaskscheduler) | **GET** /api/v1/task_schedulers/{id} | Show given scheduler
+*TaskSchedulersApiAdapter* | [**updateTaskScheduler**](docs/TaskSchedulersApiAdapter.md#updatetaskscheduler) | **PUT** /api/v1/task_schedulers/{id} | Update task scheduler 
+*TaskStatusApiAdapter* | [**bulkTaskStatuss**](docs/TaskStatusApiAdapter.md#bulktaskstatuss) | **POST** /api/v1/task_statuses/bulk | Performs bulk actions on an array of task statuses
+*TaskStatusApiAdapter* | [**editTaskStatuss**](docs/TaskStatusApiAdapter.md#edittaskstatuss) | **GET** /api/v1/task_statuses/{id}/edit | Shows an TaskStatusfor editting
+*TaskStatusApiAdapter* | [**getTaskStatuses**](docs/TaskStatusApiAdapter.md#gettaskstatuses) | **GET** /api/v1/task_statuses | Gets a list of task statuses
+*TaskStatusApiAdapter* | [**getTaskStatussCreate**](docs/TaskStatusApiAdapter.md#gettaskstatusscreate) | **GET** /api/v1/task_statuses/create | Gets a new blank TaskStatus object
+*TaskStatusApiAdapter* | [**showTaskStatus**](docs/TaskStatusApiAdapter.md#showtaskstatus) | **GET** /api/v1/task_statuses/{id} | Shows a TaskStatus Term
+*TaskStatusApiAdapter* | [**storeTaskStatus**](docs/TaskStatusApiAdapter.md#storetaskstatus) | **POST** /api/v1/task_statuses | Adds a TaskStatus
+*TaskStatusApiAdapter* | [**updateTaskStatus**](docs/TaskStatusApiAdapter.md#updatetaskstatus) | **PUT** /api/v1/task_statuses/{id} | Updates a TaskStatus Term
+*TaskStatussApiAdapter* | [**deleteTaskStatus**](docs/TaskStatussApiAdapter.md#deletetaskstatus) | **DELETE** /api/v1/task_statuses/{id} | Deletes a TaskStatus Term
+*TasksApiAdapter* | [**bulkTasks**](docs/TasksApiAdapter.md#bulktasks) | **POST** /api/v1/tasks/bulk | Bulk task actions
+*TasksApiAdapter* | [**deleteTask**](docs/TasksApiAdapter.md#deletetask) | **DELETE** /api/v1/tasks/{id} | Delete task
+*TasksApiAdapter* | [**editTask**](docs/TasksApiAdapter.md#edittask) | **GET** /api/v1/tasks/{id}/edit | Edit task
+*TasksApiAdapter* | [**getTasks**](docs/TasksApiAdapter.md#gettasks) | **GET** /api/v1/tasks | List tasks
+*TasksApiAdapter* | [**getTasksCreate**](docs/TasksApiAdapter.md#gettaskscreate) | **GET** /api/v1/tasks/create | Blank task
+*TasksApiAdapter* | [**showTask**](docs/TasksApiAdapter.md#showtask) | **GET** /api/v1/tasks/{id} | Show task
+*TasksApiAdapter* | [**sortTasks**](docs/TasksApiAdapter.md#sorttasks) | **POST** /api/v1/tasks/sort | Sort tasks on KanBan
+*TasksApiAdapter* | [**storeTask**](docs/TasksApiAdapter.md#storetask) | **POST** /api/v1/tasks | Create task
+*TasksApiAdapter* | [**updateTask**](docs/TasksApiAdapter.md#updatetask) | **PUT** /api/v1/tasks/{id} | Update task
+*TasksApiAdapter* | [**uploadTask**](docs/TasksApiAdapter.md#uploadtask) | **PUT** /api/v1/tasks/{id}/upload | Uploads a task document
+*TaxRatesApiAdapter* | [**bulkTaxRates**](docs/TaxRatesApiAdapter.md#bulktaxrates) | **POST** /api/v1/tax_rates/bulk | Performs bulk actions on an array of TaxRates
+*TaxRatesApiAdapter* | [**deleteTaxRate**](docs/TaxRatesApiAdapter.md#deletetaxrate) | **DELETE** /api/v1/tax_rates/{id} | Deletes a TaxRate
+*TaxRatesApiAdapter* | [**editTaxRate**](docs/TaxRatesApiAdapter.md#edittaxrate) | **GET** /api/v1/tax_rates/{id}/edit | Shows a Tax Rate for editting
+*TaxRatesApiAdapter* | [**getTaxRateCreate**](docs/TaxRatesApiAdapter.md#gettaxratecreate) | **GET** /api/v1/tax_rates/create | Gets a new blank Tax Rate object
+*TaxRatesApiAdapter* | [**getTaxRates**](docs/TaxRatesApiAdapter.md#gettaxrates) | **GET** /api/v1/tax_rates | Gets a list of tax_rates
+*TaxRatesApiAdapter* | [**showTaxRate**](docs/TaxRatesApiAdapter.md#showtaxrate) | **GET** /api/v1/tax_rates/{id} | Shows a Tax Rate
+*TaxRatesApiAdapter* | [**updateTaxRate**](docs/TaxRatesApiAdapter.md#updatetaxrate) | **PUT** /api/v1/tax_rates/{id} | Updates a tax rate
+*TemplatesApiAdapter* | [**getShowTemplate**](docs/TemplatesApiAdapter.md#getshowtemplate) | **POST** /api/v1/templates | Returns a entity template with the template variables replaced with the Entities
+*TokensApiAdapter* | [**bulkTokens**](docs/TokensApiAdapter.md#bulktokens) | **POST** /api/v1/tokens/bulk | Performs bulk actions on an array of tokens
+*TokensApiAdapter* | [**deleteToken**](docs/TokensApiAdapter.md#deletetoken) | **DELETE** /api/v1/tokens/{id} | Deletes a token
+*TokensApiAdapter* | [**editToken**](docs/TokensApiAdapter.md#edittoken) | **GET** /api/v1/tokens/{id}/edit | Shows a token for editting
+*TokensApiAdapter* | [**getTokens**](docs/TokensApiAdapter.md#gettokens) | **GET** /api/v1/tokens | Gets a list of company tokens
+*TokensApiAdapter* | [**getTokensCreate**](docs/TokensApiAdapter.md#gettokenscreate) | **GET** /api/v1/tokens/create | Gets a new blank token object
+*TokensApiAdapter* | [**showToken**](docs/TokensApiAdapter.md#showtoken) | **GET** /api/v1/tokens/{id} | Shows a token
+*TokensApiAdapter* | [**storeToken**](docs/TokensApiAdapter.md#storetoken) | **POST** /api/v1/tokens | Adds a token
+*TokensApiAdapter* | [**updateToken**](docs/TokensApiAdapter.md#updatetoken) | **PUT** /api/v1/tokens/{id} | Updates a token
+*UpdateApiAdapter* | [**selfUpdate**](docs/UpdateApiAdapter.md#selfupdate) | **POST** /api/v1/self-update | Performs a system update
+*UsersApiAdapter* | [**bulkUsers**](docs/UsersApiAdapter.md#bulkusers) | **POST** /api/v1/users/bulk | Performs bulk actions on an array of users
+*UsersApiAdapter* | [**deleteUser**](docs/UsersApiAdapter.md#deleteuser) | **DELETE** /api/v1/users/{id} | Deletes a User
+*UsersApiAdapter* | [**detachUser**](docs/UsersApiAdapter.md#detachuser) | **DELETE** /api/v1/users/{user}/detach_from_company | Detach an existing user to a company
+*UsersApiAdapter* | [**editUser**](docs/UsersApiAdapter.md#edituser) | **GET** /api/v1/users/{id}/edit | Shows an User for editting
+*UsersApiAdapter* | [**getUsers**](docs/UsersApiAdapter.md#getusers) | **GET** /api/v1/users | Gets a list of users
+*UsersApiAdapter* | [**getUsersCreate**](docs/UsersApiAdapter.md#getuserscreate) | **GET** /api/v1/users/create | Gets a new blank User object
+*UsersApiAdapter* | [**inviteUser**](docs/UsersApiAdapter.md#inviteuser) | **POST** /api/v1/users/{user}/invite | Reconfirm an existing user to a company
+*UsersApiAdapter* | [**inviteUserReconfirm**](docs/UsersApiAdapter.md#inviteuserreconfirm) | **POST** /api/v1/users/{user}/reconfirm | Reconfirm an existing user to a company
+*UsersApiAdapter* | [**showUser**](docs/UsersApiAdapter.md#showuser) | **GET** /api/v1/users/{id} | Shows an User
+*UsersApiAdapter* | [**storeUser**](docs/UsersApiAdapter.md#storeuser) | **POST** /api/v1/users | Adds a User
+*UsersApiAdapter* | [**updateUser**](docs/UsersApiAdapter.md#updateuser) | **PUT** /api/v1/users/{id} | Updates an User
+*VendorsApiAdapter* | [**bulkVendors**](docs/VendorsApiAdapter.md#bulkvendors) | **POST** /api/v1/vendors/bulk | Bulk vendor actions
+*VendorsApiAdapter* | [**deleteVendor**](docs/VendorsApiAdapter.md#deletevendor) | **DELETE** /api/v1/vendors/{id} | Delete vendor
+*VendorsApiAdapter* | [**editVendor**](docs/VendorsApiAdapter.md#editvendor) | **GET** /api/v1/vendors/{id}/edit | Edit vendor
+*VendorsApiAdapter* | [**getVendors**](docs/VendorsApiAdapter.md#getvendors) | **GET** /api/v1/vendors | List vendors
+*VendorsApiAdapter* | [**getVendorsCreate**](docs/VendorsApiAdapter.md#getvendorscreate) | **GET** /api/v1/vendors/create | Blank vendor
+*VendorsApiAdapter* | [**showVendor**](docs/VendorsApiAdapter.md#showvendor) | **GET** /api/v1/vendors/{id} | Show vendor
+*VendorsApiAdapter* | [**storeVendor**](docs/VendorsApiAdapter.md#storevendor) | **POST** /api/v1/vendors | Create vendor
+*VendorsApiAdapter* | [**updateVendor**](docs/VendorsApiAdapter.md#updatevendor) | **PUT** /api/v1/vendors/{id} | Update vendor
+*VendorsApiAdapter* | [**uploadVendor**](docs/VendorsApiAdapter.md#uploadvendor) | **PUT** /api/v1/vendors/{id}/upload | Uploads a vendor document
+*WebcronApiAdapter* | [**webcron**](docs/WebcronApiAdapter.md#webcron) | **GET** /api/v1/webcron | Executes the task scheduler via a webcron service
+*WebhooksApiAdapter* | [**bulkWebhooks**](docs/WebhooksApiAdapter.md#bulkwebhooks) | **POST** /api/v1/webhooks/bulk | Performs bulk actions on an array of Webhooks
+*WebhooksApiAdapter* | [**deleteWebhook**](docs/WebhooksApiAdapter.md#deletewebhook) | **DELETE** /api/v1/webhooks/{id} | Deletes a Webhook
+*WebhooksApiAdapter* | [**editWebhook**](docs/WebhooksApiAdapter.md#editwebhook) | **GET** /api/v1/webhooks/{id}/edit | Shows a Webhook for editting
+*WebhooksApiAdapter* | [**getWebhooks**](docs/WebhooksApiAdapter.md#getwebhooks) | **GET** /api/v1/webhooks | Gets a list of Webhooks
+*WebhooksApiAdapter* | [**getWebhooksCreate**](docs/WebhooksApiAdapter.md#getwebhookscreate) | **GET** /api/v1/webhooks/create | Gets a new blank Webhook object
+*WebhooksApiAdapter* | [**showWebhook**](docs/WebhooksApiAdapter.md#showwebhook) | **GET** /api/v1/webhooks/{id} | Shows a Webhook
+*WebhooksApiAdapter* | [**storeWebhook**](docs/WebhooksApiAdapter.md#storewebhook) | **POST** /api/v1/webhooks | Adds a Webhook
+*WebhooksApiAdapter* | [**updateWebhook**](docs/WebhooksApiAdapter.md#updatewebhook) | **PUT** /api/v1/webhooks/{id} | Updates a Webhook
+*YodleeApiAdapter* | [**yodleeRefreshWebhook**](docs/YodleeApiAdapter.md#yodleerefreshwebhook) | **POST** /api/v1/yodlee/refresh | Yodlee Webhook
 
 
 <a name="documentation-for-models"></a>
@@ -399,9 +399,11 @@ Class | Method | HTTP request | Description
  - [com.nivalit.invoiceninja.models.BulkInvoicesRequest](docs/BulkInvoicesRequest.md)
  - [com.nivalit.invoiceninja.models.BulkRecurringInvoicesRequest](docs/BulkRecurringInvoicesRequest.md)
  - [com.nivalit.invoiceninja.models.Client](docs/Client.md)
+ - [com.nivalit.invoiceninja.models.ClientArrayWrapped](docs/ClientArrayWrapped.md)
  - [com.nivalit.invoiceninja.models.ClientContact](docs/ClientContact.md)
  - [com.nivalit.invoiceninja.models.ClientGatewayToken](docs/ClientGatewayToken.md)
  - [com.nivalit.invoiceninja.models.ClientStatementRequest](docs/ClientStatementRequest.md)
+ - [com.nivalit.invoiceninja.models.ClientWrapped](docs/ClientWrapped.md)
  - [com.nivalit.invoiceninja.models.Company](docs/Company.md)
  - [com.nivalit.invoiceninja.models.CompanyGateway](docs/CompanyGateway.md)
  - [com.nivalit.invoiceninja.models.CompanyLedger](docs/CompanyLedger.md)

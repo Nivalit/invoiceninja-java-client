@@ -12,11 +12,11 @@ Name | Type | Description | Notes
 **currencyId** | **kotlin.String** | The currency ID of the currency |  [optional]
 **accountType** | **kotlin.String** | The account type |  [optional]
 **description** | **kotlin.String** | The description of the transaction |  [optional]
-**categoryId** | **kotlin.Int** | The category id |  [optional]
+**categoryId** | **kotlin.String** | The category id |  [optional]
 **categoryType** | **kotlin.String** | The category description |  [optional]
 **baseType** | **kotlin.String** | Either CREDIT or DEBIT |  [optional]
 **date** | **kotlin.String** | The date of the transaction |  [optional]
-**bankAccountId** | **kotlin.Int** | The ID number of the bank account |  [optional]
+**bankAccountId** | **kotlin.String** | The ID number of the bank account |  [optional]
 
 
 

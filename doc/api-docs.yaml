@@ -8552,7 +8552,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Client'
+                $ref: '#/components/schemas/ClientArrayWrapped'
         401:
           $ref: '#/components/responses/401'
         403:
@@ -8572,7 +8572,7 @@ paths:
         - $ref: '#/components/parameters/X-Requested-With'
         - $ref: '#/components/parameters/client_include'
       requestBody:
-        $ref: '#/components/requestBodies/clientPostRequestBody'
+        $ref: '#/components/requestBodies/clientRequestBody'
       responses:
         200:
           description: 'Returns the saved client object'
@@ -8586,7 +8586,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Client'
+                $ref: '#/components/schemas/ClientWrapped'
         401:
           $ref: '#/components/responses/401'
         403:
@@ -8627,7 +8627,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Client'
+                $ref: '#/components/schemas/ClientWrapped'
         401:
           $ref: '#/components/responses/401'
         403:
@@ -8654,6 +8654,8 @@ paths:
             type: string
             format: string
           example: D2J234DFA
+      requestBody:
+        $ref: '#/components/requestBodies/clientRequestBody'
       responses:
         200:
           description: 'Returns the client object'
@@ -8667,7 +8669,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Client'
+                $ref: '#/components/schemas/ClientWrapped'
         401:
           $ref: '#/components/responses/401'
         403:
@@ -13749,7 +13751,7 @@ components:
           example: '4'
         frequency_id:
           description: 'The recurring invoice frequency'
-          type: number
+          type: string
           example: '4'
         remaining_cycles:
           description: 'The number of invoices left to be generated'
@@ -13947,7 +13949,6 @@ components:
           type: boolean
           example: true
       type: object
-
     Client:
       properties:
         id:
@@ -13985,11 +13986,11 @@ components:
           example: asdfkjhk342hjhbfdvmnfb1
         industry_id:
           description: 'The unique identifier of the industry the client operates in'
-          type: number
+          type: string
           example: '5'
         size_id:
           description: 'The unique identifier for the size category of the client company or organization'
-          type: number
+          type: string
           example: '2'
         address1:
           description: "First line of the client's address"
@@ -14017,8 +14018,7 @@ components:
           example: '555-3434-3434'
         country_id:
           description: "The unique identifier of the client's country"
-          type: number
-          format: integer
+          type: string
           example: '1'
         custom_value1:
           description: 'A custom field for storing additional information'
@@ -14069,8 +14069,7 @@ components:
           example: '6110'
         shipping_country_id:
           description: "The unique identifier of the country for the client's shipping address"
-          type: number
-          format: integer
+          type: string
           example: '4'
         is_deleted:
           description: 'A boolean value indicating whether the client has been deleted or not'
@@ -14109,6 +14108,16 @@ components:
         settings:
           $ref: '#/components/schemas/CompanySettings'
       type: object
+    ClientWrapped:
+      properties:
+        data:
+          $ref: '#/components/schemas/Client'
+    ClientArrayWrapped:
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Client'
     SystemLog:
       properties:
         id:
@@ -14683,7 +14692,7 @@ components:
           example: 'true'
         currency_id:
           description: Unique identifier for the currency used in the subscription
-          type: integer
+          type: string
           example: '1'
         max_seats_limit:
           description: Maximum number of seats allowed for the subscription
@@ -15052,7 +15061,7 @@ components:
           example: 'Potato purchases for kevin'
         category_id:
           description: 'The category id'
-          type: integer
+          type: string
           example: 1
         category_type:
           description: 'The category description'
@@ -15068,7 +15077,7 @@ components:
           example: '2022-09-01'
         bank_account_id:
           description: 'The ID number of the bank account'
-          type: integer
+          type: string
           example: '1'
       type: object
     Company:
@@ -15311,7 +15320,7 @@ components:
           example: 'Chase Bank'
         bank_account_id:
           description: 'The bank account id'
-          type: integer
+          type: string
           example: '1233434'
         bank_account_name:
           description: 'The name of the account'
@@ -15582,7 +15591,7 @@ components:
           example: R
         reset_counter_frequency_id:
           description: 'CONSTANT which is used to apply the frequency which the counters are reset'
-          type: integer
+          type: string
           example: '1'
         reset_counter_date:
           description: 'The explicit date which is used to reset counters'
@@ -17972,8 +17981,8 @@ components:
           example: true
       type: object
   requestBodies:
-    clientPostRequestBody:
-      description: "A request body for creating new client"
+    clientRequestBody:
+      description: "A request body for creating new client and update"
       required: true
       content:
         application/json:

@@ -105,7 +105,7 @@ data class Subscription (
 
     /* Unique identifier for the currency used in the subscription */
     @Json(name = "currency_id")
-    val currencyId: kotlin.Int? = null,
+    val currencyId: kotlin.String? = null,
 
     /* Maximum number of seats allowed for the subscription */
     @Json(name = "max_seats_limit")

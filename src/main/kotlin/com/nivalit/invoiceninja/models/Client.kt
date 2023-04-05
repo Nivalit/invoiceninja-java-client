@@ -99,11 +99,11 @@ data class Client (
 
     /* The unique identifier of the industry the client operates in */
     @Json(name = "industry_id")
-    val industryId: java.math.BigDecimal? = null,
+    val industryId: kotlin.String? = null,
 
     /* The unique identifier for the size category of the client company or organization */
     @Json(name = "size_id")
-    val sizeId: java.math.BigDecimal? = null,
+    val sizeId: kotlin.String? = null,
 
     /* First line of the client's address */
     @Json(name = "address1")
@@ -131,7 +131,7 @@ data class Client (
 
     /* The unique identifier of the client's country */
     @Json(name = "country_id")
-    val countryId: java.math.BigDecimal? = null,
+    val countryId: kotlin.String? = null,
 
     /* A custom field for storing additional information */
     @Json(name = "custom_value1")
@@ -183,7 +183,7 @@ data class Client (
 
     /* The unique identifier of the country for the client's shipping address */
     @Json(name = "shipping_country_id")
-    val shippingCountryId: java.math.BigDecimal? = null,
+    val shippingCountryId: kotlin.String? = null,
 
     /* A boolean value indicating whether the client has been deleted or not */
     @Json(name = "is_deleted")
