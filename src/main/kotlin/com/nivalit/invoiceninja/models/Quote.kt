@@ -18,7 +18,7 @@ package com.nivalit.invoiceninja.models
 import com.nivalit.invoiceninja.models.CompanySettings
 import com.nivalit.invoiceninja.models.InvoiceItem
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -78,198 +78,198 @@ import com.squareup.moshi.Json
 data class Quote (
 
     /* The unique hashed identifier for the quote */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The unique hashed identifier for the user who created the quote */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The unique hashed identifier for the user assigned to the quote */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The unique hashed identifier for the company associated with the quote */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The unique hashed identifier for the client associated with the quote */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The status of the quote represented by a unique identifier */
-    @Json(name = "status_id")
+    @field:JsonProperty("status_id")
     val statusId: kotlin.String? = null,
 
     /* The unique alpha-numeric quote number for the quote per company */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* The purchase order number associated with the quote */
-    @Json(name = "po_number")
+    @field:JsonProperty("po_number")
     val poNumber: kotlin.String? = null,
 
     /* The terms and conditions for the quote */
-    @Json(name = "terms")
+    @field:JsonProperty("terms")
     val terms: kotlin.String? = null,
 
     /* Publicly visible notes associated with the quote */
-    @Json(name = "public_notes")
+    @field:JsonProperty("public_notes")
     val publicNotes: kotlin.String? = null,
 
     /* Privately visible notes associated with the quote, not disclosed to the client */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* The footer text of the quote */
-    @Json(name = "footer")
+    @field:JsonProperty("footer")
     val footer: kotlin.String? = null,
 
     /* First custom value field for additional information */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* Second custom value field for additional information */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* Third custom value field for additional information */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* Fourth custom value field for additional information */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The name of the first tax applied to the quote */
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
     /* The name of the second tax applied to the quote */
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
     /* The rate of the first tax applied to the quote */
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: kotlin.Float? = null,
 
     /* The rate of the second tax applied to the quote */
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: kotlin.Float? = null,
 
     /* The name of the third tax applied to the quote */
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
     /* The rate of the third tax applied to the quote */
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: kotlin.Float? = null,
 
     /* The total amount of taxes for the quote */
-    @Json(name = "total_taxes")
+    @field:JsonProperty("total_taxes")
     val totalTaxes: kotlin.Float? = null,
 
     /* An array of objects which define the line items of the quote */
-    @Json(name = "line_items")
+    @field:JsonProperty("line_items")
     val lineItems: kotlin.collections.List<InvoiceItem>? = null,
 
     /* The total amount of the quote before taxes and discounts */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: kotlin.Float? = null,
 
     /* The balance due for the quote after accounting for payments */
-    @Json(name = "balance")
+    @field:JsonProperty("balance")
     val balance: kotlin.Float? = null,
 
     /* The total amount paid on the quote so far */
-    @Json(name = "paid_to_date")
+    @field:JsonProperty("paid_to_date")
     val paidToDate: kotlin.Float? = null,
 
     /* The discount amount or percentage applied to the quote */
-    @Json(name = "discount")
+    @field:JsonProperty("discount")
     val discount: kotlin.Float? = null,
 
     /* The partial or deposit amount for the quote */
-    @Json(name = "partial")
+    @field:JsonProperty("partial")
     val partial: kotlin.Float? = null,
 
     /* Boolean flag indicating if the discount is a fixed amount or a percentage */
-    @Json(name = "is_amount_discount")
+    @field:JsonProperty("is_amount_discount")
     val isAmountDiscount: kotlin.Boolean? = null,
 
     /* Boolean flag indicating if the quote has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Boolean flag indicating if the taxes used are inclusive or exclusive */
-    @Json(name = "uses_inclusive_taxes")
+    @field:JsonProperty("uses_inclusive_taxes")
     val usesInclusiveTaxes: kotlin.Boolean? = null,
 
     /* The date the quote was created */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: java.time.LocalDate? = null,
 
     /* The last date the quote was sent to the client */
-    @Json(name = "last_sent_date")
+    @field:JsonProperty("last_sent_date")
     val lastSentDate: java.time.LocalDate? = null,
 
     /* The next scheduled date for sending a reminder for the quote */
-    @Json(name = "next_send_date")
+    @field:JsonProperty("next_send_date")
     val nextSendDate: java.time.LocalDate? = null,
 
     /* The due date for the partial or deposit amount */
-    @Json(name = "partial_due_date")
+    @field:JsonProperty("partial_due_date")
     val partialDueDate: java.time.LocalDate? = null,
 
     /* The due date for the total amount of the quote */
-    @Json(name = "due_date")
+    @field:JsonProperty("due_date")
     val dueDate: java.time.LocalDate? = null,
 
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: CompanySettings? = null,
 
     /* The timestamp of the last time the quote was viewed */
-    @Json(name = "last_viewed")
+    @field:JsonProperty("last_viewed")
     val lastViewed: java.math.BigDecimal? = null,
 
     /* The timestamp of the last update to the quote */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* The timestamp of when the quote was archived */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null,
 
     /* First custom surcharge amount for the quote */
-    @Json(name = "custom_surcharge1")
+    @field:JsonProperty("custom_surcharge1")
     val customSurcharge1: kotlin.Float? = null,
 
     /* Second custom surcharge amount for the quote */
-    @Json(name = "custom_surcharge2")
+    @field:JsonProperty("custom_surcharge2")
     val customSurcharge2: kotlin.Float? = null,
 
     /* Third custom surcharge amount for the quote */
-    @Json(name = "custom_surcharge3")
+    @field:JsonProperty("custom_surcharge3")
     val customSurcharge3: kotlin.Float? = null,
 
     /* Fourth custom surcharge amount for the quote */
-    @Json(name = "custom_surcharge4")
+    @field:JsonProperty("custom_surcharge4")
     val customSurcharge4: kotlin.Float? = null,
 
     /* Boolean flag indicating if taxes are charged on the first custom surcharge amount */
-    @Json(name = "custom_surcharge_tax1")
+    @field:JsonProperty("custom_surcharge_tax1")
     val customSurchargeTax1: kotlin.Boolean? = null,
 
     /* Boolean flag indicating if taxes are charged on the second custom surcharge amount */
-    @Json(name = "custom_surcharge_tax2")
+    @field:JsonProperty("custom_surcharge_tax2")
     val customSurchargeTax2: kotlin.Boolean? = null,
 
     /* Boolean flag indicating if taxes are charged on the third custom surcharge amount */
-    @Json(name = "custom_surcharge_tax3")
+    @field:JsonProperty("custom_surcharge_tax3")
     val customSurchargeTax3: kotlin.Boolean? = null,
 
     /* Boolean flag indicating if taxes are charged on the fourth custom surcharge amount */
-    @Json(name = "custom_surcharge_tax4")
+    @field:JsonProperty("custom_surcharge_tax4")
     val customSurchargeTax4: kotlin.Boolean? = null
 
 )

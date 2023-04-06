@@ -1,0 +1,2 @@
+./gradlew clean build
+mvn install:install-file -Dfile=/Users/mateusz/repos/invoiceninja-java-client/build/libs/invoiceninja-java-client-1.0.0.jar -DgroupId=com.nivalit.invoiceninja -DartifactId=invoiceninja-java-client -Dversion=1.0.0 -Dpackaging=jar

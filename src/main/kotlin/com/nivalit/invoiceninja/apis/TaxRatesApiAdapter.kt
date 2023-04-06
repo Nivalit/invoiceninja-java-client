@@ -26,7 +26,7 @@ import com.nivalit.invoiceninja.models.TaxRate
 import com.nivalit.invoiceninja.models.ValidationError
 import com.nivalit.invoiceninja.models.Webhook
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 import com.nivalit.invoiceninja.infrastructure.ApiClient
 import com.nivalit.invoiceninja.infrastructure.ApiResponse

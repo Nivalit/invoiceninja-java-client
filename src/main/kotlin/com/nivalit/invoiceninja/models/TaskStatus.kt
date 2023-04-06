@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -32,23 +32,23 @@ import com.squareup.moshi.Json
 data class TaskStatus (
 
     /* The task status name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* A boolean flag determining if the task status has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null
 
 )

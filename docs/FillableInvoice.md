@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **taxRate2** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | Rate of the second tax applied to the invoice |  [optional]
 **taxName3** | **kotlin.String** | Name of the third tax applied to the invoice |  [optional]
 **taxRate3** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | Rate of the third tax applied to the invoice |  [optional]
-**lineItems** | [**kotlin.Any**](.md) | Array of line items included in the invoice |  [optional]
+**lineItems** | [**kotlin.collections.List&lt;InvoiceItem&gt;**](InvoiceItem.md) | An array of objects which define the line items of the invoice |  [optional]
 **discount** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | The discount applied to the invoice |  [optional]
 **partial** | [**java.math.BigDecimal**](java.math.BigDecimal.md) | The partial amount applied to the invoice |  [optional]
 **isAmountDiscount** | **kotlin.Boolean** | Indicates whether the discount applied is a fixed amount or a percentage |  [optional]

@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -31,19 +31,19 @@ import com.squareup.moshi.Json
 data class TaxRate (
 
     /* Thie hashed id of the tax */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The tax name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The tax rate */
-    @Json(name = "rate")
+    @field:JsonProperty("rate")
     val rate: java.math.BigDecimal? = null,
 
     /* Boolean flag determining if the tax has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null
 
 )

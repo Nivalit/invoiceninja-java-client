@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -29,11 +29,11 @@ import com.squareup.moshi.Json
 data class Account (
 
     /* The account hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* Boolean flag if the account has been verified by sms */
-    @Json(name = "account_sms_verified")
+    @field:JsonProperty("account_sms_verified")
     val accountSmsVerified: kotlin.String? = null
 
 )

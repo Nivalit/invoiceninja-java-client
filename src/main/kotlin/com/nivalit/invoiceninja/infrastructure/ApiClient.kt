@@ -27,7 +27,7 @@ import java.time.LocalTime
 import java.time.OffsetDateTime
 import java.time.OffsetTime
 import java.util.Locale
-import com.squareup.moshi.adapter
+import com.fasterxml.jackson.core.type.TypeReference
 
 open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClient) {
     companion object {
@@ -107,7 +107,7 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
                 if (content == null) {
                     EMPTY_REQUEST
                 } else {
-                    Serializer.moshi.adapter(T::class.java).toJson(content)
+                    Serializer.jacksonObjectMapper.writeValueAsString(content)
                         .toRequestBody((mediaType ?: JsonMediaType).toMediaTypeOrNull())
                 }
             mediaType == XmlMediaType -> throw UnsupportedOperationException("xml not currently supported.")
@@ -115,7 +115,6 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
             else -> throw UnsupportedOperationException("requestBody currently only supports JSON body and File body.")
         }
 
-    @OptIn(ExperimentalStdlibApi::class)
     protected inline fun <reified T: Any?> responseBody(body: ResponseBody?, mediaType: String? = JsonMediaType): T? {
         if(body == null) {
             return null
@@ -138,7 +137,7 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
         }
         return when {
             mediaType==null || (mediaType.startsWith("application/") && mediaType.endsWith("json")) ->
-                Serializer.moshi.adapter<T>().fromJson(bodyContent)
+                Serializer.jacksonObjectMapper.readValue(bodyContent, object: TypeReference<T>() {})
             else ->  throw UnsupportedOperationException("responseBody currently only supports JSON body.")
         }
     }
@@ -254,6 +253,6 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
         formatter. It also easily allows to provide a simple way to define a custom date format pattern
         inside a gson/moshi adapter.
         */
-        return Serializer.moshi.adapter(T::class.java).toJson(value).replace("\"", "")
+        return Serializer.jacksonObjectMapper.writeValueAsString(value).replace("\"", "")
     }
 }

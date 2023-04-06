@@ -25,9 +25,11 @@ import com.nivalit.invoiceninja.models.BulkInvoicesRequest
 import com.nivalit.invoiceninja.models.Error
 import com.nivalit.invoiceninja.models.FillableInvoice
 import com.nivalit.invoiceninja.models.Invoice
+import com.nivalit.invoiceninja.models.InvoiceArrayWrapped
+import com.nivalit.invoiceninja.models.InvoiceWrapped
 import com.nivalit.invoiceninja.models.ValidationError
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 import com.nivalit.invoiceninja.infrastructure.ApiClient
 import com.nivalit.invoiceninja.infrastructure.ApiResponse
@@ -595,7 +597,7 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param payable Returns the invoice list that are payable for a defined client. Please note, you must pass the client_id as the value for this query parameter  (optional)
      * @param sort Returns the list sorted by column in ascending or descending order. (optional)
      * @param privateNotes Searches on the private_notes field of the invoices  (optional)
-     * @return Invoice
+     * @return InvoiceArrayWrapped
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -604,11 +606,11 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getInvoices(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, include: kotlin.String? = null, status: kotlin.String? = null, clientId: kotlin.String? = null, createdAt: kotlin.Int? = null, updatedAt: kotlin.Int? = null, isDeleted: kotlin.Boolean? = null, filterDeletedClients: kotlin.String? = null, vendorId: kotlin.String? = null, clientStatus: kotlin.String? = null, number: kotlin.String? = null, filter: kotlin.String? = null, withoutDeletedClients: kotlin.String? = null, overdue: kotlin.String? = null, payable: kotlin.String? = null, sort: kotlin.String? = null, privateNotes: kotlin.String? = null) : Invoice {
+    fun getInvoices(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, include: kotlin.String? = null, status: kotlin.String? = null, clientId: kotlin.String? = null, createdAt: kotlin.Int? = null, updatedAt: kotlin.Int? = null, isDeleted: kotlin.Boolean? = null, filterDeletedClients: kotlin.String? = null, vendorId: kotlin.String? = null, clientStatus: kotlin.String? = null, number: kotlin.String? = null, filter: kotlin.String? = null, withoutDeletedClients: kotlin.String? = null, overdue: kotlin.String? = null, payable: kotlin.String? = null, sort: kotlin.String? = null, privateNotes: kotlin.String? = null) : InvoiceArrayWrapped {
         val localVarResponse = getInvoicesWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, include = include, status = status, clientId = clientId, createdAt = createdAt, updatedAt = updatedAt, isDeleted = isDeleted, filterDeletedClients = filterDeletedClients, vendorId = vendorId, clientStatus = clientStatus, number = number, filter = filter, withoutDeletedClients = withoutDeletedClients, overdue = overdue, payable = payable, sort = sort, privateNotes = privateNotes)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Invoice
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceArrayWrapped
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -643,16 +645,16 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param payable Returns the invoice list that are payable for a defined client. Please note, you must pass the client_id as the value for this query parameter  (optional)
      * @param sort Returns the list sorted by column in ascending or descending order. (optional)
      * @param privateNotes Searches on the private_notes field of the invoices  (optional)
-     * @return ApiResponse<Invoice?>
+     * @return ApiResponse<InvoiceArrayWrapped?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun getInvoicesWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, include: kotlin.String?, status: kotlin.String?, clientId: kotlin.String?, createdAt: kotlin.Int?, updatedAt: kotlin.Int?, isDeleted: kotlin.Boolean?, filterDeletedClients: kotlin.String?, vendorId: kotlin.String?, clientStatus: kotlin.String?, number: kotlin.String?, filter: kotlin.String?, withoutDeletedClients: kotlin.String?, overdue: kotlin.String?, payable: kotlin.String?, sort: kotlin.String?, privateNotes: kotlin.String?) : ApiResponse<Invoice?> {
+    fun getInvoicesWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, include: kotlin.String?, status: kotlin.String?, clientId: kotlin.String?, createdAt: kotlin.Int?, updatedAt: kotlin.Int?, isDeleted: kotlin.Boolean?, filterDeletedClients: kotlin.String?, vendorId: kotlin.String?, clientStatus: kotlin.String?, number: kotlin.String?, filter: kotlin.String?, withoutDeletedClients: kotlin.String?, overdue: kotlin.String?, payable: kotlin.String?, sort: kotlin.String?, privateNotes: kotlin.String?) : ApiResponse<InvoiceArrayWrapped?> {
         val localVariableConfig = getInvoicesRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, include = include, status = status, clientId = clientId, createdAt = createdAt, updatedAt = updatedAt, isDeleted = isDeleted, filterDeletedClients = filterDeletedClients, vendorId = vendorId, clientStatus = clientStatus, number = number, filter = filter, withoutDeletedClients = withoutDeletedClients, overdue = overdue, payable = payable, sort = sort, privateNotes = privateNotes)
 
-        return request<Unit, Invoice>(
+        return request<Unit, InvoiceArrayWrapped>(
             localVariableConfig
         )
     }
@@ -839,7 +841,7 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param id The Invoice Hashed ID
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return Invoice
+     * @return InvoiceWrapped
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -848,11 +850,11 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun showInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String? = null) : Invoice {
+    fun showInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String? = null) : InvoiceWrapped {
         val localVarResponse = showInvoiceWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, include = include)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Invoice
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceWrapped
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -873,16 +875,16 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param id The Invoice Hashed ID
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return ApiResponse<Invoice?>
+     * @return ApiResponse<InvoiceWrapped?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun showInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String?) : ApiResponse<Invoice?> {
+    fun showInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String?) : ApiResponse<InvoiceWrapped?> {
         val localVariableConfig = showInvoiceRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, include = include)
 
-        return request<Unit, Invoice>(
+        return request<Unit, InvoiceWrapped>(
             localVariableConfig
         )
     }
@@ -926,7 +928,7 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param fillableInvoice 
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return Invoice
+     * @return InvoiceWrapped
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -935,11 +937,11 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun storeInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, fillableInvoice: FillableInvoice, include: kotlin.String? = null) : Invoice {
+    fun storeInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, fillableInvoice: FillableInvoice, include: kotlin.String? = null) : InvoiceWrapped {
         val localVarResponse = storeInvoiceWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, fillableInvoice = fillableInvoice, include = include)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Invoice
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceWrapped
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -960,16 +962,16 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param fillableInvoice 
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return ApiResponse<Invoice?>
+     * @return ApiResponse<InvoiceWrapped?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun storeInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, fillableInvoice: FillableInvoice, include: kotlin.String?) : ApiResponse<Invoice?> {
+    fun storeInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, fillableInvoice: FillableInvoice, include: kotlin.String?) : ApiResponse<InvoiceWrapped?> {
         val localVariableConfig = storeInvoiceRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, fillableInvoice = fillableInvoice, include = include)
 
-        return request<FillableInvoice, Invoice>(
+        return request<FillableInvoice, InvoiceWrapped>(
             localVariableConfig
         )
     }
@@ -1013,8 +1015,9 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param id The Invoice Hashed ID
+     * @param invoice A request body for creating new invoice and update
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return Invoice
+     * @return InvoiceWrapped
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1023,11 +1026,11 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun updateInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String? = null) : Invoice {
-        val localVarResponse = updateInvoiceWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, include = include)
+    fun updateInvoice(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, invoice: Invoice, include: kotlin.String? = null) : InvoiceWrapped {
+        val localVarResponse = updateInvoiceWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, invoice = invoice, include = include)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Invoice
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceWrapped
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1047,17 +1050,18 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param id The Invoice Hashed ID
+     * @param invoice A request body for creating new invoice and update
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
-     * @return ApiResponse<Invoice?>
+     * @return ApiResponse<InvoiceWrapped?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun updateInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String?) : ApiResponse<Invoice?> {
-        val localVariableConfig = updateInvoiceRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, include = include)
+    fun updateInvoiceWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, invoice: Invoice, include: kotlin.String?) : ApiResponse<InvoiceWrapped?> {
+        val localVariableConfig = updateInvoiceRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, id = id, invoice = invoice, include = include)
 
-        return request<Unit, Invoice>(
+        return request<Invoice, InvoiceWrapped>(
             localVariableConfig
         )
     }
@@ -1068,11 +1072,12 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param id The Invoice Hashed ID
+     * @param invoice A request body for creating new invoice and update
      * @param include Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes (optional)
      * @return RequestConfig
      */
-    fun updateInvoiceRequestConfig(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, include: kotlin.String?) : RequestConfig<Unit> {
-        val localVariableBody = null
+    fun updateInvoiceRequestConfig(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, id: kotlin.String, invoice: Invoice, include: kotlin.String?) : RequestConfig<Invoice> {
+        val localVariableBody = invoice
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (include != null) {
@@ -1082,6 +1087,7 @@ class InvoicesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHt
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         X_API_TOKEN.apply { localVariableHeaders["X-API-TOKEN"] = this.toString() }
         xRequestedWith.apply { localVariableHeaders["X-Requested-With"] = this.toString() }
+        localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(

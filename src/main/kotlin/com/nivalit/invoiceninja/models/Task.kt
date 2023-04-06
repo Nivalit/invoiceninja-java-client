@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -49,91 +49,91 @@ import com.squareup.moshi.Json
 data class Task (
 
     /* The hashed id of the task */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the user who created the task */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The assigned user of the task */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed if of the client */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The hashed id of the invoice associated with the task */
-    @Json(name = "invoice_id")
+    @field:JsonProperty("invoice_id")
     val invoiceId: kotlin.String? = null,
 
     /* The hashed id of the project associated with the task */
-    @Json(name = "project_id")
+    @field:JsonProperty("project_id")
     val projectId: kotlin.String? = null,
 
     /* The number of the task */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* An array of unix time stamps defining the start and end times of the task */
-    @Json(name = "time_log")
+    @field:JsonProperty("time_log")
     val timeLog: kotlin.String? = null,
 
     /* Determines if the task is still running */
-    @Json(name = "is_running")
+    @field:JsonProperty("is_running")
     val isRunning: kotlin.Boolean? = null,
 
     /* Boolean flag determining if the task has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The hashed id of the task status */
-    @Json(name = "task_status_id")
+    @field:JsonProperty("task_status_id")
     val taskStatusId: kotlin.String? = null,
 
     /* The task description */
-    @Json(name = "description")
+    @field:JsonProperty("description")
     val description: kotlin.String? = null,
 
     /* The task duration */
-    @Json(name = "duration")
+    @field:JsonProperty("duration")
     val duration: kotlin.Int? = null,
 
     /* The order of the task */
-    @Json(name = "task_status_order")
+    @field:JsonProperty("task_status_order")
     val taskStatusOrder: kotlin.Int? = null,
 
     /* A custom value */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null
 
 )

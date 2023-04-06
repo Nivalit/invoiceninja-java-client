@@ -18,7 +18,7 @@ package com.nivalit.invoiceninja.models
 import com.nivalit.invoiceninja.models.ClientContact
 import com.nivalit.invoiceninja.models.CompanySettings
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -67,153 +67,153 @@ import com.squareup.moshi.Json
 data class Client (
 
     /* The unique identifier of the client */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The unique identifier of the user who created the client */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The unique identifier of the company the client belongs to */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
-    @Json(name = "contacts")
+    @field:JsonProperty("contacts")
     val contacts: kotlin.collections.List<ClientContact>? = null,
 
     /* The name of the client company or organization */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The website URL of the client company or organization */
-    @Json(name = "website")
+    @field:JsonProperty("website")
     val website: kotlin.String? = null,
 
     /* Notes that are only visible to the user who created the client */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* A unique hash value for the client */
-    @Json(name = "client_hash")
+    @field:JsonProperty("client_hash")
     val clientHash: kotlin.String? = null,
 
     /* The unique identifier of the industry the client operates in */
-    @Json(name = "industry_id")
+    @field:JsonProperty("industry_id")
     val industryId: kotlin.String? = null,
 
     /* The unique identifier for the size category of the client company or organization */
-    @Json(name = "size_id")
+    @field:JsonProperty("size_id")
     val sizeId: kotlin.String? = null,
 
     /* First line of the client's address */
-    @Json(name = "address1")
+    @field:JsonProperty("address1")
     val address1: kotlin.String? = null,
 
     /* Second line of the client's address, if needed */
-    @Json(name = "address2")
+    @field:JsonProperty("address2")
     val address2: kotlin.String? = null,
 
     /* The city the client is located in */
-    @Json(name = "city")
+    @field:JsonProperty("city")
     val city: kotlin.String? = null,
 
     /* The state, province, or locality the client is located in */
-    @Json(name = "state")
+    @field:JsonProperty("state")
     val state: kotlin.String? = null,
 
     /* The postal code or ZIP code of the client */
-    @Json(name = "postal_code")
+    @field:JsonProperty("postal_code")
     val postalCode: kotlin.String? = null,
 
     /* The client's phone number */
-    @Json(name = "phone")
+    @field:JsonProperty("phone")
     val phone: kotlin.String? = null,
 
     /* The unique identifier of the client's country */
-    @Json(name = "country_id")
+    @field:JsonProperty("country_id")
     val countryId: kotlin.String? = null,
 
     /* A custom field for storing additional information */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* A custom field for storing additional information */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* A custom field for storing additional information */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* A custom field for storing additional information */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The client's VAT (Value Added Tax) number, if applicable */
-    @Json(name = "vat_number")
+    @field:JsonProperty("vat_number")
     val vatNumber: kotlin.String? = null,
 
     /* A unique identification number for the client, such as a tax ID or business registration number */
-    @Json(name = "id_number")
+    @field:JsonProperty("id_number")
     val idNumber: kotlin.String? = null,
 
     /* A system-assigned unique number for the client, typically used for invoicing purposes */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* First line of the client's shipping address */
-    @Json(name = "shipping_address1")
+    @field:JsonProperty("shipping_address1")
     val shippingAddress1: kotlin.String? = null,
 
     /* Second line of the client's shipping address, if needed */
-    @Json(name = "shipping_address2")
+    @field:JsonProperty("shipping_address2")
     val shippingAddress2: kotlin.String? = null,
 
     /* The city of the client's shipping address */
-    @Json(name = "shipping_city")
+    @field:JsonProperty("shipping_city")
     val shippingCity: kotlin.String? = null,
 
     /* The state, province, or locality of the client's shipping address */
-    @Json(name = "shipping_state")
+    @field:JsonProperty("shipping_state")
     val shippingState: kotlin.String? = null,
 
     /* The postal code or ZIP code of the client's shipping address */
-    @Json(name = "shipping_postal_code")
+    @field:JsonProperty("shipping_postal_code")
     val shippingPostalCode: kotlin.String? = null,
 
     /* The unique identifier of the country for the client's shipping address */
-    @Json(name = "shipping_country_id")
+    @field:JsonProperty("shipping_country_id")
     val shippingCountryId: kotlin.String? = null,
 
     /* A boolean value indicating whether the client has been deleted or not */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The outstanding balance the client owes */
-    @Json(name = "balance")
+    @field:JsonProperty("balance")
     val balance: kotlin.Float? = null,
 
     /* The total amount the client has paid to date */
-    @Json(name = "paid_to_date")
+    @field:JsonProperty("paid_to_date")
     val paidToDate: kotlin.Float? = null,
 
     /* The available credit balance for the client to use on future purchases */
-    @Json(name = "credit_balance")
+    @field:JsonProperty("credit_balance")
     val creditBalance: kotlin.Float? = null,
 
     /* The timestamp of the client's last login */
-    @Json(name = "last_login")
+    @field:JsonProperty("last_login")
     val lastLogin: java.math.BigDecimal? = null,
 
     /* The timestamp when the client was created */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* The timestamp when the client was last updated */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: CompanySettings? = null
 
 )

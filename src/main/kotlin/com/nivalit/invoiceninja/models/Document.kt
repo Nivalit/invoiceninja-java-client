@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -43,67 +43,67 @@ import com.squareup.moshi.Json
 data class Document (
 
     /* The document hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The assigned user hashed id */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The project associated with this document */
-    @Json(name = "project_id")
+    @field:JsonProperty("project_id")
     val projectId: kotlin.String? = null,
 
     /* The vendor associated with this documents */
-    @Json(name = "vendor_id")
+    @field:JsonProperty("vendor_id")
     val vendorId: kotlin.String? = null,
 
     /* The document name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The document url */
-    @Json(name = "url")
+    @field:JsonProperty("url")
     val url: kotlin.String? = null,
 
     /* The document preview url */
-    @Json(name = "preview")
+    @field:JsonProperty("preview")
     val preview: kotlin.String? = null,
 
     /* The document type */
-    @Json(name = "type")
+    @field:JsonProperty("type")
     val type: kotlin.String? = null,
 
     /* The document disk */
-    @Json(name = "disk")
+    @field:JsonProperty("disk")
     val disk: kotlin.String? = null,
 
     /* The document hashed */
-    @Json(name = "hash")
+    @field:JsonProperty("hash")
     val hash: kotlin.String? = null,
 
     /* Flag to determine if the document is deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Flag to determine if the document is a default doc */
-    @Json(name = "is_default")
+    @field:JsonProperty("is_default")
     val isDefault: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "deleted_at")
+    @field:JsonProperty("deleted_at")
     val deletedAt: java.math.BigDecimal? = null
 
 )

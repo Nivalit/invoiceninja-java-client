@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.ValidationErrorErrors
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -30,10 +30,10 @@ import com.squareup.moshi.Json
 data class AuthorizationError (
 
     /* Insufficient permissions for this resource. */
-    @Json(name = "message")
+    @field:JsonProperty("message")
     val message: kotlin.String? = null,
 
-    @Json(name = "errors")
+    @field:JsonProperty("errors")
     val errors: ValidationErrorErrors? = null
 
 )

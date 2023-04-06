@@ -19,7 +19,7 @@ import com.nivalit.invoiceninja.models.CreditPaymentable
 import com.nivalit.invoiceninja.models.InvoicePaymentable
 import com.nivalit.invoiceninja.models.Paymentable
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -51,86 +51,86 @@ import com.squareup.moshi.Json
 data class Payment (
 
     /* The payment hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The client hashed id */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The invitation hashed id */
-    @Json(name = "invitation_id")
+    @field:JsonProperty("invitation_id")
     val invitationId: kotlin.String? = null,
 
     /* The client contact hashed id */
-    @Json(name = "client_contact_id")
+    @field:JsonProperty("client_contact_id")
     val clientContactId: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The Payment Type ID */
-    @Json(name = "type_id")
+    @field:JsonProperty("type_id")
     val typeId: kotlin.String? = null,
 
     /* The Payment date */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: kotlin.String? = null,
 
     /* The transaction reference as defined by the payment gateway */
-    @Json(name = "transaction_reference")
+    @field:JsonProperty("transaction_reference")
     val transactionReference: kotlin.String? = null,
 
     /* The assigned user hashed id */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The private notes of the payment */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* Flags whether the payment was made manually or processed via a gateway */
-    @Json(name = "is_manual")
+    @field:JsonProperty("is_manual")
     val isManual: kotlin.Boolean? = null,
 
     /* Defines if the payment has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The amount of this payment */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: java.math.BigDecimal? = null,
 
     /* The refunded amount of this payment */
-    @Json(name = "refunded")
+    @field:JsonProperty("refunded")
     val refunded: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null,
 
     /* The company gateway id */
-    @Json(name = "company_gateway_id")
+    @field:JsonProperty("company_gateway_id")
     val companyGatewayId: kotlin.String? = null,
 
-    @Json(name = "paymentables")
+    @field:JsonProperty("paymentables")
     val paymentables: Paymentable? = null,
 
     /*  */
-    @Json(name = "invoices")
+    @field:JsonProperty("invoices")
     val invoices: kotlin.collections.List<InvoicePaymentable>? = null,
 
     /*  */
-    @Json(name = "credits")
+    @field:JsonProperty("credits")
     val credits: kotlin.collections.List<CreditPaymentable>? = null,
 
     /* The payment number - is a unique alpha numeric number per payment per company */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null
 
 )

@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 data class AuthenticationError (
 
     /* These credentials do not match our records / Invalid Token */
-    @Json(name = "message")
+    @field:JsonProperty("message")
     val message: kotlin.String? = null
 
 )

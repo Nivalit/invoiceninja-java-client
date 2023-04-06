@@ -354,7 +354,7 @@ Configure ApiKeyAuth:
 
 <a name="getInvoices"></a>
 # **getInvoices**
-> Invoice getInvoices(X_API_TOKEN, xRequestedWith, include, status, clientId, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, clientStatus, number, filter, withoutDeletedClients, overdue, payable, sort, privateNotes)
+> InvoiceArrayWrapped getInvoices(X_API_TOKEN, xRequestedWith, include, status, clientId, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, clientStatus, number, filter, withoutDeletedClients, overdue, payable, sort, privateNotes)
 
 List invoices
 
@@ -386,7 +386,7 @@ val payable : kotlin.String = ?payable={client_id} // kotlin.String | Returns th
 val sort : kotlin.String = id|desc number|desc balance|asc // kotlin.String | Returns the list sorted by column in ascending or descending order.
 val privateNotes : kotlin.String = ?private_notes=super secret // kotlin.String | Searches on the private_notes field of the invoices 
 try {
-    val result : Invoice = apiInstance.getInvoices(X_API_TOKEN, xRequestedWith, include, status, clientId, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, clientStatus, number, filter, withoutDeletedClients, overdue, payable, sort, privateNotes)
+    val result : InvoiceArrayWrapped = apiInstance.getInvoices(X_API_TOKEN, xRequestedWith, include, status, clientId, createdAt, updatedAt, isDeleted, filterDeletedClients, vendorId, clientStatus, number, filter, withoutDeletedClients, overdue, payable, sort, privateNotes)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling InvoicesApiAdapter#getInvoices")
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Invoice**](Invoice.md)
+[**InvoiceArrayWrapped**](InvoiceArrayWrapped.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ Configure ApiKeyAuth:
 
 <a name="showInvoice"></a>
 # **showInvoice**
-> Invoice showInvoice(X_API_TOKEN, xRequestedWith, id, include)
+> InvoiceWrapped showInvoice(X_API_TOKEN, xRequestedWith, id, include)
 
 Show invoice
 
@@ -510,7 +510,7 @@ val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to s
 val id : kotlin.String = D2J234DFA // kotlin.String | The Invoice Hashed ID
 val include : kotlin.String = first_load // kotlin.String | Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes
 try {
-    val result : Invoice = apiInstance.showInvoice(X_API_TOKEN, xRequestedWith, id, include)
+    val result : InvoiceWrapped = apiInstance.showInvoice(X_API_TOKEN, xRequestedWith, id, include)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling InvoicesApiAdapter#showInvoice")
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Invoice**](Invoice.md)
+[**InvoiceWrapped**](InvoiceWrapped.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ Configure ApiKeyAuth:
 
 <a name="storeInvoice"></a>
 # **storeInvoice**
-> Invoice storeInvoice(X_API_TOKEN, xRequestedWith, fillableInvoice, include)
+> InvoiceWrapped storeInvoice(X_API_TOKEN, xRequestedWith, fillableInvoice, include)
 
 Create invoice
 
@@ -566,7 +566,7 @@ val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to s
 val fillableInvoice : FillableInvoice =  // FillableInvoice | 
 val include : kotlin.String = first_load // kotlin.String | Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes
 try {
-    val result : Invoice = apiInstance.storeInvoice(X_API_TOKEN, xRequestedWith, fillableInvoice, include)
+    val result : InvoiceWrapped = apiInstance.storeInvoice(X_API_TOKEN, xRequestedWith, fillableInvoice, include)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling InvoicesApiAdapter#storeInvoice")
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Invoice**](Invoice.md)
+[**InvoiceWrapped**](InvoiceWrapped.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Configure ApiKeyAuth:
 
 <a name="updateInvoice"></a>
 # **updateInvoice**
-> Invoice updateInvoice(X_API_TOKEN, xRequestedWith, id, include)
+> InvoiceWrapped updateInvoice(X_API_TOKEN, xRequestedWith, id, invoice, include)
 
 Update invoice
 
@@ -620,9 +620,10 @@ val apiInstance = InvoicesApiAdapter()
 val X_API_TOKEN : kotlin.String = TOKEN // kotlin.String | The API token to be used for authentication
 val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to send the XMLHttpRequest header
 val id : kotlin.String = D2J234DFA // kotlin.String | The Invoice Hashed ID
+val invoice : Invoice =  // Invoice | A request body for creating new invoice and update
 val include : kotlin.String = first_load // kotlin.String | Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes
 try {
-    val result : Invoice = apiInstance.updateInvoice(X_API_TOKEN, xRequestedWith, id, include)
+    val result : InvoiceWrapped = apiInstance.updateInvoice(X_API_TOKEN, xRequestedWith, id, invoice, include)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling InvoicesApiAdapter#updateInvoice")
@@ -640,11 +641,12 @@ Name | Type | Description  | Notes
  **X_API_TOKEN** | **kotlin.String**| The API token to be used for authentication |
  **xRequestedWith** | **kotlin.String**| Used to send the XMLHttpRequest header |
  **id** | **kotlin.String**| The Invoice Hashed ID |
+ **invoice** | [**Invoice**](Invoice.md)| A request body for creating new invoice and update |
  **include** | **kotlin.String**| Includes child relationships in the response, format is comma separated. Check each model for the list of associated includes | [optional]
 
 ### Return type
 
-[**Invoice**](Invoice.md)
+[**InvoiceWrapped**](InvoiceWrapped.md)
 
 ### Authorization
 
@@ -655,7 +657,7 @@ Configure ApiKeyAuth:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="uploadInvoice"></a>

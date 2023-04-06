@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -43,67 +43,67 @@ import com.squareup.moshi.Json
 data class VendorContact (
 
     /* The hashed id of the vendor contact */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the user id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed id of the vendor */
-    @Json(name = "vendor_id")
+    @field:JsonProperty("vendor_id")
     val vendorId: kotlin.String? = null,
 
     /* The first name of the contact */
-    @Json(name = "first_name")
+    @field:JsonProperty("first_name")
     val firstName: kotlin.String? = null,
 
     /* The last name of the contact */
-    @Json(name = "last_name")
+    @field:JsonProperty("last_name")
     val lastName: kotlin.String? = null,
 
     /* The contacts phone number */
-    @Json(name = "phone")
+    @field:JsonProperty("phone")
     val phone: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* A custom value */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The contact email address */
-    @Json(name = "email")
+    @field:JsonProperty("email")
     val email: kotlin.String? = null,
 
     /* Boolean flag determining if the contact is the primary contact for the vendor */
-    @Json(name = "is_primary")
+    @field:JsonProperty("is_primary")
     val isPrimary: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "deleted_at")
+    @field:JsonProperty("deleted_at")
     val deletedAt: java.math.BigDecimal? = null
 
 )

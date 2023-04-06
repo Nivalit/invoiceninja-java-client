@@ -2,6 +2,7 @@ package com.nivalit.invoiceninja.sdk
 
 import com.nivalit.invoiceninja.apis.ClientsApiAdapter
 import com.nivalit.invoiceninja.models.Client
+import java.math.BigDecimal
 
 class ClientApi {
 
@@ -10,13 +11,13 @@ class ClientApi {
 
         fun create(client: Client) = clientApi.storeClient(
             X_API_TOKEN = InvoiceNinja.apiToken,
-            xRequestedWith = "XMLHttpRequest",
+            xRequestedWith = InvoiceNinja.xRequestedWith,
             client = client
         ).data
 
         fun update(id: String, client: Client) = clientApi.updateClient(
             X_API_TOKEN = InvoiceNinja.apiToken,
-            xRequestedWith = "XMLHttpRequest",
+            xRequestedWith = InvoiceNinja.xRequestedWith,
             id = id,
             client = client
         ).data
@@ -24,7 +25,7 @@ class ClientApi {
 
         fun retrieve(id: String) = clientApi.showClient(
             X_API_TOKEN = InvoiceNinja.apiToken,
-            xRequestedWith = "XMLHttpRequest",
+            xRequestedWith = InvoiceNinja.xRequestedWith,
             id = id,
         ).data
 
@@ -47,7 +48,7 @@ class ClientApi {
             sort: String? = null
         ) = clientApi.getClients(
             X_API_TOKEN = InvoiceNinja.apiToken,
-            xRequestedWith = "XMLHttpRequest",
+            xRequestedWith = InvoiceNinja.xRequestedWith,
             include = include,
             index = index,
             status = status,

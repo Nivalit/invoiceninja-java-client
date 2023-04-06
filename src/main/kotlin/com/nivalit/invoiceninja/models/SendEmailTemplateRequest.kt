@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -32,23 +32,23 @@ import com.squareup.moshi.Json
 data class SendEmailTemplateRequest (
 
     /* The email subject */
-    @Json(name = "subject")
+    @field:JsonProperty("subject")
     val subject: kotlin.String? = null,
 
     /* The email body */
-    @Json(name = "body")
+    @field:JsonProperty("body")
     val body: kotlin.String? = null,
 
     /* The entity name */
-    @Json(name = "entity")
+    @field:JsonProperty("entity")
     val entity: kotlin.String? = null,
 
     /* The entity_id */
-    @Json(name = "entity_id")
+    @field:JsonProperty("entity_id")
     val entityId: kotlin.String? = null,
 
     /* The template required */
-    @Json(name = "template")
+    @field:JsonProperty("template")
     val template: kotlin.String? = null
 
 )

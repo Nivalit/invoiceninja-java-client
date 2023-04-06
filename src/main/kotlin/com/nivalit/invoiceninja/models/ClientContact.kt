@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -53,107 +53,107 @@ import com.squareup.moshi.Json
 data class ClientContact (
 
     /* The hashed if of the contact */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the user who created the contact */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed id of the client */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The first name of the contact */
-    @Json(name = "first_name")
+    @field:JsonProperty("first_name")
     val firstName: kotlin.String? = null,
 
     /* The last name of the contact */
-    @Json(name = "last_name")
+    @field:JsonProperty("last_name")
     val lastName: kotlin.String? = null,
 
     /* The phone number of the contact */
-    @Json(name = "phone")
+    @field:JsonProperty("phone")
     val phone: kotlin.String? = null,
 
     /* A Custom field value */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* A Custom field value */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* A Custom field value */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* A Custom field value */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The email of the contact */
-    @Json(name = "email")
+    @field:JsonProperty("email")
     val email: kotlin.String? = null,
 
     /* The terms of service which the contact has accpeted */
-    @Json(name = "accepted_terms_version")
+    @field:JsonProperty("accepted_terms_version")
     val acceptedTermsVersion: kotlin.String? = null,
 
     /* The hashed password of the contact */
-    @Json(name = "password")
+    @field:JsonProperty("password")
     val password: kotlin.String? = null,
 
     /* The confirmation code used to authenticate the contacts email address */
-    @Json(name = "confirmation-code")
+    @field:JsonProperty("confirmation-code")
     val confirmationCode: kotlin.String? = null,
 
     /* A uuid based token. */
-    @Json(name = "token")
+    @field:JsonProperty("token")
     val token: kotlin.String? = null,
 
     /* Defines is this contact is the primary contact for the client */
-    @Json(name = "is_primary")
+    @field:JsonProperty("is_primary")
     val isPrimary: kotlin.Boolean? = null,
 
     /* Boolean value confirms the user has confirmed their account. */
-    @Json(name = "confirmed")
+    @field:JsonProperty("confirmed")
     val confirmed: kotlin.Boolean? = null,
 
     /* Boolean value defines if the contact has been locked out. */
-    @Json(name = "is_locked")
+    @field:JsonProperty("is_locked")
     val isLocked: kotlin.Boolean? = null,
 
     /* Boolean value determines is this contact should receive emails */
-    @Json(name = "send_email")
+    @field:JsonProperty("send_email")
     val sendEmail: kotlin.Boolean? = null,
 
     /* The number of failed logins the contact has had */
-    @Json(name = "failed_logins")
+    @field:JsonProperty("failed_logins")
     val failedLogins: java.math.BigDecimal? = null,
 
     /* The date which the contact confirmed their email */
-    @Json(name = "email_verified_at")
+    @field:JsonProperty("email_verified_at")
     val emailVerifiedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "last_login")
+    @field:JsonProperty("last_login")
     val lastLogin: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "deleted_at")
+    @field:JsonProperty("deleted_at")
     val deletedAt: java.math.BigDecimal? = null
 
 )

@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -29,11 +29,11 @@ import com.squareup.moshi.Json
 data class InvoicePaymentable (
 
     /* ______ */
-    @Json(name = "invoice_id")
+    @field:JsonProperty("invoice_id")
     val invoiceId: kotlin.String? = null,
 
     /* ______ */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: kotlin.String? = null
 
 )

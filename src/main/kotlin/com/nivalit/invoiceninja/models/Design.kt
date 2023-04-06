@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -36,39 +36,39 @@ import com.squareup.moshi.Json
 data class Design (
 
     /* The design hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The design name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The design HTML */
-    @Json(name = "design")
+    @field:JsonProperty("design")
     val design: kotlin.String? = null,
 
     /* Flag to determine if the design is a custom user design */
-    @Json(name = "is_custom")
+    @field:JsonProperty("is_custom")
     val isCustom: kotlin.Boolean? = null,
 
     /* Flag to determine if the design is available for use */
-    @Json(name = "is_active")
+    @field:JsonProperty("is_active")
     val isActive: kotlin.Boolean? = null,
 
     /* Flag to determine if the design is deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "deleted_at")
+    @field:JsonProperty("deleted_at")
     val deletedAt: java.math.BigDecimal? = null
 
 )

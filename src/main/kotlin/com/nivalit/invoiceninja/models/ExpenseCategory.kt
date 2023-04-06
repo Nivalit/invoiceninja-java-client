@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -33,27 +33,27 @@ import com.squareup.moshi.Json
 data class ExpenseCategory (
 
     /* The expense hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The expense category name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* Flag determining whether the expense category has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The updated at timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: kotlin.Int? = null,
 
     /* The created at timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: kotlin.Int? = null
 
 )

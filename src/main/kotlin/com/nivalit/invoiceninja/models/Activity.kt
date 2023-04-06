@@ -29,7 +29,7 @@ import com.nivalit.invoiceninja.models.User
 import com.nivalit.invoiceninja.models.Vendor
 import com.nivalit.invoiceninja.models.VendorContact
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -69,106 +69,106 @@ import com.squareup.moshi.Json
 data class Activity (
 
     /* The id field of the activity */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The activity type id */
-    @Json(name = "activity_type_id")
+    @field:JsonProperty("activity_type_id")
     val activityTypeId: kotlin.String? = null,
 
     /* The client hashed id */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The invoice hashed id */
-    @Json(name = "invoice_id")
+    @field:JsonProperty("invoice_id")
     val invoiceId: kotlin.String? = null,
 
     /* The payment hashed id */
-    @Json(name = "payment_id")
+    @field:JsonProperty("payment_id")
     val paymentId: kotlin.String? = null,
 
     /* The credit hashed id */
-    @Json(name = "credit_id")
+    @field:JsonProperty("credit_id")
     val creditId: kotlin.String? = null,
 
     /* Unixtimestamp the last time the record was updated */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: kotlin.Int? = null,
 
     /* The expense hashed id */
-    @Json(name = "expense_id")
+    @field:JsonProperty("expense_id")
     val expenseId: kotlin.String? = null,
 
     /* Defines is the activity was performed by the system */
-    @Json(name = "is_system")
+    @field:JsonProperty("is_system")
     val isSystem: kotlin.Boolean? = null,
 
     /* The contact hashed id */
-    @Json(name = "contact_id")
+    @field:JsonProperty("contact_id")
     val contactId: kotlin.String? = null,
 
     /* The task hashed id */
-    @Json(name = "task_id")
+    @field:JsonProperty("task_id")
     val taskId: kotlin.String? = null,
 
     /* Activity Notes */
-    @Json(name = "notes")
+    @field:JsonProperty("notes")
     val notes: kotlin.String? = null,
 
     /* The hashed ID of the token who performed the action */
-    @Json(name = "token_id")
+    @field:JsonProperty("token_id")
     val tokenId: kotlin.String? = null,
 
     /* The IP Address of the user who performed the action */
-    @Json(name = "ip")
+    @field:JsonProperty("ip")
     val ip: kotlin.String? = null,
 
-    @Json(name = "user")
+    @field:JsonProperty("user")
     val user: User? = null,
 
-    @Json(name = "client")
+    @field:JsonProperty("client")
     val client: Client? = null,
 
-    @Json(name = "contact")
+    @field:JsonProperty("contact")
     val contact: ClientContact? = null,
 
-    @Json(name = "recurring_invoice")
+    @field:JsonProperty("recurring_invoice")
     val recurringInvoice: RecurringInvoice? = null,
 
-    @Json(name = "invoice")
+    @field:JsonProperty("invoice")
     val invoice: Invoice? = null,
 
-    @Json(name = "credit")
+    @field:JsonProperty("credit")
     val credit: Credit? = null,
 
-    @Json(name = "quote")
+    @field:JsonProperty("quote")
     val quote: Quote? = null,
 
-    @Json(name = "payment")
+    @field:JsonProperty("payment")
     val payment: Payment? = null,
 
-    @Json(name = "expense")
+    @field:JsonProperty("expense")
     val expense: Expense? = null,
 
-    @Json(name = "task")
+    @field:JsonProperty("task")
     val task: Task? = null,
 
-    @Json(name = "purchase_order")
+    @field:JsonProperty("purchase_order")
     val purchaseOrder: PurchaseOrder? = null,
 
-    @Json(name = "vendor")
+    @field:JsonProperty("vendor")
     val vendor: Vendor? = null,
 
-    @Json(name = "vendor_contact")
+    @field:JsonProperty("vendor_contact")
     val vendorContact: VendorContact? = null
 
 )

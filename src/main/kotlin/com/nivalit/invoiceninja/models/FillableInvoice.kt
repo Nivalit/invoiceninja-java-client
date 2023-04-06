@@ -15,8 +15,9 @@
 
 package com.nivalit.invoiceninja.models
 
+import com.nivalit.invoiceninja.models.InvoiceItem
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -39,7 +40,7 @@ import com.squareup.moshi.Json
  * @param taxRate2 Rate of the second tax applied to the invoice
  * @param taxName3 Name of the third tax applied to the invoice
  * @param taxRate3 Rate of the third tax applied to the invoice
- * @param lineItems Array of line items included in the invoice
+ * @param lineItems An array of objects which define the line items of the invoice
  * @param discount The discount applied to the invoice
  * @param partial The partial amount applied to the invoice
  * @param isAmountDiscount Indicates whether the discount applied is a fixed amount or a percentage
@@ -57,123 +58,123 @@ import com.squareup.moshi.Json
 data class FillableInvoice (
 
     /* The assigned user's hashed ID */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The client's hashed ID */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The unique alphanumeric invoice number for each invoice per company */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* The purchase order number associated with the invoice */
-    @Json(name = "po_number")
+    @field:JsonProperty("po_number")
     val poNumber: kotlin.String? = null,
 
     /* The terms and conditions for the invoice */
-    @Json(name = "terms")
+    @field:JsonProperty("terms")
     val terms: kotlin.String? = null,
 
     /* Public notes visible to the client on the invoice */
-    @Json(name = "public_notes")
+    @field:JsonProperty("public_notes")
     val publicNotes: kotlin.String? = null,
 
     /* Private notes for internal use only */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* The footer text displayed on the invoice */
-    @Json(name = "footer")
+    @field:JsonProperty("footer")
     val footer: kotlin.String? = null,
 
     /* First custom value for additional information */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* Second custom value for additional information */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* Third custom value for additional information */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* Fourth custom value for additional information */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* Name of the first tax applied to the invoice */
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
     /* Name of the second tax applied to the invoice */
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
     /* Rate of the first tax applied to the invoice */
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: java.math.BigDecimal? = null,
 
     /* Rate of the second tax applied to the invoice */
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: java.math.BigDecimal? = null,
 
     /* Name of the third tax applied to the invoice */
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
     /* Rate of the third tax applied to the invoice */
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: java.math.BigDecimal? = null,
 
-    /* Array of line items included in the invoice */
-    @Json(name = "line_items")
-    val lineItems: kotlin.Any? = null,
+    /* An array of objects which define the line items of the invoice */
+    @field:JsonProperty("line_items")
+    val lineItems: kotlin.collections.List<InvoiceItem>? = null,
 
     /* The discount applied to the invoice */
-    @Json(name = "discount")
+    @field:JsonProperty("discount")
     val discount: java.math.BigDecimal? = null,
 
     /* The partial amount applied to the invoice */
-    @Json(name = "partial")
+    @field:JsonProperty("partial")
     val partial: java.math.BigDecimal? = null,
 
     /* Indicates whether the discount applied is a fixed amount or a percentage */
-    @Json(name = "is_amount_discount")
+    @field:JsonProperty("is_amount_discount")
     val isAmountDiscount: kotlin.Boolean? = null,
 
     /* Indicates whether the tax rates applied to the invoice are inclusive or exclusive */
-    @Json(name = "uses_inclusive_taxes")
+    @field:JsonProperty("uses_inclusive_taxes")
     val usesInclusiveTaxes: kotlin.Boolean? = null,
 
     /* The date the invoice was issued */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: kotlin.String? = null,
 
     /* The due date for the partial payment */
-    @Json(name = "partial_due_date")
+    @field:JsonProperty("partial_due_date")
     val partialDueDate: kotlin.String? = null,
 
     /* The due date for the invoice */
-    @Json(name = "due_date")
+    @field:JsonProperty("due_date")
     val dueDate: kotlin.String? = null,
 
     /* First custom surcharge applied to the invoice */
-    @Json(name = "custom_surcharge1")
+    @field:JsonProperty("custom_surcharge1")
     val customSurcharge1: java.math.BigDecimal? = null,
 
     /* Second custom surcharge applied to the invoice */
-    @Json(name = "custom_surcharge2")
+    @field:JsonProperty("custom_surcharge2")
     val customSurcharge2: java.math.BigDecimal? = null,
 
     /* Third custom surcharge applied to the invoice */
-    @Json(name = "custom_surcharge3")
+    @field:JsonProperty("custom_surcharge3")
     val customSurcharge3: java.math.BigDecimal? = null,
 
     /* Fourth custom surcharge applied to the invoice */
-    @Json(name = "custom_surcharge4")
+    @field:JsonProperty("custom_surcharge4")
     val customSurcharge4: java.math.BigDecimal? = null
 
 )

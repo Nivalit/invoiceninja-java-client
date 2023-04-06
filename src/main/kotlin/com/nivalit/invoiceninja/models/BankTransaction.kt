@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -40,55 +40,55 @@ import com.squareup.moshi.Json
 data class BankTransaction (
 
     /* The bank integration hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The id of the transaction rule */
-    @Json(name = "transaction_id")
+    @field:JsonProperty("transaction_id")
     val transactionId: kotlin.Int? = null,
 
     /* The transaction amount */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: java.math.BigDecimal? = null,
 
     /* The currency ID of the currency */
-    @Json(name = "currency_id")
+    @field:JsonProperty("currency_id")
     val currencyId: kotlin.String? = null,
 
     /* The account type */
-    @Json(name = "account_type")
+    @field:JsonProperty("account_type")
     val accountType: kotlin.String? = null,
 
     /* The description of the transaction */
-    @Json(name = "description")
+    @field:JsonProperty("description")
     val description: kotlin.String? = null,
 
     /* The category id */
-    @Json(name = "category_id")
+    @field:JsonProperty("category_id")
     val categoryId: kotlin.String? = null,
 
     /* The category description */
-    @Json(name = "category_type")
+    @field:JsonProperty("category_type")
     val categoryType: kotlin.String? = null,
 
     /* Either CREDIT or DEBIT */
-    @Json(name = "base_type")
+    @field:JsonProperty("base_type")
     val baseType: kotlin.String? = null,
 
     /* The date of the transaction */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: kotlin.String? = null,
 
     /* The ID number of the bank account */
-    @Json(name = "bank_account_id")
+    @field:JsonProperty("bank_account_id")
     val bankAccountId: kotlin.String? = null
 
 )

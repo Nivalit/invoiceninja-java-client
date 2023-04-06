@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -57,123 +57,123 @@ import com.squareup.moshi.Json
 data class Product (
 
     /* The hashed product ID. */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed ID of the company that owns this product. */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed ID of the user that created this product. */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The hashed ID of the user assigned to this product. */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The hashed ID of the project that this product is associated with. */
-    @Json(name = "project_id")
+    @field:JsonProperty("project_id")
     val projectId: kotlin.String? = null,
 
     /* The hashed ID of the vendor that this product is associated with. */
-    @Json(name = "vendor_id")
+    @field:JsonProperty("vendor_id")
     val vendorId: kotlin.String? = null,
 
     /* Custom value field 1. */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* Custom value field 2. */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* Custom value field 3. */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* Custom value field 4. */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The product key. */
-    @Json(name = "product_key")
+    @field:JsonProperty("product_key")
     val productKey: kotlin.String? = null,
 
     /* Notes about the product. */
-    @Json(name = "notes")
+    @field:JsonProperty("notes")
     val notes: kotlin.String? = null,
 
     /* The cost of the product. */
-    @Json(name = "cost")
+    @field:JsonProperty("cost")
     val cost: kotlin.Float? = null,
 
     /* The price of the product. */
-    @Json(name = "price")
+    @field:JsonProperty("price")
     val price: kotlin.Float? = null,
 
     /* The quantity of the product. */
-    @Json(name = "quantity")
+    @field:JsonProperty("quantity")
     val quantity: kotlin.Float? = null,
 
     /* The name of tax 1. */
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
     /* The rate of tax 1. */
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: kotlin.Float? = null,
 
     /* The name of tax 2. */
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
     /* The rate of tax 2. */
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: kotlin.Float? = null,
 
     /* The name of tax 3. */
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
     /* The rate of tax 3. */
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: kotlin.Float? = null,
 
     /* The timestamp when the product was archived. */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: kotlin.Int? = null,
 
     /* The timestamp when the product was created. */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: kotlin.Int? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: kotlin.Int? = null,
 
     /* Boolean flag determining if the product has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The quantity of the product that is currently in stock */
-    @Json(name = "in_stock_quantity")
+    @field:JsonProperty("in_stock_quantity")
     val inStockQuantity: kotlin.Int? = 0,
 
     /* Indicates whether stock notifications are enabled for this product */
-    @Json(name = "stock_notification")
+    @field:JsonProperty("stock_notification")
     val stockNotification: kotlin.Boolean? = true,
 
     /* The minimum quantity threshold for which stock notifications will be triggered */
-    @Json(name = "stock_notification_threshold")
+    @field:JsonProperty("stock_notification_threshold")
     val stockNotificationThreshold: kotlin.Int? = 0,
 
     /* The maximum quantity that can be ordered for this product */
-    @Json(name = "max_quantity")
+    @field:JsonProperty("max_quantity")
     val maxQuantity: kotlin.Int? = null,
 
     /* The URL of the product image */
-    @Json(name = "product_image")
+    @field:JsonProperty("product_image")
     val productImage: kotlin.String? = null
 
 )

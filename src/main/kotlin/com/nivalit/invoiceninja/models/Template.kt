@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 data class Template (
 
     /* The template HTML */
-    @Json(name = "html")
+    @field:JsonProperty("html")
     val html: kotlin.String? = null
 
 )

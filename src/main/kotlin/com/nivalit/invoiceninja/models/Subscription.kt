@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -52,103 +52,103 @@ import com.squareup.moshi.Json
 data class Subscription (
 
     /* Unique identifier for the subscription */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* Unique identifier for the user associated with the subscription */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* Unique identifier for the product associated with the subscription */
-    @Json(name = "product_id")
+    @field:JsonProperty("product_id")
     val productId: kotlin.String? = null,
 
     /* Unique identifier for the company associated with the subscription */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* Unique identifier for the recurring invoice associated with the subscription */
-    @Json(name = "recurring_invoice_id")
+    @field:JsonProperty("recurring_invoice_id")
     val recurringInvoiceId: kotlin.String? = null,
 
     /* Indicates whether the subscription is recurring */
-    @Json(name = "is_recurring")
+    @field:JsonProperty("is_recurring")
     val isRecurring: kotlin.Boolean? = null,
 
     /* integer const representation of the frequency */
-    @Json(name = "frequency_id")
+    @field:JsonProperty("frequency_id")
     val frequencyId: kotlin.String? = null,
 
     /* enum setting */
-    @Json(name = "auto_bill")
+    @field:JsonProperty("auto_bill")
     val autoBill: kotlin.String? = null,
 
     /* Promotional code applied to the subscription */
-    @Json(name = "promo_code")
+    @field:JsonProperty("promo_code")
     val promoCode: kotlin.String? = null,
 
     /* Discount percentage or amount applied to the subscription */
-    @Json(name = "promo_discount")
+    @field:JsonProperty("promo_discount")
     val promoDiscount: java.math.BigDecimal? = null,
 
     /* Indicates whether the discount is a fixed amount */
-    @Json(name = "is_amount_discount")
+    @field:JsonProperty("is_amount_discount")
     val isAmountDiscount: kotlin.Boolean? = null,
 
     /* Indicates whether the subscription can be cancelled */
-    @Json(name = "allow_cancellation")
+    @field:JsonProperty("allow_cancellation")
     val allowCancellation: kotlin.Boolean? = null,
 
     /* Indicates whether the subscription pricing is per seat */
-    @Json(name = "per_seat_enabled")
+    @field:JsonProperty("per_seat_enabled")
     val perSeatEnabled: kotlin.Boolean? = null,
 
     /* Unique identifier for the currency used in the subscription */
-    @Json(name = "currency_id")
+    @field:JsonProperty("currency_id")
     val currencyId: kotlin.String? = null,
 
     /* Maximum number of seats allowed for the subscription */
-    @Json(name = "max_seats_limit")
+    @field:JsonProperty("max_seats_limit")
     val maxSeatsLimit: kotlin.Int? = null,
 
     /* Indicates whether the subscription has a trial period */
-    @Json(name = "trial_enabled")
+    @field:JsonProperty("trial_enabled")
     val trialEnabled: kotlin.Boolean? = null,
 
     /* Duration of the trial period in days */
-    @Json(name = "trial_duration")
+    @field:JsonProperty("trial_duration")
     val trialDuration: kotlin.Int? = null,
 
     /* Indicates whether query overrides are allowed for the subscription */
-    @Json(name = "allow_query_overrides")
+    @field:JsonProperty("allow_query_overrides")
     val allowQueryOverrides: kotlin.Boolean? = null,
 
     /* Indicates whether plan changes are allowed for the subscription */
-    @Json(name = "allow_plan_changes")
+    @field:JsonProperty("allow_plan_changes")
     val allowPlanChanges: kotlin.Boolean? = null,
 
     /* Number of days within which refunds can be requested */
-    @Json(name = "refund_period")
+    @field:JsonProperty("refund_period")
     val refundPeriod: kotlin.Int? = null,
 
     /* Webhook configuration for the subscription */
-    @Json(name = "webhook_configuration")
+    @field:JsonProperty("webhook_configuration")
     val webhookConfiguration: kotlin.String? = null,
 
     /* Indicates whether the subscription has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null
 
 )

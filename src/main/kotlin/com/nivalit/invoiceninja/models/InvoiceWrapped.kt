@@ -15,21 +15,21 @@
 
 package com.nivalit.invoiceninja.models
 
+import com.nivalit.invoiceninja.models.Invoice
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
  *
- * @param job Set action name, action names can be found in Scheduler Model
+ * @param `data` 
  */
 
 
-data class UpdateJobForASchedulerSchema (
+data class InvoiceWrapped (
 
-    /* Set action name, action names can be found in Scheduler Model */
-    @field:JsonProperty("job")
-    val job: kotlin.String? = null
+    @field:JsonProperty("data")
+    val `data`: Invoice? = null
 
 )
 

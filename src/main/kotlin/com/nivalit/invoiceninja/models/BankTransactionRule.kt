@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.BTRules
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -39,47 +39,47 @@ import com.squareup.moshi.Json
 data class BankTransactionRule (
 
     /* The bank transaction rules hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The name of the transaction */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* A mapped collection of the sub rules for the BankTransactionRule */
-    @Json(name = "rules")
+    @field:JsonProperty("rules")
     val rules: kotlin.collections.List<BTRules>? = null,
 
     /* Flags whether the rule converts the transaction automatically */
-    @Json(name = "auto_convert")
+    @field:JsonProperty("auto_convert")
     val autoConvert: kotlin.Boolean? = null,
 
     /* Flags whether all subrules are required for the match */
-    @Json(name = "matches_on_all")
+    @field:JsonProperty("matches_on_all")
     val matchesOnAll: kotlin.Boolean? = null,
 
     /* Flags whether the rule applies to a CREDIT or DEBIT */
-    @Json(name = "applies_to")
+    @field:JsonProperty("applies_to")
     val appliesTo: kotlin.String? = null,
 
     /* The client hashed id */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The vendor hashed id */
-    @Json(name = "vendor_id")
+    @field:JsonProperty("vendor_id")
     val vendorId: kotlin.String? = null,
 
     /* The category hashed id */
-    @Json(name = "category_id")
+    @field:JsonProperty("category_id")
     val categoryId: kotlin.String? = null
 
 )

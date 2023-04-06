@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -36,38 +36,38 @@ import com.squareup.moshi.Json
 data class TaskSchedulerSchema (
 
     /* The scheduler paused state */
-    @Json(name = "paused")
+    @field:JsonProperty("paused")
     val paused: kotlin.Boolean? = null,
 
     /* Accepted values (DAY,WEEK,MONTH,3MONTHS,YEAR) */
-    @Json(name = "repeat_every")
+    @field:JsonProperty("repeat_every")
     val repeatEvery: kotlin.String? = null,
 
     /* Timestamp when we should start the scheduler, default is today */
-    @Json(name = "start_from")
+    @field:JsonProperty("start_from")
     val startFrom: kotlin.Int? = null,
 
     /* Job, we can find list of available jobs in Scheduler model */
-    @Json(name = "job")
+    @field:JsonProperty("job")
     val job: kotlin.String? = null,
 
     /* The string representation of the date range of data to be returned */
-    @Json(name = "date_range")
+    @field:JsonProperty("date_range")
     val dateRange: kotlin.String? = null,
 
     /* The date column to search between. */
-    @Json(name = "date_key")
+    @field:JsonProperty("date_key")
     val dateKey: kotlin.String? = null,
 
     /* The start date to search between */
-    @Json(name = "start_date")
+    @field:JsonProperty("start_date")
     val startDate: kotlin.String? = null,
 
     /* The end date to search between */
-    @Json(name = "end_date")
+    @field:JsonProperty("end_date")
     val endDate: kotlin.String? = null,
 
-    @Json(name = "report_keys")
+    @field:JsonProperty("report_keys")
     val reportKeys: kotlin.collections.List<kotlin.String>? = null
 
 )

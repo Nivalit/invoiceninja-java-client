@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -48,87 +48,87 @@ import com.squareup.moshi.Json
 data class Project (
 
     /* The project hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String,
 
     /* The name of the project */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String,
 
     /* The default rate per task for the project */
-    @Json(name = "task_rate")
+    @field:JsonProperty("task_rate")
     val taskRate: kotlin.Float,
 
     /* The number of budgeted hours for the project */
-    @Json(name = "budgeted_hours")
+    @field:JsonProperty("budgeted_hours")
     val budgetedHours: kotlin.Float,
 
     /* A flag indicating if the project is deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean,
 
     /* The color associated with the project */
-    @Json(name = "color")
+    @field:JsonProperty("color")
     val color: kotlin.String,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String,
 
     /* The assigned user identifier associated with the project */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The client identifier associated with the project */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The due date for the project */
-    @Json(name = "due_date")
+    @field:JsonProperty("due_date")
     val dueDate: java.time.LocalDate? = null,
 
     /* Private notes associated with the project */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* Custom value field 1 */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* Custom value field 2 */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* Custom value field 3 */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* Custom value field 4 */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The timestamp of the project creation */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* The timestamp of the last project update */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* The timestamp of the project deletion */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null,
 
     /* Public notes associated with the project */
-    @Json(name = "public_notes")
+    @field:JsonProperty("public_notes")
     val publicNotes: kotlin.String? = null,
 
     /* The project number */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null
 
 )

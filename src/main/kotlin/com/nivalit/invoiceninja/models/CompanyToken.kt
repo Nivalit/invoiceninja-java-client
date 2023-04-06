@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -30,15 +30,15 @@ import com.squareup.moshi.Json
 data class CompanyToken (
 
     /* The token name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The token value */
-    @Json(name = "token")
+    @field:JsonProperty("token")
     val token: kotlin.String? = null,
 
     /* Determines whether the token is created by the system rather than a user */
-    @Json(name = "is_system")
+    @field:JsonProperty("is_system")
     val isSystem: kotlin.Boolean? = null
 
 )

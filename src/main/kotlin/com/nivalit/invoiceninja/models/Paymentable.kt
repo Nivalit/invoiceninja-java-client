@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -34,31 +34,31 @@ import com.squareup.moshi.Json
 data class Paymentable (
 
     /* The paymentable hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The invoice hashed id */
-    @Json(name = "invoice_id")
+    @field:JsonProperty("invoice_id")
     val invoiceId: kotlin.String? = null,
 
     /* The credit hashed id */
-    @Json(name = "credit_id")
+    @field:JsonProperty("credit_id")
     val creditId: kotlin.String? = null,
 
     /* The amount that has been refunded for this payment */
-    @Json(name = "refunded")
+    @field:JsonProperty("refunded")
     val refunded: kotlin.Float? = null,
 
     /* The amount that has been applied to the payment */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: kotlin.Float? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null
 
 )

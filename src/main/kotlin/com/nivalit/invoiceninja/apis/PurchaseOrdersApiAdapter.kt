@@ -27,7 +27,7 @@ import com.nivalit.invoiceninja.models.Invoice
 import com.nivalit.invoiceninja.models.ValidationError
 import com.nivalit.invoiceninja.models.Vendor
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 import com.nivalit.invoiceninja.infrastructure.ApiClient
 import com.nivalit.invoiceninja.infrastructure.ApiResponse

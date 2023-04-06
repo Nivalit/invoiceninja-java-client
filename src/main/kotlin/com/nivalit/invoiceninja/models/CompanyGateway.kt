@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.FeesAndLimits
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -37,39 +37,39 @@ import com.squareup.moshi.Json
 data class CompanyGateway (
 
     /* The hashed id of the company gateway */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The gateway key (hash) */
-    @Json(name = "gateway_key")
+    @field:JsonProperty("gateway_key")
     val gatewayKey: kotlin.String? = null,
 
     /* Bitmask representation of cards */
-    @Json(name = "accepted_credit_cards")
+    @field:JsonProperty("accepted_credit_cards")
     val acceptedCreditCards: kotlin.Int? = null,
 
     /* Determines if the the billing address is required prior to payment. */
-    @Json(name = "require_billing_address")
+    @field:JsonProperty("require_billing_address")
     val requireBillingAddress: kotlin.Boolean? = null,
 
     /* Determines if the the billing address is required prior to payment. */
-    @Json(name = "require_shipping_address")
+    @field:JsonProperty("require_shipping_address")
     val requireShippingAddress: kotlin.Boolean? = null,
 
     /* The configuration map for the gateway */
-    @Json(name = "config")
+    @field:JsonProperty("config")
     val config: kotlin.String? = null,
 
     /* Determines if the client details should be updated. */
-    @Json(name = "update_details")
+    @field:JsonProperty("update_details")
     val updateDetails: kotlin.Boolean? = null,
 
     /* A mapped collection of the fees and limits for the configured gateway */
-    @Json(name = "fees_and_limits")
+    @field:JsonProperty("fees_and_limits")
     val feesAndLimits: kotlin.collections.List<FeesAndLimits>? = null
 
 )
