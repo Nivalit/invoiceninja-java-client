@@ -1,5 +1,3 @@
-README.md
-build.gradle
 docs/Account.md
 docs/Activity.md
 docs/ActvitiesApiAdapter.md
@@ -129,10 +127,6 @@ docs/WebcronApiAdapter.md
 docs/Webhook.md
 docs/WebhooksApiAdapter.md
 docs/YodleeApiAdapter.md
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
-gradlew.bat
-settings.gradle
 src/main/kotlin/com/nivalit/invoiceninja/apis/ActvitiesApiAdapter.kt
 src/main/kotlin/com/nivalit/invoiceninja/apis/BankIntegrationsApiAdapter.kt
 src/main/kotlin/com/nivalit/invoiceninja/apis/BankTransactionRulesApiAdapter.kt

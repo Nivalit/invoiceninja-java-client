@@ -23,3 +23,9 @@
 #!docs/README.md
 gradlew**
 **/Serializer.kt
+build.gradle
+gradle/wrapper/gradle-wrapper.properties
+README.md
+gradle/wrapper/gradle-wrapper.jar
+gradlew.bat
+settings.gradle
