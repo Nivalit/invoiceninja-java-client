@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -31,19 +31,19 @@ import com.squareup.moshi.Json
 data class Webhook (
 
     /* The subscription hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The subscription event id */
-    @Json(name = "event_id")
+    @field:JsonProperty("event_id")
     val eventId: kotlin.String? = null,
 
     /* The api endpoint */
-    @Json(name = "target_url")
+    @field:JsonProperty("target_url")
     val targetUrl: kotlin.String? = null,
 
     /* JSON or UBL */
-    @Json(name = "format")
+    @field:JsonProperty("format")
     val format: kotlin.String? = null
 
 )

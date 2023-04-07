@@ -1,23 +1,16 @@
 package com.nivalit.invoiceninja.infrastructure
 
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.annotation.JsonInclude
+import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 
 object Serializer {
     @JvmStatic
-    val moshiBuilder: Moshi.Builder = Moshi.Builder()
-        .add(OffsetDateTimeAdapter())
-        .add(LocalDateTimeAdapter())
-        .add(LocalDateAdapter())
-        .add(UUIDAdapter())
-        .add(ByteArrayAdapter())
-        .add(URIAdapter())
-        .add(KotlinJsonAdapterFactory())
-        .add(BigDecimalAdapter())
-        .add(BigIntegerAdapter())
-
-    @JvmStatic
-    val moshi: Moshi by lazy {
-        moshiBuilder.build()
-    }
+    val jacksonObjectMapper: ObjectMapper = jacksonObjectMapper()
+        .findAndRegisterModules()
+        .setSerializationInclusion(JsonInclude.Include.NON_ABSENT)
+        .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 }

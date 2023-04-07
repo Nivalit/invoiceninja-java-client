@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -49,74 +49,74 @@ import com.squareup.moshi.Json
 
 data class InvoiceItem (
 
-    @Json(name = "quantity")
+    @field:JsonProperty("quantity")
     val quantity: kotlin.Int? = null,
 
-    @Json(name = "cost")
+    @field:JsonProperty("cost")
     val cost: kotlin.Float? = null,
 
-    @Json(name = "product_key")
+    @field:JsonProperty("product_key")
     val productKey: kotlin.String? = null,
 
-    @Json(name = "product_cost")
+    @field:JsonProperty("product_cost")
     val productCost: kotlin.Float? = null,
 
-    @Json(name = "notes")
+    @field:JsonProperty("notes")
     val notes: kotlin.String? = null,
 
-    @Json(name = "discount")
+    @field:JsonProperty("discount")
     val discount: kotlin.Float? = null,
 
-    @Json(name = "is_amount_discount")
+    @field:JsonProperty("is_amount_discount")
     val isAmountDiscount: kotlin.Boolean? = null,
 
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: kotlin.Float? = null,
 
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: kotlin.Float? = null,
 
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: kotlin.Float? = null,
 
-    @Json(name = "sort_id")
+    @field:JsonProperty("sort_id")
     val sortId: kotlin.String? = null,
 
-    @Json(name = "line_total")
+    @field:JsonProperty("line_total")
     val lineTotal: kotlin.Float? = null,
 
-    @Json(name = "gross_line_total")
+    @field:JsonProperty("gross_line_total")
     val grossLineTotal: kotlin.Float? = null,
 
-    @Json(name = "tax_amount")
+    @field:JsonProperty("tax_amount")
     val taxAmount: kotlin.Float? = null,
 
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: java.time.OffsetDateTime? = null,
 
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* 1 = product, 2 = service, 3 unpaid gateway fee, 4 paid gateway fee, 5 late fee, 6 expense */
-    @Json(name = "type_id")
+    @field:JsonProperty("type_id")
     val typeId: kotlin.String? = null
 
 )

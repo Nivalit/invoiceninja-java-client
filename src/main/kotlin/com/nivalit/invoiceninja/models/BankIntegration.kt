@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -38,47 +38,47 @@ import com.squareup.moshi.Json
 data class BankIntegration (
 
     /* The bank integration hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The providers bank name */
-    @Json(name = "provider_bank_name")
+    @field:JsonProperty("provider_bank_name")
     val providerBankName: kotlin.String? = null,
 
     /* The bank account id */
-    @Json(name = "bank_account_id")
+    @field:JsonProperty("bank_account_id")
     val bankAccountId: kotlin.String? = null,
 
     /* The name of the account */
-    @Json(name = "bank_account_name")
+    @field:JsonProperty("bank_account_name")
     val bankAccountName: kotlin.String? = null,
 
     /* The account number */
-    @Json(name = "bank_account_number")
+    @field:JsonProperty("bank_account_number")
     val bankAccountNumber: kotlin.String? = null,
 
     /* The status of the bank account */
-    @Json(name = "bank_account_status")
+    @field:JsonProperty("bank_account_status")
     val bankAccountStatus: kotlin.String? = null,
 
     /* The type of account */
-    @Json(name = "bank_account_type")
+    @field:JsonProperty("bank_account_type")
     val bankAccountType: kotlin.String? = null,
 
     /* The current bank balance if available */
-    @Json(name = "balance")
+    @field:JsonProperty("balance")
     val balance: java.math.BigDecimal? = null,
 
     /* iso_3166_3 code */
-    @Json(name = "currency")
+    @field:JsonProperty("currency")
     val currency: kotlin.String? = null
 
 )

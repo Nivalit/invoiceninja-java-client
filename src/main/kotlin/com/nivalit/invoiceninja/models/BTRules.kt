@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -30,15 +30,15 @@ import com.squareup.moshi.Json
 data class BTRules (
 
     /* The key to search */
-    @Json(name = "data_key")
+    @field:JsonProperty("data_key")
     val dataKey: kotlin.String? = null,
 
     /* The operator flag of the search */
-    @Json(name = "operator")
+    @field:JsonProperty("operator")
     val `operator`: kotlin.String? = null,
 
     /* The value to search for */
-    @Json(name = "value")
+    @field:JsonProperty("value")
     val `value`: kotlin.String? = null
 
 )

@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -29,11 +29,11 @@ import com.squareup.moshi.Json
 data class Error (
 
     /* Something terrible went wrong */
-    @Json(name = "message")
+    @field:JsonProperty("message")
     val message: kotlin.String? = null,
 
     /* The HTTP error code, ie 5xx 4xx */
-    @Json(name = "code")
+    @field:JsonProperty("code")
     val code: kotlin.Int? = null
 
 )

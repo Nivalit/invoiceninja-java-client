@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.CompanySettings
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -51,94 +51,94 @@ import com.squareup.moshi.Json
 data class Company (
 
     /* The unique hashed identifier for the company */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The unique identifier representing the company's size category */
-    @Json(name = "size_id")
+    @field:JsonProperty("size_id")
     val sizeId: kotlin.String? = null,
 
     /* The unique identifier representing the company's industry category */
-    @Json(name = "industry_id")
+    @field:JsonProperty("industry_id")
     val industryId: kotlin.String? = null,
 
     /* The URL for the company's Slack webhook notifications */
-    @Json(name = "slack_webhook_url")
+    @field:JsonProperty("slack_webhook_url")
     val slackWebhookUrl: kotlin.String? = null,
 
     /* The company's Google Analytics tracking ID */
-    @Json(name = "google_analytics_key")
+    @field:JsonProperty("google_analytics_key")
     val googleAnalyticsKey: kotlin.String? = null,
 
     /* The mode determining how client-facing URLs are structured (e.g., subdomain, domain, or iframe) */
-    @Json(name = "portal_mode")
+    @field:JsonProperty("portal_mode")
     val portalMode: kotlin.String? = null,
 
     /* The subdomain prefix for the company's domain (e.g., 'acme' in acme.domain.com) */
-    @Json(name = "subdomain")
+    @field:JsonProperty("subdomain")
     val subdomain: kotlin.String? = null,
 
     /* The fully qualified domain used for client-facing URLs */
-    @Json(name = "portal_domain")
+    @field:JsonProperty("portal_domain")
     val portalDomain: kotlin.String? = null,
 
     /* The number of tax rates used per entity */
-    @Json(name = "enabled_tax_rates")
+    @field:JsonProperty("enabled_tax_rates")
     val enabledTaxRates: kotlin.Int? = null,
 
     /* A flag determining whether to auto-fill product descriptions based on the product key */
-    @Json(name = "fill_products")
+    @field:JsonProperty("fill_products")
     val fillProducts: kotlin.Boolean? = null,
 
     /* A flag determining whether to convert products between different types or units */
-    @Json(name = "convert_products")
+    @field:JsonProperty("convert_products")
     val convertProducts: kotlin.Boolean? = null,
 
     /* A flag determining whether to update product descriptions when the description changes */
-    @Json(name = "update_products")
+    @field:JsonProperty("update_products")
     val updateProducts: kotlin.Boolean? = null,
 
     /* A flag determining whether to display product details in the user interface */
-    @Json(name = "show_product_details")
+    @field:JsonProperty("show_product_details")
     val showProductDetails: kotlin.Boolean? = null,
 
     /* A mapping of custom fields for various objects within the company */
-    @Json(name = "custom_fields")
+    @field:JsonProperty("custom_fields")
     val customFields: kotlin.Any? = null,
 
     /* A flag determining whether to show or hide the product cost field in the user interface */
-    @Json(name = "enable_product_cost")
+    @field:JsonProperty("enable_product_cost")
     val enableProductCost: kotlin.Boolean? = null,
 
     /* A flag determining whether to show or hide the product quantity field in the user interface */
-    @Json(name = "enable_product_quantity")
+    @field:JsonProperty("enable_product_quantity")
     val enableProductQuantity: kotlin.Boolean? = null,
 
     /* A flag determining whether to use a default quantity for products */
-    @Json(name = "default_quantity")
+    @field:JsonProperty("default_quantity")
     val defaultQuantity: kotlin.Boolean? = null,
 
     /* A flag determining whether to apply taxes on custom surcharge amounts for the first custom surcharge field */
-    @Json(name = "custom_surcharge_taxes1")
+    @field:JsonProperty("custom_surcharge_taxes1")
     val customSurchargeTaxes1: kotlin.Boolean? = null,
 
     /* A flag determining whether to apply taxes on custom surcharge amounts for the second custom surcharge field */
-    @Json(name = "custom_surcharge_taxes2")
+    @field:JsonProperty("custom_surcharge_taxes2")
     val customSurchargeTaxes2: kotlin.Boolean? = null,
 
     /* A flag determining whether to apply taxes on custom surcharge amounts for the third custom surcharge field */
-    @Json(name = "custom_surcharge_taxes3")
+    @field:JsonProperty("custom_surcharge_taxes3")
     val customSurchargeTaxes3: kotlin.Boolean? = null,
 
     /* A flag determining whether to apply taxes on custom surcharge amounts for the fourth custom */
-    @Json(name = "custom_surcharge_taxes4")
+    @field:JsonProperty("custom_surcharge_taxes4")
     val customSurchargeTaxes4: kotlin.Any? = null,
 
     /* The company logo file in binary format */
-    @Json(name = "logo")
+    @field:JsonProperty("logo")
     val logo: java.io.File? = null,
 
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: CompanySettings? = null
 
 )

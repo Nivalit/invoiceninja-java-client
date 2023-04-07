@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.Client
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 
 data class ClientArrayWrapped (
 
-    @Json(name = "data")
+    @field:JsonProperty("data")
     val `data`: kotlin.collections.List<Client>? = null
 
 )

@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -29,11 +29,11 @@ import com.squareup.moshi.Json
 data class PostLoginRequest (
 
     /* The users email address. */
-    @Json(name = "email")
+    @field:JsonProperty("email")
     val email: kotlin.String? = null,
 
     /* The user password. Must meet minimum criteria ~ > 6 characters */
-    @Json(name = "password")
+    @field:JsonProperty("password")
     val password: kotlin.String? = null
 
 )

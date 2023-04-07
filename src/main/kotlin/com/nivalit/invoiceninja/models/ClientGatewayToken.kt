@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -34,31 +34,31 @@ import com.squareup.moshi.Json
 data class ClientGatewayToken (
 
     /* The hashed id of the client gateway token */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed_id of the client */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The payment token */
-    @Json(name = "token")
+    @field:JsonProperty("token")
     val token: kotlin.String? = null,
 
     /* THe bank account routing number */
-    @Json(name = "routing_number")
+    @field:JsonProperty("routing_number")
     val routingNumber: kotlin.String? = null,
 
     /* The hashed id of the company gateway */
-    @Json(name = "company_gateway_id")
+    @field:JsonProperty("company_gateway_id")
     val companyGatewayId: kotlin.String? = null,
 
     /* Flag determining if the token is the default payment method */
-    @Json(name = "is_default")
+    @field:JsonProperty("is_default")
     val isDefault: kotlin.Boolean? = null
 
 )

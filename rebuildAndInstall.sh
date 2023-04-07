@@ -1,2 +1,2 @@
-sh refreshApi.sh
+./gradlew clean build
 mvn install:install-file -Dfile=./build/libs/invoiceninja-java-client-1.0.0.jar -DgroupId=com.nivalit.invoiceninja -DartifactId=invoiceninja-java-client -Dversion=1.0.0 -Dpackaging=jar

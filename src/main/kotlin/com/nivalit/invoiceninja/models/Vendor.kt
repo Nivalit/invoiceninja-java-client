@@ -18,7 +18,7 @@ package com.nivalit.invoiceninja.models
 import com.nivalit.invoiceninja.models.CompanySettings
 import com.nivalit.invoiceninja.models.VendorContact
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -60,125 +60,125 @@ import com.squareup.moshi.Json
 data class Vendor (
 
     /* The hashed id of the vendor */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the user who created the vendor */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The hashed id of the assigned user to this vendor */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed id of the client */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
-    @Json(name = "contacts")
+    @field:JsonProperty("contacts")
     val contacts: kotlin.collections.List<VendorContact>? = null,
 
     /* The vendor name */
-    @Json(name = "name")
+    @field:JsonProperty("name")
     val name: kotlin.String? = null,
 
     /* The website of the vendor */
-    @Json(name = "website")
+    @field:JsonProperty("website")
     val website: kotlin.String? = null,
 
     /* The private notes of the vendor */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* The industry id of the vendor */
-    @Json(name = "industry_id")
+    @field:JsonProperty("industry_id")
     val industryId: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "size_id")
+    @field:JsonProperty("size_id")
     val sizeId: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "address1")
+    @field:JsonProperty("address1")
     val address1: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "address2")
+    @field:JsonProperty("address2")
     val address2: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "city")
+    @field:JsonProperty("city")
     val city: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "state")
+    @field:JsonProperty("state")
     val state: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "postal_code")
+    @field:JsonProperty("postal_code")
     val postalCode: kotlin.String? = null,
 
     /* The client phone number */
-    @Json(name = "phone")
+    @field:JsonProperty("phone")
     val phone: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "country_id")
+    @field:JsonProperty("country_id")
     val countryId: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "currency_id")
+    @field:JsonProperty("currency_id")
     val currencyId: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "vat_number")
+    @field:JsonProperty("vat_number")
     val vatNumber: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "id_number")
+    @field:JsonProperty("id_number")
     val idNumber: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* ________ */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "last_login")
+    @field:JsonProperty("last_login")
     val lastLogin: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: CompanySettings? = null
 
 )

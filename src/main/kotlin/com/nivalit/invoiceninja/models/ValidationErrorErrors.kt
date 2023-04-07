@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -27,7 +27,7 @@ import com.squareup.moshi.Json
 
 data class ValidationErrorErrors (
 
-    @Json(name = "value")
+    @field:JsonProperty("value")
     val `value`: kotlin.collections.List<kotlin.String>? = null
 
 )

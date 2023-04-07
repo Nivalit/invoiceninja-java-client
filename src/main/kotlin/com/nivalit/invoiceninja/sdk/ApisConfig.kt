@@ -4,6 +4,7 @@ class InvoiceNinja {
     companion object {
         var basePath: String = ""
         var apiToken: String = ""
+        var xRequestedWith: String = "XMLHttpRequest"
     }
 
 }

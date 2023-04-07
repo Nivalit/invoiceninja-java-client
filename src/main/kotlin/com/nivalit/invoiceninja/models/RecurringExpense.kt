@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -66,159 +66,159 @@ import com.squareup.moshi.Json
 data class RecurringExpense (
 
     /* The hashed id of the recurring expense */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The hashed id of the user who created the recurring expense */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The hashed id of the user assigned to this recurring expense */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The hashed id of the company */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The hashed id of the client */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The hashed id of the invoice */
-    @Json(name = "invoice_id")
+    @field:JsonProperty("invoice_id")
     val invoiceId: kotlin.String? = null,
 
     /* The id of the bank associated with this recurring expense */
-    @Json(name = "bank_id")
+    @field:JsonProperty("bank_id")
     val bankId: kotlin.String? = null,
 
     /* The currency id of the invoice associated with this recurring expense */
-    @Json(name = "invoice_currency_id")
+    @field:JsonProperty("invoice_currency_id")
     val invoiceCurrencyId: kotlin.String? = null,
 
     /* The currency id of the expense associated with this recurring expense */
-    @Json(name = "expense_currency_id")
+    @field:JsonProperty("expense_currency_id")
     val expenseCurrencyId: kotlin.String? = null,
 
     /* The category id of the invoice */
-    @Json(name = "invoice_category_id")
+    @field:JsonProperty("invoice_category_id")
     val invoiceCategoryId: kotlin.String? = null,
 
     /* The payment type id */
-    @Json(name = "payment_type_id")
+    @field:JsonProperty("payment_type_id")
     val paymentTypeId: kotlin.String? = null,
 
     /* The recurring expense private notes */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* The recurring expense public notes */
-    @Json(name = "public_notes")
+    @field:JsonProperty("public_notes")
     val publicNotes: kotlin.String? = null,
 
     /* The recurring expense transaction reference */
-    @Json(name = "transaction_reference")
+    @field:JsonProperty("transaction_reference")
     val transactionReference: kotlin.String? = null,
 
     /* The transaction id of the recurring expense */
-    @Json(name = "transcation_id")
+    @field:JsonProperty("transcation_id")
     val transcationId: kotlin.String? = null,
 
     /* Custom value field */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* Custom value field */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* Custom value field */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* Custom value field */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The tax name */
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
     /* The tax name */
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: kotlin.Float? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: kotlin.Float? = null,
 
     /* The tax name */
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: kotlin.Float? = null,
 
     /* The total amount of the recurring expense */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: kotlin.Float? = null,
 
     /* The frequency this recurring expense fires */
-    @Json(name = "frequency_id")
+    @field:JsonProperty("frequency_id")
     val frequencyId: java.math.BigDecimal? = null,
 
     /* The number of remaining cycles for this recurring expense */
-    @Json(name = "remaining_cycles")
+    @field:JsonProperty("remaining_cycles")
     val remainingCycles: java.math.BigDecimal? = null,
 
     /* The foreign currency amount of the recurring expense */
-    @Json(name = "foreign_amount")
+    @field:JsonProperty("foreign_amount")
     val foreignAmount: kotlin.Float? = null,
 
     /* The exchange rate for the expernse */
-    @Json(name = "exchange_rate")
+    @field:JsonProperty("exchange_rate")
     val exchangeRate: kotlin.Float? = null,
 
     /* The date of the expense */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: kotlin.String? = null,
 
     /* The date the expense was paid */
-    @Json(name = "payment_date")
+    @field:JsonProperty("payment_date")
     val paymentDate: kotlin.String? = null,
 
     /* Boolean flag determining if the expense should be invoiced */
-    @Json(name = "should_be_invoiced")
+    @field:JsonProperty("should_be_invoiced")
     val shouldBeInvoiced: kotlin.Boolean? = null,
 
     /* Boolean flag determining if the recurring expense is deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* The Date it was sent last */
-    @Json(name = "last_sent_date")
+    @field:JsonProperty("last_sent_date")
     val lastSentDate: java.time.LocalDate? = null,
 
     /* The next send date */
-    @Json(name = "next_send_date")
+    @field:JsonProperty("next_send_date")
     val nextSendDate: java.time.LocalDate? = null,
 
     /* Boolean flag determining if the documents associated with this expense should be passed onto the invoice if it is converted to an invoice */
-    @Json(name = "invoice_documents")
+    @field:JsonProperty("invoice_documents")
     val invoiceDocuments: kotlin.Boolean? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null
 
 )

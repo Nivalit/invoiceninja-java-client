@@ -20,7 +20,7 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 import com.nivalit.invoiceninja.infrastructure.ApiClient
 import com.nivalit.invoiceninja.infrastructure.ApiResponse

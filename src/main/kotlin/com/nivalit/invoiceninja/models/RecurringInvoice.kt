@@ -17,7 +17,7 @@ package com.nivalit.invoiceninja.models
 
 import com.nivalit.invoiceninja.models.CompanySettings
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -79,206 +79,206 @@ import com.squareup.moshi.Json
 data class RecurringInvoice (
 
     /* The hashed id of the recurring invoice */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The user hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The assigned user hashed id */
-    @Json(name = "assigned_user_id")
+    @field:JsonProperty("assigned_user_id")
     val assignedUserId: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The client hashed id */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The invoice status variable */
-    @Json(name = "status_id")
+    @field:JsonProperty("status_id")
     val statusId: kotlin.String? = null,
 
     /* The recurring invoice frequency */
-    @Json(name = "frequency_id")
+    @field:JsonProperty("frequency_id")
     val frequencyId: kotlin.String? = null,
 
     /* The number of invoices left to be generated */
-    @Json(name = "remaining_cycles")
+    @field:JsonProperty("remaining_cycles")
     val remainingCycles: java.math.BigDecimal? = null,
 
     /* The recurringinvoice number - is a unique alpha numeric number per invoice per company */
-    @Json(name = "number")
+    @field:JsonProperty("number")
     val number: kotlin.String? = null,
 
     /* The purchase order associated with this recurring invoice */
-    @Json(name = "po_number")
+    @field:JsonProperty("po_number")
     val poNumber: kotlin.String? = null,
 
     /* The invoice terms */
-    @Json(name = "terms")
+    @field:JsonProperty("terms")
     val terms: kotlin.String? = null,
 
     /* The public notes of the invoice */
-    @Json(name = "public_notes")
+    @field:JsonProperty("public_notes")
     val publicNotes: kotlin.String? = null,
 
     /* The private notes of the invoice */
-    @Json(name = "private_notes")
+    @field:JsonProperty("private_notes")
     val privateNotes: kotlin.String? = null,
 
     /* The invoice footer notes */
-    @Json(name = "footer")
+    @field:JsonProperty("footer")
     val footer: kotlin.String? = null,
 
     /* A custom field value */
-    @Json(name = "custom_value1")
+    @field:JsonProperty("custom_value1")
     val customValue1: kotlin.String? = null,
 
     /* A custom field value */
-    @Json(name = "custom_value2")
+    @field:JsonProperty("custom_value2")
     val customValue2: kotlin.String? = null,
 
     /* A custom field value */
-    @Json(name = "custom_value3")
+    @field:JsonProperty("custom_value3")
     val customValue3: kotlin.String? = null,
 
     /* A custom field value */
-    @Json(name = "custom_value4")
+    @field:JsonProperty("custom_value4")
     val customValue4: kotlin.String? = null,
 
     /* The tax name */
-    @Json(name = "tax_name1")
+    @field:JsonProperty("tax_name1")
     val taxName1: kotlin.String? = null,
 
     /* The tax name */
-    @Json(name = "tax_name2")
+    @field:JsonProperty("tax_name2")
     val taxName2: kotlin.String? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate1")
+    @field:JsonProperty("tax_rate1")
     val taxRate1: kotlin.Float? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate2")
+    @field:JsonProperty("tax_rate2")
     val taxRate2: kotlin.Float? = null,
 
     /* The tax name */
-    @Json(name = "tax_name3")
+    @field:JsonProperty("tax_name3")
     val taxName3: kotlin.String? = null,
 
     /* The tax rate */
-    @Json(name = "tax_rate3")
+    @field:JsonProperty("tax_rate3")
     val taxRate3: kotlin.Float? = null,
 
     /* The total taxes for the invoice */
-    @Json(name = "total_taxes")
+    @field:JsonProperty("total_taxes")
     val totalTaxes: kotlin.Float? = null,
 
     /* An array of objects which define the line items of the invoice */
-    @Json(name = "line_items")
+    @field:JsonProperty("line_items")
     val lineItems: kotlin.Any? = null,
 
     /* The invoice amount */
-    @Json(name = "amount")
+    @field:JsonProperty("amount")
     val amount: kotlin.Float? = null,
 
     /* The invoice balance */
-    @Json(name = "balance")
+    @field:JsonProperty("balance")
     val balance: kotlin.Float? = null,
 
     /* The amount paid on the invoice to date */
-    @Json(name = "paid_to_date")
+    @field:JsonProperty("paid_to_date")
     val paidToDate: kotlin.Float? = null,
 
     /* The invoice discount, can be an amount or a percentage */
-    @Json(name = "discount")
+    @field:JsonProperty("discount")
     val discount: kotlin.Float? = null,
 
     /* The deposit/partial amount */
-    @Json(name = "partial")
+    @field:JsonProperty("partial")
     val partial: kotlin.Float? = null,
 
     /* Flag determining if the discount is an amount or a percentage */
-    @Json(name = "is_amount_discount")
+    @field:JsonProperty("is_amount_discount")
     val isAmountDiscount: kotlin.Boolean? = null,
 
     /* Defines if the invoice has been deleted */
-    @Json(name = "is_deleted")
+    @field:JsonProperty("is_deleted")
     val isDeleted: kotlin.Boolean? = null,
 
     /* Defines the type of taxes used as either inclusive or exclusive */
-    @Json(name = "uses_inclusive_taxes")
+    @field:JsonProperty("uses_inclusive_taxes")
     val usesInclusiveTaxes: kotlin.Boolean? = null,
 
     /* The Invoice Date */
-    @Json(name = "date")
+    @field:JsonProperty("date")
     val date: java.time.LocalDate? = null,
 
     /* The last date the invoice was sent out */
-    @Json(name = "last_sent_date")
+    @field:JsonProperty("last_sent_date")
     val lastSentDate: java.time.LocalDate? = null,
 
     /* The Next date for a reminder to be sent */
-    @Json(name = "next_send_date")
+    @field:JsonProperty("next_send_date")
     val nextSendDate: java.time.LocalDate? = null,
 
     /* The due date for the deposit/partial amount */
-    @Json(name = "partial_due_date")
+    @field:JsonProperty("partial_due_date")
     val partialDueDate: java.time.LocalDate? = null,
 
     /* The due date of the invoice */
-    @Json(name = "due_date")
+    @field:JsonProperty("due_date")
     val dueDate: java.time.LocalDate? = null,
 
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: CompanySettings? = null,
 
     /* Timestamp */
-    @Json(name = "last_viewed")
+    @field:JsonProperty("last_viewed")
     val lastViewed: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "archived_at")
+    @field:JsonProperty("archived_at")
     val archivedAt: java.math.BigDecimal? = null,
 
     /* First Custom Surcharge */
-    @Json(name = "custom_surcharge1")
+    @field:JsonProperty("custom_surcharge1")
     val customSurcharge1: kotlin.Float? = null,
 
     /* Second Custom Surcharge */
-    @Json(name = "custom_surcharge2")
+    @field:JsonProperty("custom_surcharge2")
     val customSurcharge2: kotlin.Float? = null,
 
     /* Third Custom Surcharge */
-    @Json(name = "custom_surcharge3")
+    @field:JsonProperty("custom_surcharge3")
     val customSurcharge3: kotlin.Float? = null,
 
     /* Fourth Custom Surcharge */
-    @Json(name = "custom_surcharge4")
+    @field:JsonProperty("custom_surcharge4")
     val customSurcharge4: kotlin.Float? = null,
 
     /* Toggles charging taxes on custom surcharge amounts */
-    @Json(name = "custom_surcharge_tax1")
+    @field:JsonProperty("custom_surcharge_tax1")
     val customSurchargeTax1: kotlin.Boolean? = null,
 
     /* Toggles charging taxes on custom surcharge amounts */
-    @Json(name = "custom_surcharge_tax2")
+    @field:JsonProperty("custom_surcharge_tax2")
     val customSurchargeTax2: kotlin.Boolean? = null,
 
     /* Toggles charging taxes on custom surcharge amounts */
-    @Json(name = "custom_surcharge_tax3")
+    @field:JsonProperty("custom_surcharge_tax3")
     val customSurchargeTax3: kotlin.Boolean? = null,
 
     /* Toggles charging taxes on custom surcharge amounts */
-    @Json(name = "custom_surcharge_tax4")
+    @field:JsonProperty("custom_surcharge_tax4")
     val customSurchargeTax4: kotlin.Boolean? = null
 
 )

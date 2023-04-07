@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -33,27 +33,27 @@ import com.squareup.moshi.Json
 data class CompanyLedger (
 
     /* This field will reference one of the following entity hashed ID payment_id, invoice_id or credit_id */
-    @Json(name = "entity_id")
+    @field:JsonProperty("entity_id")
     val entityId: kotlin.String? = null,
 
     /* The notes which reference this entry of the ledger */
-    @Json(name = "notes")
+    @field:JsonProperty("notes")
     val notes: kotlin.String? = null,
 
     /* The client balance */
-    @Json(name = "balance")
+    @field:JsonProperty("balance")
     val balance: kotlin.Float? = null,
 
     /* The amount the client balance is adjusted by */
-    @Json(name = "adjustment")
+    @field:JsonProperty("adjustment")
     val adjustment: kotlin.Float? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: java.math.BigDecimal? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: java.math.BigDecimal? = null
 
 )

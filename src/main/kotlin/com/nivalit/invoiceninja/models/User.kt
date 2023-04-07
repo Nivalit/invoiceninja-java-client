@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -37,43 +37,43 @@ import com.squareup.moshi.Json
 data class User (
 
     /* The hashed id of the user */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The first name of the user */
-    @Json(name = "first_name")
+    @field:JsonProperty("first_name")
     val firstName: kotlin.String? = null,
 
     /* The last name of the user */
-    @Json(name = "last_name")
+    @field:JsonProperty("last_name")
     val lastName: kotlin.String? = null,
 
     /* The users email address */
-    @Json(name = "email")
+    @field:JsonProperty("email")
     val email: kotlin.String? = null,
 
     /* The users phone number */
-    @Json(name = "phone")
+    @field:JsonProperty("phone")
     val phone: kotlin.String? = null,
 
     /* The users sign off signature */
-    @Json(name = "signature")
+    @field:JsonProperty("signature")
     val signature: kotlin.String? = null,
 
     /* The users avatar */
-    @Json(name = "avatar")
+    @field:JsonProperty("avatar")
     val avatar: kotlin.String? = null,
 
     /* The version of the invoice ninja terms that has been accepted by the user */
-    @Json(name = "accepted_terms_version")
+    @field:JsonProperty("accepted_terms_version")
     val acceptedTermsVersion: kotlin.String? = null,
 
     /* The provider id of the oauth entity */
-    @Json(name = "oauth_user_id")
+    @field:JsonProperty("oauth_user_id")
     val oauthUserId: kotlin.String? = null,
 
     /* The oauth entity id */
-    @Json(name = "oauth_provider_id")
+    @field:JsonProperty("oauth_provider_id")
     val oauthProviderId: kotlin.String? = null
 
 )

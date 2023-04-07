@@ -20,7 +20,7 @@ import com.nivalit.invoiceninja.models.Company
 import com.nivalit.invoiceninja.models.CompanyToken
 import com.nivalit.invoiceninja.models.User
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -43,47 +43,47 @@ import com.squareup.moshi.Json
 data class CompanyUser (
 
     /* The company user permissions */
-    @Json(name = "permissions")
+    @field:JsonProperty("permissions")
     val permissions: kotlin.String? = null,
 
     /* Settings that are used for the frontend applications to store user preferences / metadata */
-    @Json(name = "settings")
+    @field:JsonProperty("settings")
     val settings: kotlin.Any? = null,
 
     /* Dedicated settings object for the react web application */
-    @Json(name = "react_settings")
+    @field:JsonProperty("react_settings")
     val reactSettings: kotlin.Any? = null,
 
     /* Determines whether the user owns this company */
-    @Json(name = "is_owner")
+    @field:JsonProperty("is_owner")
     val isOwner: kotlin.Boolean? = null,
 
     /* Determines whether the user is the admin of this company */
-    @Json(name = "is_admin")
+    @field:JsonProperty("is_admin")
     val isAdmin: kotlin.Boolean? = null,
 
     /* Determines whether the users access to this company has been locked */
-    @Json(name = "is_locked")
+    @field:JsonProperty("is_locked")
     val isLocked: kotlin.Boolean? = null,
 
     /* The last time the record was modified, format Unix Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: kotlin.Int? = null,
 
     /* Timestamp when the user was archived, format Unix Timestamp */
-    @Json(name = "deleted_at")
+    @field:JsonProperty("deleted_at")
     val deletedAt: kotlin.Int? = null,
 
-    @Json(name = "account")
+    @field:JsonProperty("account")
     val account: Account? = null,
 
-    @Json(name = "company")
+    @field:JsonProperty("company")
     val company: Company? = null,
 
-    @Json(name = "user")
+    @field:JsonProperty("user")
     val user: User? = null,
 
-    @Json(name = "token")
+    @field:JsonProperty("token")
     val token: CompanyToken? = null
 
 )

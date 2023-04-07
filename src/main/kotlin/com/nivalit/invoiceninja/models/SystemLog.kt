@@ -16,7 +16,7 @@
 package com.nivalit.invoiceninja.models
 
 
-import com.squareup.moshi.Json
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * 
@@ -37,43 +37,43 @@ import com.squareup.moshi.Json
 data class SystemLog (
 
     /* The account hashed id */
-    @Json(name = "id")
+    @field:JsonProperty("id")
     val id: kotlin.String? = null,
 
     /* The company hashed id */
-    @Json(name = "company_id")
+    @field:JsonProperty("company_id")
     val companyId: kotlin.String? = null,
 
     /* The user_id hashed id */
-    @Json(name = "user_id")
+    @field:JsonProperty("user_id")
     val userId: kotlin.String? = null,
 
     /* The client_id hashed id */
-    @Json(name = "client_id")
+    @field:JsonProperty("client_id")
     val clientId: kotlin.String? = null,
 
     /* The Log Type ID */
-    @Json(name = "event_id")
+    @field:JsonProperty("event_id")
     val eventId: kotlin.Int? = null,
 
     /* The Category Type ID */
-    @Json(name = "category_id")
+    @field:JsonProperty("category_id")
     val categoryId: kotlin.Int? = null,
 
     /* The Type Type ID */
-    @Json(name = "type_id")
+    @field:JsonProperty("type_id")
     val typeId: kotlin.Int? = null,
 
     /* The json object of the error */
-    @Json(name = "log")
+    @field:JsonProperty("log")
     val log: kotlin.Any? = null,
 
     /* Timestamp */
-    @Json(name = "updated_at")
+    @field:JsonProperty("updated_at")
     val updatedAt: kotlin.String? = null,
 
     /* Timestamp */
-    @Json(name = "created_at")
+    @field:JsonProperty("created_at")
     val createdAt: kotlin.String? = null
 
 )

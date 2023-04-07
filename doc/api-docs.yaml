@@ -11647,7 +11647,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: "#/components/schemas/InvoiceArrayWrapped"
         401:
           $ref: "#/components/responses/401"
         403:
@@ -11685,7 +11685,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: "#/components/schemas/InvoiceWrapped"
         401:
           $ref: "#/components/responses/401"
         403:
@@ -11727,7 +11727,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: "#/components/schemas/InvoiceWrapped"
         401:
           $ref: "#/components/responses/401"
         403:
@@ -11755,6 +11755,8 @@ paths:
             type: string
             format: string
           example: D2J234DFA
+      requestBody:
+        $ref: "#/components/requestBodies/invoiceRequestBody"
       responses:
         200:
           description: "Returns the invoice object"
@@ -11768,7 +11770,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: "#/components/schemas/InvoiceWrapped"
         401:
           $ref: "#/components/responses/401"
         403:
@@ -13879,6 +13881,7 @@ components:
           description: 'The last date the invoice was sent out'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The Next date for a reminder to be sent'
@@ -14346,6 +14349,7 @@ components:
           description: "The date the credit was last sent out"
           type: string
           format: date
+          nullable: true
           example: "1994-07-30"
         next_send_date:
           description: "The next scheduled date for sending a credit reminder"
@@ -14897,6 +14901,7 @@ components:
           description: 'The last date the invoice was sent out'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The Next date for a reminder to be sent'
@@ -14967,7 +14972,16 @@ components:
           type: boolean
           example: true
       type: object
-
+    InvoiceWrapped:
+      properties:
+        data:
+          $ref: '#/components/schemas/Invoice'
+    InvoiceArrayWrapped:
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Invoice'
     FeesAndLimits:
       properties:
         min_limit:
@@ -16053,9 +16067,11 @@ components:
           type: number
           example: 8.00
         line_items:
-          description: "Array of line items included in the invoice"
-          type: object
-          example: "[{item1}, {item2}]"
+          type: array
+          description: 'An array of objects which define the line items of the invoice'
+          items:
+            $ref: '#/components/schemas/InvoiceItem'
+          maxItems: 100
         discount:
           description: "The discount applied to the invoice"
           type: number
@@ -16717,6 +16733,7 @@ components:
           description: 'The Date it was sent last'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The next send date'
@@ -16894,6 +16911,7 @@ components:
           description: 'The last date the quote was sent out'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The Next date for a reminder to be sent'
@@ -17283,6 +17301,7 @@ components:
           description: 'The last date the purchase order was sent to the vendor'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The next scheduled date for sending a reminder for the purchase order'
@@ -17788,6 +17807,7 @@ components:
           description: 'The last date the quote was sent to the client'
           type: string
           format: date
+          nullable: true
           example: '1994-07-30'
         next_send_date:
           description: 'The next scheduled date for sending a reminder for the quote'
@@ -17988,6 +18008,13 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Client"
+    invoiceRequestBody:
+      description: "A request body for creating new invoice and update"
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Invoice"
 tags:
   - name: login
     description: |
