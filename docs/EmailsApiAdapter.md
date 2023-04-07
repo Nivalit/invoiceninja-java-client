@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sendEmailTemplate"></a>
 # **sendEmailTemplate**
-> Template sendEmailTemplate(xRequestedWith, sendEmailTemplateRequest)
+> Template sendEmailTemplate(X_API_TOKEN, xRequestedWith, sendEmailTemplateRequest)
 
 Sends an email for an entity
 
@@ -22,10 +22,11 @@ Sends an email for an entity
 //import com.nivalit.invoiceninja.models.*
 
 val apiInstance = EmailsApiAdapter()
+val X_API_TOKEN : kotlin.String = TOKEN // kotlin.String | The API token to be used for authentication
 val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to send the XMLHttpRequest header
 val sendEmailTemplateRequest : SendEmailTemplateRequest =  // SendEmailTemplateRequest | The template subject and body
 try {
-    val result : Template = apiInstance.sendEmailTemplate(xRequestedWith, sendEmailTemplateRequest)
+    val result : Template = apiInstance.sendEmailTemplate(X_API_TOKEN, xRequestedWith, sendEmailTemplateRequest)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EmailsApiAdapter#sendEmailTemplate")
@@ -40,6 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **X_API_TOKEN** | **kotlin.String**| The API token to be used for authentication |
  **xRequestedWith** | **kotlin.String**| Used to send the XMLHttpRequest header |
  **sendEmailTemplateRequest** | [**SendEmailTemplateRequest**](SendEmailTemplateRequest.md)| The template subject and body |
 

@@ -53,6 +53,7 @@ class EmailsApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHttp
     /**
      * Sends an email for an entity
      * Sends an email for an entity
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param sendEmailTemplateRequest The template subject and body
      * @return Template
@@ -64,8 +65,8 @@ class EmailsApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sendEmailTemplate(xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : Template {
-        val localVarResponse = sendEmailTemplateWithHttpInfo(xRequestedWith = xRequestedWith, sendEmailTemplateRequest = sendEmailTemplateRequest)
+    fun sendEmailTemplate(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : Template {
+        val localVarResponse = sendEmailTemplateWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, sendEmailTemplateRequest = sendEmailTemplateRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as Template
@@ -85,6 +86,7 @@ class EmailsApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHttp
     /**
      * Sends an email for an entity
      * Sends an email for an entity
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param sendEmailTemplateRequest The template subject and body
      * @return ApiResponse<Template?>
@@ -93,8 +95,8 @@ class EmailsApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sendEmailTemplateWithHttpInfo(xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : ApiResponse<Template?> {
-        val localVariableConfig = sendEmailTemplateRequestConfig(xRequestedWith = xRequestedWith, sendEmailTemplateRequest = sendEmailTemplateRequest)
+    fun sendEmailTemplateWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : ApiResponse<Template?> {
+        val localVariableConfig = sendEmailTemplateRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, sendEmailTemplateRequest = sendEmailTemplateRequest)
 
         return request<SendEmailTemplateRequest, Template>(
             localVariableConfig
@@ -104,14 +106,16 @@ class EmailsApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkHttp
     /**
      * To obtain the request config of the operation sendEmailTemplate
      *
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param sendEmailTemplateRequest The template subject and body
      * @return RequestConfig
      */
-    fun sendEmailTemplateRequestConfig(xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : RequestConfig<SendEmailTemplateRequest> {
+    fun sendEmailTemplateRequestConfig(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, sendEmailTemplateRequest: SendEmailTemplateRequest) : RequestConfig<SendEmailTemplateRequest> {
         val localVariableBody = sendEmailTemplateRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        X_API_TOKEN.apply { localVariableHeaders["X-API-TOKEN"] = this.toString() }
         xRequestedWith.apply { localVariableHeaders["X-Requested-With"] = this.toString() }
         localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
