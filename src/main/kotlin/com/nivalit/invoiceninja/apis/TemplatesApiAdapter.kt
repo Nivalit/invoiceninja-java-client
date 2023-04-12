@@ -53,6 +53,7 @@ class TemplatesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Returns a entity template with the template variables replaced with the Entities
      * Returns a entity template with the template variables replaced with the Entities
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param getShowTemplateRequest The template subject and body
      * @return Template
@@ -64,8 +65,8 @@ class TemplatesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getShowTemplate(xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : Template {
-        val localVarResponse = getShowTemplateWithHttpInfo(xRequestedWith = xRequestedWith, getShowTemplateRequest = getShowTemplateRequest)
+    fun getShowTemplate(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : Template {
+        val localVarResponse = getShowTemplateWithHttpInfo(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, getShowTemplateRequest = getShowTemplateRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as Template
@@ -85,6 +86,7 @@ class TemplatesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Returns a entity template with the template variables replaced with the Entities
      * Returns a entity template with the template variables replaced with the Entities
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param getShowTemplateRequest The template subject and body
      * @return ApiResponse<Template?>
@@ -93,8 +95,8 @@ class TemplatesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun getShowTemplateWithHttpInfo(xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : ApiResponse<Template?> {
-        val localVariableConfig = getShowTemplateRequestConfig(xRequestedWith = xRequestedWith, getShowTemplateRequest = getShowTemplateRequest)
+    fun getShowTemplateWithHttpInfo(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : ApiResponse<Template?> {
+        val localVariableConfig = getShowTemplateRequestConfig(X_API_TOKEN = X_API_TOKEN, xRequestedWith = xRequestedWith, getShowTemplateRequest = getShowTemplateRequest)
 
         return request<GetShowTemplateRequest, Template>(
             localVariableConfig
@@ -104,14 +106,16 @@ class TemplatesApiAdapter(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * To obtain the request config of the operation getShowTemplate
      *
+     * @param X_API_TOKEN The API token to be used for authentication
      * @param xRequestedWith Used to send the XMLHttpRequest header
      * @param getShowTemplateRequest The template subject and body
      * @return RequestConfig
      */
-    fun getShowTemplateRequestConfig(xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : RequestConfig<GetShowTemplateRequest> {
+    fun getShowTemplateRequestConfig(X_API_TOKEN: kotlin.String, xRequestedWith: kotlin.String, getShowTemplateRequest: GetShowTemplateRequest) : RequestConfig<GetShowTemplateRequest> {
         val localVariableBody = getShowTemplateRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        X_API_TOKEN.apply { localVariableHeaders["X-API-TOKEN"] = this.toString() }
         xRequestedWith.apply { localVariableHeaders["X-Requested-With"] = this.toString() }
         localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"

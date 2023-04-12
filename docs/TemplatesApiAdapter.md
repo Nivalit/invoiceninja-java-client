@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getShowTemplate"></a>
 # **getShowTemplate**
-> Template getShowTemplate(xRequestedWith, getShowTemplateRequest)
+> Template getShowTemplate(X_API_TOKEN, xRequestedWith, getShowTemplateRequest)
 
 Returns a entity template with the template variables replaced with the Entities
 
@@ -22,10 +22,11 @@ Returns a entity template with the template variables replaced with the Entities
 //import com.nivalit.invoiceninja.models.*
 
 val apiInstance = TemplatesApiAdapter()
+val X_API_TOKEN : kotlin.String = TOKEN // kotlin.String | The API token to be used for authentication
 val xRequestedWith : kotlin.String = XMLHttpRequest // kotlin.String | Used to send the XMLHttpRequest header
 val getShowTemplateRequest : GetShowTemplateRequest =  // GetShowTemplateRequest | The template subject and body
 try {
-    val result : Template = apiInstance.getShowTemplate(xRequestedWith, getShowTemplateRequest)
+    val result : Template = apiInstance.getShowTemplate(X_API_TOKEN, xRequestedWith, getShowTemplateRequest)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling TemplatesApiAdapter#getShowTemplate")
@@ -40,6 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **X_API_TOKEN** | **kotlin.String**| The API token to be used for authentication |
  **xRequestedWith** | **kotlin.String**| Used to send the XMLHttpRequest header |
  **getShowTemplateRequest** | [**GetShowTemplateRequest**](GetShowTemplateRequest.md)| The template subject and body |
 

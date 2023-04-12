@@ -2704,6 +2704,7 @@ paths:
       description: "Sends an email for an entity"
       operationId: sendEmailTemplate
       parameters:
+        - $ref: "#/components/parameters/X-API-TOKEN"
         - $ref: "#/components/parameters/X-Requested-With"
       requestBody:
         description: "The template subject and body"
@@ -7018,6 +7019,7 @@ paths:
       description: "Returns a entity template with the template variables replaced with the Entities"
       operationId: getShowTemplate
       parameters:
+        - $ref: "#/components/parameters/X-API-TOKEN"
         - $ref: "#/components/parameters/X-Requested-With"
       requestBody:
         description: "The template subject and body"
@@ -7031,6 +7033,12 @@ paths:
                   type: string
                 body:
                   description: "The email template body"
+                  type: string
+                entity:
+                  type: string
+                entity_id:
+                  type: string
+                template:
                   type: string
               type: object
       responses:
@@ -13567,7 +13575,7 @@ components:
       type: object
     Template:
       properties:
-        html:
+        body:
           description: 'The template HTML'
           type: string
           example: '<HTML></HTML>'

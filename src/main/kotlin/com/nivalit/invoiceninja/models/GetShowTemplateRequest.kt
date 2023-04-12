@@ -23,6 +23,9 @@ import com.fasterxml.jackson.annotation.JsonProperty
  *
  * @param subject The email template subject
  * @param body The email template body
+ * @param entity 
+ * @param entityId 
+ * @param template 
  */
 
 
@@ -34,7 +37,16 @@ data class GetShowTemplateRequest (
 
     /* The email template body */
     @field:JsonProperty("body")
-    val body: kotlin.String? = null
+    val body: kotlin.String? = null,
+
+    @field:JsonProperty("entity")
+    val entity: kotlin.String? = null,
+
+    @field:JsonProperty("entity_id")
+    val entityId: kotlin.String? = null,
+
+    @field:JsonProperty("template")
+    val template: kotlin.String? = null
 
 )
 

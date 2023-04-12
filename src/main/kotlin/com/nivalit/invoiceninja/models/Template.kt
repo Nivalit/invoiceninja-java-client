@@ -21,15 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * 
  *
- * @param html The template HTML
+ * @param body The template HTML
  */
 
 
 data class Template (
 
     /* The template HTML */
-    @field:JsonProperty("html")
-    val html: kotlin.String? = null
+    @field:JsonProperty("body")
+    val body: kotlin.String? = null
 
 )
 
