@@ -37,15 +37,6 @@ class InvoiceApi {
         )
 
         fun send(id: String) =
-//            templateClient.getShowTemplate(
-//                X_API_TOKEN = InvoiceNinja.apiToken,
-//                xRequestedWith = InvoiceNinja.xRequestedWith,
-//                getShowTemplateRequest = GetShowTemplateRequest(
-//                    entity = "invoice",
-//                    entityId = id,
-//                    template = "email_template_invoice"
-//                )
-//            ).body.let{emailBody ->
             emailClient.sendEmailTemplate(
                 X_API_TOKEN = InvoiceNinja.apiToken,
                 xRequestedWith = InvoiceNinja.xRequestedWith,
@@ -55,6 +46,16 @@ class InvoiceApi {
                     template = "email_template_invoice"
                 )
             )
-//            }
+
+        fun previewEmail(id: String) =
+            templateClient.getShowTemplate(
+                X_API_TOKEN = InvoiceNinja.apiToken,
+                xRequestedWith = InvoiceNinja.xRequestedWith,
+                getShowTemplateRequest = GetShowTemplateRequest(
+                    entity = "invoice",
+                    entityId = id,
+                    template = "email_template_invoice"
+                )
+            )
     }
 }
