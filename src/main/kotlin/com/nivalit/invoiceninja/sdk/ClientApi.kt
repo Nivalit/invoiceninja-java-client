@@ -2,29 +2,28 @@ package com.nivalit.invoiceninja.sdk
 
 import com.nivalit.invoiceninja.apis.ClientsApiAdapter
 import com.nivalit.invoiceninja.models.Client
-import java.math.BigDecimal
 
 class ClientApi {
 
     companion object {
         private val clientApi = ClientsApiAdapter(basePath = InvoiceNinja.basePath)
 
-        fun create(client: Client) = clientApi.storeClient(
-            X_API_TOKEN = InvoiceNinja.apiToken,
+        fun create(client: Client, apiToken: String? = null) = clientApi.storeClient(
+            X_API_TOKEN = apiToken ?: InvoiceNinja.apiToken,
             xRequestedWith = InvoiceNinja.xRequestedWith,
             client = client
         ).data
 
-        fun update(id: String, client: Client) = clientApi.updateClient(
-            X_API_TOKEN = InvoiceNinja.apiToken,
+        fun update(id: String, client: Client, apiToken: String? = null) = clientApi.updateClient(
+            X_API_TOKEN = apiToken ?: InvoiceNinja.apiToken,
             xRequestedWith = InvoiceNinja.xRequestedWith,
             id = id,
             client = client
         ).data
 
 
-        fun retrieve(id: String) = clientApi.showClient(
-            X_API_TOKEN = InvoiceNinja.apiToken,
+        fun retrieve(id: String, apiToken: String? = null) = clientApi.showClient(
+            X_API_TOKEN = apiToken ?: InvoiceNinja.apiToken,
             xRequestedWith = InvoiceNinja.xRequestedWith,
             id = id,
         ).data
@@ -45,9 +44,10 @@ class ClientApi {
             idNumber: String? = null,
             number: String? = null,
             filter: String? = null,
-            sort: String? = null
+            sort: String? = null,
+            apiToken: String? = null
         ) = clientApi.getClients(
-            X_API_TOKEN = InvoiceNinja.apiToken,
+            X_API_TOKEN = apiToken ?: InvoiceNinja.apiToken,
             xRequestedWith = InvoiceNinja.xRequestedWith,
             include = include,
             index = index,
